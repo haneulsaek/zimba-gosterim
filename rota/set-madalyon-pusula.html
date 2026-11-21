@@ -276,7 +276,7 @@ precision highp float;
 #else
 precision mediump float;
 #endif
-varying vec3 vN; varying vec3 vM; varying vec3 vV; varying float vAo; uniform float yz; uniform float par; uniform vec3 C; uniform float tur; uniform float kil; uniform vec3 Sa; uniform vec3 Sb; uniform vec3 Sc; uniform float Ss; uniform float sac;
+varying vec3 vN; varying vec3 vM; varying vec3 vV; varying float vAo; uniform float yz; uniform float par; uniform vec3 C; uniform float tur; uniform float kil; uniform vec3 Sa; uniform vec3 Sb; uniform vec3 Sc; uniform float Ss; uniform float sac; uniform float kes;
 float kutu(vec3 d,vec3 c,vec3 tx,vec3 ty,vec2 wh,float e){ float z=dot(d,c); if(z<=0.02) return 0.0; vec2 uv=abs(vec2(dot(d,tx),dot(d,ty))/z); vec2 m=1.0-smoothstep(wh-e,wh+e,uv); return m.x*m.y; }
 uniform vec3 gok; uniform vec3 yer; uniform float bay; uniform float bay2; uniform float poz; uniform float kut; uniform float yum; uniform float aoD; uniform float gez;
 vec3 ortam(vec3 d,float e){
@@ -301,6 +301,14 @@ void main(){ vec3 n=normalize(vN); vec3 v=normalize(-vV); if(dot(n,v)<0.0) n=-n;
   col=F*(env*1.3*poz*mix(1.0,oc,0.55)+C*kendi*0.22*oc); }   // yalnız belirgin girinti koyulaşır (geniş düz yüzeyde iz kalmasın)   // aşağı bakan yansımada metal kendini görür
  else { vec3 yans=ortam(r,0.03)*(0.045+0.955*f);
   if(tur>1.5){ col=C*0.25+yans*1.4; }
+  else if(kes>0.5){ // yuvarlak dışı kesim (oval, damla, baget, markiz): içteki yansıma taşın kendi fasetlerinden; her faset ayrı yöne bakar
+   vec3 a=normalize(Sa); vec3 r1=refract(-v,n,0.42); vec3 tg=n-a*dot(n,a); float tl=length(tg); tg=tl>1e-4?tg/tl:vec3(0.0);
+   vec3 r2=reflect(r1,normalize(-a*0.75+tg*0.66)); vec3 r3=reflect(r2,normalize(-a*0.75-tg*0.66)); vec3 d0=normalize(r3+tg*0.9+n*0.2);   // iki köşk yansıması: faset eğimine göre
+   vec3 ic=vec3(ortam(normalize(d0-tg*sac),0.05).r, ortam(d0,0.05).g, ortam(normalize(d0+tg*sac),0.05).b);
+   ic=pow(min(ic,vec3(2.4))/2.4,vec3(1.7))*2.4; ic=mix(vec3(dot(ic,vec3(0.3,0.5,0.2))),ic,0.4);   // koyu-açık karşıtlığı; renk saçılması ölçülü
+   col=C*(0.1+1.6*ic)+yans*0.95;
+   float kv=pow(max(dot(r3,normalize(vec3(0.0,0.94,0.34))),0.0),140.0)+pow(max(dot(r,normalize(vec3(0.62,0.42,0.66))),0.0),220.0)+pow(max(dot(r2,normalize(vec3(-0.9,0.12,0.42))),0.0),160.0);
+   col+=vec3(kv)*mix(vec3(5.0),C*5.0+1.5,0.35); }
   else { vec3 a=normalize(Sa); vec3 t1=normalize(Sb-a*dot(Sb,a)); vec3 t2=cross(a,t1);
    vec3 r1=refract(-v,n,0.58); vec3 h=(vM-Sc)+r1*Ss*0.42; vec3 u=h-a*dot(h,a);
    float aci=atan(dot(u,t2),dot(u,t1)); float halka=step(0.2,length(u)/Ss); float dil=0.7854*mix(1.0,0.5,halka);
@@ -449,7 +457,7 @@ function sahneCiz(dt,w,h,jx,jy){
     gl.uniformMatrix3fv(U.M,false,new Float32Array([M[0],M[3],M[6],M[1],M[4],M[7],M[2],M[5],M[8]])); gl.uniform3f(U.Tr,Tr[0],Tr[1],Tr[2]);
     const ms=Array.isArray(pc.m)?pc.m:[pc.m], a=A_[ms[0]]; gl.uniform1f(U.yz,pc.yz||0); gl.uniform1f(U.par,tasMi&&e>0&&e<0.35&&p<0.999?Math.sin(Math.PI*e/0.35):0);
     if(tasMi){ const t_=(ayrim&&kucuk&&pc.k)?RENKSIZ:tas, r=t_[2], us=t_[3]===2?1.2:2.1;
-      gl.uniform3f(U.C,Math.pow(r[0],us),Math.pow(r[1],us),Math.pow(r[2],us)); gl.uniform1f(U.tur,t_[3]===1?2:1); gl.uniform1f(U.sac,t_[3]===2?0.16:0.05);
+      gl.uniform3f(U.C,Math.pow(r[0],us),Math.pow(r[1],us),Math.pow(r[2],us)); gl.uniform1f(U.tur,t_[3]===1?2:1); gl.uniform1f(U.sac,t_[3]===2?0.16:0.05); gl.uniform1f(U.kes,pc.kz||0);
       const sa=rd(R,mv(M,a.ek)), sb=rd(R,mv(M,a.ek2)), sc=rd(R,top3(mv(M,a.mer),Tr));
       gl.uniform3f(U.Sa,sa[0],sa[1],sa[2]); gl.uniform3f(U.Sb,sb[0],sb[1],sb[2]); gl.uniform3f(U.Sc,sc[0],sc[1],sc[2]); gl.uniform1f(U.Ss,a.boy); }
     else { const r=(pc.dn>=0&&metal2?metal2:metal)[3]; gl.uniform3f(U.C,r[0],r[1],r[2]); gl.uniform1f(U.tur,0); }
@@ -573,7 +581,7 @@ function acilisKapat(){ const bekle=gec?0:Math.max(0,1500-(performance.now()-t0)
   const prog=gl.createProgram(); gl.attachShader(prog,kabuk(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,kabuk(gl.FRAGMENT_SHADER,FS));
   gl.bindAttribLocation(prog,0,"p"); gl.bindAttribLocation(prog,1,"n"); gl.bindAttribLocation(prog,2,"ao"); gl.linkProgram(prog);
   if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog)); gl.useProgram(prog);
-  for(const k of ["P","R","M","T","Tr","C","tur","kil","Sa","Sb","Sc","Ss","sac","yz","par","gok","yer","bay","bay2","poz","kut","yum","aoD","gez"]) U[k]=gl.getUniformLocation(prog,k);
+  for(const k of ["P","R","M","T","Tr","C","tur","kil","Sa","Sb","Sc","Ss","sac","kes","yz","par","gok","yer","bay","bay2","poz","kut","yum","aoD","gez"]) U[k]=gl.getUniformLocation(prog,k);
   gl.enableVertexAttribArray(0); gl.enableVertexAttribArray(1); gl.enableVertexAttribArray(2); gl.enable(gl.DEPTH_TEST); dortgenKur(prog);
   secenek("metaller",METAL,0,m=>metal=m); secenek("taslar",TAS,0,m=>{ tas=m; tasSecildi=true; });
   secenek("metaller2",[["ayni","Gövdeyle aynı",null,null]].concat(METAL),0,m=>{ metal2=m[3]?m:null; });
