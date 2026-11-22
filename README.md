@@ -8,6 +8,8 @@ Zımba tasarımlarının tarayıcıda döndürülebilen 3B ön izlemeleri. Adres
 - **Kelepçeler**: 2 ürün
 - **Mıhlama v1**: 11 ürün
 - **Devran**: 22 ürün
+- **Bahçe**: 21 ürün
+- **Selim'in Yüzükleri**: 9 ürün
 
 Her ürün sayfası tek dosyadır ve dışarıdan hiçbir şey yüklemez. Ön izleme modelidir. Döküm dosyaları daha yüksek çözünürlüktedir.
 STL dosyaları ve tasarım motorunun kodu bu depoda değildir; bu depo yalnız sunum içindir.
