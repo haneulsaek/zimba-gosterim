@@ -104,6 +104,17 @@ body{background:var(--zemin);margin:0;overflow:hidden;overscroll-behavior:none}
 /* yüzey işlemi (elmas kesim): Vitrin'de üçlü seçici ve sahnede kiremit etiket; yalnız sahne.json'da yuzey_islemleri olan üründe */
 .yz-kip{margin-top:6px} .yz-kip button{flex:1 1 0;min-width:0;height:auto;min-height:40px;padding:4px 6px;white-space:normal;line-height:1.12;font-size:12.5px}
 .yz-kip button[aria-pressed="true"][data-c="isaret"]{background:var(--kir);color:#efe6d3}
+/* desen seçici (yalnız desen katmanı olan üründe, "Kesimden sonra"da): küçük resimli 4 sütun ızgara, sıklık üçlüsü, bant başına seçim */
+#yz-desen h2{margin:14px 0 0} .ds-ust{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.ds-sk button,.ds-bant button{height:30px;min-width:0;padding:0 9px;font-size:12px}
+.ds-bant{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:8px;font-size:12px;color:var(--faint)} .ds-bant .seg{flex:none}
+.ds-iz{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin-top:8px}
+.ds-iz button{display:flex;flex-direction:column;align-items:stretch;gap:4px;padding:3px 3px 5px;min-width:0;background:var(--pl);color:var(--mute);font-size:11.5px;letter-spacing:.02em;transition:background .12s,color .12s,opacity .12s}
+.ds-iz button:hover{color:var(--fg)} .ds-iz img{display:block;width:100%;height:auto;aspect-ratio:7/5;object-fit:cover;background:var(--pl2)}
+.ds-iz span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center}
+.ds-iz button[aria-pressed="true"]{background:var(--fg);color:var(--zemin)} .ds-iz button[aria-pressed="true"] img{outline:2px solid var(--kiry);outline-offset:-2px}
+.ds-iz button[data-uy="0"]{opacity:.38} .ds-iz button[data-uy="0"][aria-pressed="true"]{opacity:.7}
+#ds-not{min-height:1.5em}
 .et.yzet b{background:var(--kir);color:#efe6d3} .et.yzet span{background:rgba(27,27,27,.88);color:var(--fg)}
 /* açılış: logo bloğu damga gibi iner, iz bırakır, kalkar */
 #acilis{position:absolute;inset:0;z-index:20;display:grid;place-items:center;background:var(--zemin);transition:opacity .45s ease .05s}
@@ -156,7 +167,7 @@ body{background:var(--zemin);margin:0;overflow:hidden;overscroll-behavior:none}
       <button data-mod="vitrin">Vitrin</button><button data-mod="montaj">Montaj</button><button data-mod="malzeme">Malzeme</button><button data-mod="teknik">Teknik</button></div>
     <section data-p="vitrin">
       <h2 id="v-ad"></h2><p class="tanim" id="v-tanim"></p><div id="v-uretim" hidden><h2>Üretim</h2><p class="tanim" id="v-calisma"></p></div>
-      <div id="v-yuzey" hidden><h2>Yüzey</h2><div class="seg yz-kip" id="yz-kip" role="group" aria-label="Yüzey görünümü"><button type="button" data-c="dokum">Döküm</button><button type="button" data-c="isaret">Kesim bölgesi</button><button type="button" data-c="sonra">Kesimden sonra</button></div><p class="tanim" id="yz-not"></p></div>
+      <div id="v-yuzey" hidden><h2>Yüzey</h2><div class="seg yz-kip" id="yz-kip" role="group" aria-label="Yüzey görünümü"><button type="button" data-c="dokum">Döküm</button><button type="button" data-c="isaret">Kesim bölgesi</button><button type="button" data-c="sonra">Kesimden sonra</button></div><div id="yz-desen" hidden><div class="ds-ust"><h2>Desen</h2><div class="seg ds-sk" id="ds-sk" role="group" aria-label="Sıklık"><button type="button" data-s="ince">İnce</button><button type="button" data-s="orta">Orta</button><button type="button" data-s="iri">İri</button></div></div><div class="ds-bant" id="ds-bant" hidden><span>Bantlar</span><div class="seg" id="ds-ayri" role="group" aria-label="Bantlar"><button type="button" data-a="0">Aynı</button><button type="button" data-a="1">Ayrı</button></div><div class="seg" id="ds-bn" role="group" aria-label="Bant"></div></div><div class="ds-iz" id="yz-ds" role="group" aria-label="Kesim deseni"></div><p class="tanim" id="ds-not"></p></div><p class="tanim" id="yz-not"></p></div>
       <h2>Hareket</h2>
       <div class="satir"><span>Kendiliğinden dönsün</span><button class="sw" id="s-don" role="switch" aria-label="Kendiliğinden dönsün"></button></div>
       <div class="eylem" id="r-canli"><button class="ana" id="salla">Salla</button><button id="durdur">Durdur</button></div>
@@ -226,7 +237,7 @@ const azHareket=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const sakla=(k,v)=>{ if(/(^#|&)gomulu(&|$)/.test(location.hash)) return; try{ localStorage.setItem(SET.kod+"-"+k,v); }catch(e){} }, oku=k=>{ try{ return localStorage.getItem(SET.kod+"-"+k); }catch(e){ return null; } };
 let gl,U={},urun=null,ag={},metal=METAL[0],tas=TAS[0],kucuk=true,etiket=false,donIstek=false,oynuyor=false,p=1,mod="vitrin",kil=true,canli="dogal";
 let metal2=null, ayrim=false, tasSecildi=false;
-let yzKip=null, yzEl=[];   // yüzey işlemi görünümü: "dokum" | "isaret" (kesim bölgesi) | "sonra" (kesimden sonra); yalnız u.yi olan üründe
+let yzKip=null, yzEl=[], dsKod=null, dsSk=null, dsAyri=false, dsB=[], dsBant=0, dsVurgu=-1e9;   // desen seçimi (yalnız yi[].dz olan üründe): dsKod bütün bantların deseni (null → varsayılan), dsSk sıklık, dsAyri/dsB bant başına desen   // yüzey işlemi görünümü: "dokum" | "isaret" (kesim bölgesi) | "sonra" (kesimden sonra); yalnız u.yi olan üründe
 let fizikAcik=!azHareket, FZ=[], CIFT=[], esSap=0, esYun=0, DN=[], esSapD=0, esYunD=0;
 let sapma=0,yunus=0,yakin=1,kay=[0,0],gizli=[],sira=[],etEl=[],hs=0,hy=0,sonDokunus=-1e9;
 // küçük vektör yardımcıları (3x3 matrisler satır sıralı)
@@ -267,7 +278,18 @@ function agKur(veri,a){
     const nq=new Uint16Array(veri.buffer,veri.byteOffset+a.no,a.nv*2), aq=new Uint8Array(veri.buffer,veri.byteOffset+a.ao,a.nv), N=new Float32Array(a.nv*3), AO=new Float32Array(a.nv);
     for(let i=0;i<a.nv;i++){ let x=nq[2*i]/65535*2-1, y=nq[2*i+1]/65535*2-1; const z=1-Math.abs(x)-Math.abs(y);
       if(z<0){ const ox=x; x=(1-Math.abs(y))*(ox>=0?1:-1); y=(1-Math.abs(ox))*(y>=0?1:-1); } const l=Math.hypot(x,y,z)||1; N[3*i]=x/l; N[3*i+1]=y/l; N[3*i+2]=z/l; AO[i]=aq[i]/255; }
-    return {tas:false,vb:t(P,gl.ARRAY_BUFFER),nb:t(N,gl.ARRAY_BUFFER),ab:t(AO,gl.ARRAY_BUFFER),ib:t(I,gl.ELEMENT_ARRAY_BUFFER),n:I.length,mer,yari,P,I}; }
+    const r_={tas:false,vb:t(P,gl.ARRAY_BUFFER),nb:t(N,gl.ARRAY_BUFFER),ab:t(AO,gl.ARRAY_BUFFER),ib:t(I,gl.ELEMENT_ARRAY_BUFFER),n:I.length,mer,yari,P,I};
+    if(a.so!==undefined){ // desen çerçevesi (yüzey grubu): köşe başına (s, t, u); s, t, u'nun yüzey eğimleri üçgenlerden (alan ağırlıklı)
+      const sq=new Uint16Array(veri.buffer,veri.byteOffset+a.so,a.nv*3), Q=new Float32Array(a.nv*3), G=new Float32Array(a.nv*9), W=new Float32Array(a.nv);
+      for(let i=0;i<a.nv;i++) for(let c=0;c<3;c++) Q[3*i+c]=a.sl[c]+sq[3*i+c]/65535*a.sk[c];
+      for(let f=0;f<I.length;f+=3){ const v=[I[f],I[f+1],I[f+2]], X=v.map(i=>[P[3*i],P[3*i+1],P[3*i+2]]), nn=cap(cik(X[1],X[0]),cik(X[2],X[0])), A2=Math.hypot(nn[0],nn[1],nn[2]); if(A2<1e-12) continue;
+        const nu=carp(nn,1/A2), E=[cik(X[2],X[1]),cik(X[0],X[2]),cik(X[1],X[0])].map(e=>cap(nu,e));
+        for(let c=0;c<3;c++){ let g=[0,0,0]; for(let j=0;j<3;j++) g=top3(g,carp(E[j],Q[3*v[j]+c])); g=carp(g,1/A2);
+          for(const i of v) for(let k=0;k<3;k++) G[9*i+3*c+k]+=g[k]*A2; }
+        for(const i of v) W[i]+=A2; }
+      for(let i=0;i<a.nv;i++){ const w=W[i]||1; for(let k=0;k<9;k++) G[9*i+k]/=w; }
+      r_.qb=t(Q,gl.ARRAY_BUFFER); r_.gb=t(G,gl.ARRAY_BUFFER); }
+    return r_; }
   const N=new Float32Array(a.nv*3);
   for(let i=0;i<I.length;i+=3){ const a0=I[i]*3,b0=I[i+1]*3,c0=I[i+2]*3, ux=P[b0]-P[a0],uy=P[b0+1]-P[a0+1],uz=P[b0+2]-P[a0+2],vx=P[c0]-P[a0],vy=P[c0+1]-P[a0+1],vz=P[c0+2]-P[a0+2];
     const nx=uy*vz-uz*vy,ny=uz*vx-ux*vz,nz=ux*vy-uy*vx; for(const j of [a0,b0,c0]){ N[j]+=nx; N[j+1]+=ny; N[j+2]+=nz; } }
@@ -285,14 +307,49 @@ const BAYRAKGL=BAYRAK.map(([c,wh,k])=>{ c=birim(c); const tx=birim(cap([0,1,0],c
 const BAYRAK2=[[[0.3,0.92,0.22],[0.075,0.95],0.85],[[-0.36,0.9,0.12],[0.06,0.95],0.8],[[0.0,0.62,-0.78],[0.7,0.09],0.7],
   [[0.75,0.55,0.35],[0.1,0.6],0.7],[[-0.8,0.45,0.3],[0.1,0.6],0.7],[[0.5,0.15,0.85],[0.2,0.6],0.6],[[-0.6,0.18,0.78],[0.18,0.55],0.55]];
 const BAYRAK2GL=BAYRAK2.map(([c,wh,k])=>{ c=birim(c); const tx=birim(cap([0,1,0],c)), ty=cap(c,tx); return "c*=1.0-bay2*"+k.toFixed(3)+"*kutu(d,"+v3(c)+","+v3(tx)+","+v3(ty)+",vec2("+wh[0].toFixed(3)+","+wh[1].toFixed(3)+"),e*1.5+0.05);"; }).join("\n ");
-const VS=`attribute float ao; attribute vec3 p; attribute vec3 n; uniform mat4 P; uniform mat3 R; uniform mat3 M; uniform vec3 T; uniform vec3 Tr; uniform vec4 kn; uniform vec3 zo; varying vec3 vN; varying vec3 vM; varying vec3 vV; varying float vAo;
-void main(){ vAo=ao; vec3 m=M*p+Tr; vM=R*m; vec3 nn=kn.w>0.5?normalize(p-kn.xyz):n; vN=R*(M*nn); vV=vM+T; gl_Position=P*vec4(vV,1.0); gl_Position.xy+=zo.xy*gl_Position.w; gl_Position.z-=zo.z*gl_Position.w; }`;
+const VS=`attribute float ao; attribute vec3 p; attribute vec3 n; attribute vec3 q; attribute vec3 gs; attribute vec3 gt; attribute vec3 gu; uniform mat4 P; uniform mat3 R; uniform mat3 M; uniform vec3 T; uniform vec3 Tr; uniform vec4 kn; uniform vec3 zo; varying vec3 vN; varying vec3 vM; varying vec3 vV; varying float vAo;
+varying vec3 vQ; varying vec3 vGs; varying vec3 vGt; varying vec3 vGu;   // desen: (s, t, sınır uzaklığı) ve s, t, u'nun yüzey eğimleri (dünya)
+void main(){ vAo=ao; vQ=q; vGs=R*(M*gs); vGt=R*(M*gt); vGu=R*(M*gu); vec3 m=M*p+Tr; vM=R*m; vec3 nn=kn.w>0.5?normalize(p-kn.xyz):n; vN=R*(M*nn); vV=vM+T; gl_Position=P*vec4(vV,1.0); gl_Position.xy+=zo.xy*gl_Position.w; gl_Position.z-=zo.z*gl_Position.w; }`;
 const FS=`#ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
 precision mediump float;
 #endif
 varying vec3 vN; varying vec3 vM; varying vec3 vV; varying float vAo; uniform float yz; uniform float par; uniform vec3 C; uniform float tur; uniform float kil; uniform vec3 Sa; uniform vec3 Sb; uniform vec3 Sc; uniform float Ss; uniform float sac; uniform float sl; uniform float kes; uniform float ys; uniform float cz;
+varying vec3 vQ; varying vec3 vGs; varying vec3 vGt; varying vec3 vGu; uniform float dk; uniform float dv[13]; uniform float dE; uniform float dD;
+/* DESEN (kesim deseni kütüphanesinin alan() işleviyle birebir): h(s,t) parçalı doğrusal derinlik, dönüş (h, ∂h/∂s, ∂h/∂t).
+   dv[0] tip: 1 oluk aileleri (en çok 3, max; balık sırtında t<0 açı ters), 2 dalga, 3 ışın, 4 kum/buz kafesi, 5 yüzeycik, 6 çekiç. */
+float hs(vec2 ij,float k){ vec2 p=ij+vec2(k*101.0,k*57.0); vec3 p3=fract(vec3(p.xyx)*0.1031); p3+=dot(p3,p3.yzx+33.33); return fract((p3.x+p3.y)*p3.z); }
+vec2 cadir(float a,float p,float D,float ya){ float f=fract(a/p); return vec2(ya+(D-ya)*(1.0-abs(2.0*f-1.0)),(f<0.5?2.0:-2.0)*(D-ya)/p); }
+bool ucg(vec2 x,vec3 A,vec3 B,vec3 C,inout vec3 r){ vec2 v0=B.xy-A.xy, v1=C.xy-A.xy, v2=x-A.xy; float d=v0.x*v1.y-v1.x*v0.y; if(abs(d)<1e-12) return false;
+ float w1=(v2.x*v1.y-v1.x*v2.y)/d, w2=(v0.x*v2.y-v2.x*v0.y)/d; if(w1<-1e-6||w2<-1e-6||w1+w2>1.000001) return false;
+ float e1=B.z-A.z, e2=C.z-A.z; r=vec3(A.z+w1*e1+w2*e2,(e1*v1.y-e2*v0.y)/d,(e2*v0.x-e1*v1.x)/d); return true; }
+vec3 kumD(vec2 ij){ float p=dv[1], hy=p*0.8660254, oy=dv[4], t=dv[6];
+ float q=hs(ij,t+2.0); if(dv[7]>0.5) q=q<0.5?q*0.3:0.4+q*0.6;
+ return vec3((ij.x+0.5*ij.y)*p+oy*p*(hs(ij,t)-0.5), ij.y*hy+oy*hy*(hs(ij,t+1.0)-0.5), dv[3]+(dv[2]-dv[3])*(dv[5]+(1.0-dv[5])*q)); }
+vec2 ycN(vec2 ij){ float L=dv[1], W=dv[2]; return vec2(ij.x*L*0.5+dv[5]*0.5*L*(hs(ij,dv[8])-0.5), ij.y*W*0.5+dv[5]*0.5*W*(hs(ij,dv[8]+1.0)-0.5)); }
+vec3 ckT(vec2 ij){ float p=dv[1], hy=p*0.8660254, t=dv[7]; return vec3((ij.x+0.5*ij.y)*p+dv[4]*p*(hs(ij,t)-0.5), ij.y*hy+dv[4]*hy*(hs(ij,t+1.0)-0.5), dv[3]+(dv[2]-dv[3])*(dv[6]+(1.0-dv[6])*hs(ij,t+2.0))); }
+vec3 ckK(vec2 ij,float tp){ float p=dv[1], hy=p*0.8660254, t=dv[7], k=dv[5]*p; vec2 c=tp<0.5?vec2((ij.x+0.5*ij.y)*p+p*0.5, ij.y*hy+hy/3.0):vec2((ij.x+0.5*ij.y)*p+p, ij.y*hy+2.0*hy/3.0);
+ return vec3(c+k*(vec2(hs(ij,t+3.0+2.0*tp),hs(ij,t+4.0+2.0*tp))-0.5), dv[3]); }
+vec3 desenH(vec2 x){ float tp=dv[0]; vec3 r=vec3(-1.0,0.0,0.0);
+ if(tp<1.5){ for(int i=0;i<3;i++){ if(float(i)>=dv[4]) break; float an=i==0?dv[5]:(i==1?dv[6]:dv[7]); if(dv[8]>0.5&&x.y<0.0) an=-an;
+   vec2 g=vec2(-sin(an),cos(an)); vec2 c=cadir(dot(g,x),dv[1],dv[2],dv[3]); if(c.x>r.x) r=vec3(c.x,c.y*g); } return r; }
+ if(tp<2.5){ float L=dv[4], A=dv[5], f=fract(x.x/L), Z=A*(4.0*abs(f-0.5)-1.0), dZ=f<0.5?-4.0*A/L:4.0*A/L; vec2 c=cadir(x.y-Z,dv[1],dv[2],dv[3]); return vec3(c.x,-c.y*dZ,c.y); }
+ if(tp<3.5){ vec2 X=x-vec2(dv[4],dv[5]); float d2=dv[6]*0.5, j=floor(atan(X.y,X.x)/d2), cift=mod(j,2.0)<0.5?1.0:0.0, jr=cift>0.5?j:j+1.0, jv=cift>0.5?j+1.0:j;
+   vec2 er=vec2(cos(jr*d2),sin(jr*d2)), ev=vec2(cos(jv*d2),sin(jv*d2)); float det=er.x*ev.y-ev.x*er.y, m=dv[7];
+   return vec3(dv[3]+m*(er.x*X.y-er.y*X.x)/det, -m*er.y/det, m*er.x/det); }
+ if(tp<4.5){ float hy=dv[1]*0.8660254, v=x.y/hy, u=x.x/dv[1]-0.5*v; vec2 b=floor(vec2(u,v)); r=vec3(dv[3],0.0,0.0);
+   for(int a=0;a<3;a++) for(int c=0;c<3;c++){ vec2 ij=b+vec2(a==0?0.0:(a==1?-1.0:1.0),c==0?0.0:(c==1?-1.0:1.0));
+     vec3 A=kumD(ij), B=kumD(ij+vec2(1.0,0.0)), C=kumD(ij+vec2(0.0,1.0)), E=kumD(ij+vec2(1.0,1.0)); if(ucg(x,A,B,C,r)||ucg(x,B,E,C,r)) return r; } return r; }
+ if(tp<5.5){ float L=dv[1], W=dv[2], D=dv[3], ya=dv[4], t=dv[8]; vec2 b=floor(vec2(x.x/(L*0.5),x.y/(W*0.5))+0.5); r=vec3(ya,0.0,0.0);
+   for(int a=0;a<3;a++) for(int c=0;c<3;c++){ vec2 ij=b+vec2(a==0?0.0:(a==1?-1.0:1.0),c==0?0.0:(c==1?-1.0:1.0)); if(mod(ij.x+ij.y,2.0)>0.5) continue;
+     vec3 M=vec3(ij.x*L*0.5+dv[6]*L*(hs(ij,t+2.0)-0.5), ij.y*W*0.5+dv[6]*W*(hs(ij,t+3.0)-0.5), min(ya+(D-ya)*(1.0-dv[7]+2.0*dv[7]*hs(ij,t+4.0)),D));
+     vec3 K0=vec3(ycN(ij+vec2(-1.0,0.0)),ya), K1=vec3(ycN(ij+vec2(0.0,-1.0)),ya), K2=vec3(ycN(ij+vec2(1.0,0.0)),ya), K3=vec3(ycN(ij+vec2(0.0,1.0)),ya);
+     if(ucg(x,K0,K1,M,r)||ucg(x,K1,K2,M,r)||ucg(x,K2,K3,M,r)||ucg(x,K3,K0,M,r)) return r; } return r; }
+ { float hy=dv[1]*0.8660254, v=x.y/hy, u=x.x/dv[1]-0.5*v; vec2 b=floor(vec2(u,v)+0.5); r=vec3(dv[3],0.0,0.0);
+   for(int a=0;a<3;a++) for(int c=0;c<3;c++){ vec2 ij=b+vec2(a==0?0.0:(a==1?-1.0:1.0),c==0?0.0:(c==1?-1.0:1.0)); vec3 M=ckT(ij);
+     vec3 K0=ckK(ij,0.0), K1=ckK(ij+vec2(-1.0,0.0),1.0), K2=ckK(ij+vec2(-1.0,0.0),0.0), K3=ckK(ij+vec2(-1.0,-1.0),1.0), K4=ckK(ij+vec2(0.0,-1.0),0.0), K5=ckK(ij+vec2(0.0,-1.0),1.0);
+     if(ucg(x,M,K0,K1,r)||ucg(x,M,K1,K2,r)||ucg(x,M,K2,K3,r)||ucg(x,M,K3,K4,r)||ucg(x,M,K4,K5,r)||ucg(x,M,K5,K0,r)) return r; } return r; } }
 float kutu(vec3 d,vec3 c,vec3 tx,vec3 ty,vec2 wh,float e){ float z=dot(d,c); if(z<=0.02) return 0.0; vec2 uv=abs(vec2(dot(d,tx),dot(d,ty))/z); vec2 m=1.0-smoothstep(wh-e,wh+e,uv); return m.x*m.y; }
 uniform vec3 gok; uniform vec3 yer; uniform float bay; uniform float bay2; uniform float poz; uniform float kut; uniform float yum; uniform float aoD; uniform float gez;
 vec3 ortam(vec3 d,float e){
@@ -307,17 +364,24 @@ vec3 ortam(vec3 d,float e){
 vec3 aces(vec3 x){ return clamp((x*(2.51*x+0.03))/(x*(2.43*x+0.59)+0.14),0.0,1.0); }
 vec3 ton(vec3 x){ float m=max(max(x.r,x.g),max(x.b,0.0001)); vec3 a=x*(aces(vec3(m)).r/m); return pow(mix(a,aces(x),0.28),vec3(0.4545)); }   // parlak yerde de metalin rengi kalsın
 void main(){ if(cz>0.5){ gl_FragColor=vec4(ton(vec3(0.70,0.11,0.037)*1.7)*sl,sl); return; }
- vec3 n=normalize(vN); vec3 v=normalize(-vV); if(dot(n,v)<0.0) n=-n; float nv=max(dot(n,v),0.0); vec3 r=reflect(-v,n); float f=pow(1.0-nv,5.0); vec3 col;
+ vec3 n=normalize(vN); vec3 v=normalize(-vV);
+ if(dk>0.5){ vec3 H=desenH(vQ.xy); vec3 g=H.y*vGs+H.z*vGt; if(dD*vQ.z/dE<H.x) g=(dD/dE)*vGu; n=normalize(n+g); }   // desen: n' = n + ∇h (h içeri derinlik); kenarda etek h ≤ D·u/etek
+ if(dot(n,v)<0.0) n=-n; float nv=max(dot(n,v),0.0); vec3 r=reflect(-v,n); float f=pow(1.0-nv,5.0); vec3 col;
  if(kil>0.5){ vec3 L=normalize(vec3(0.42,0.62,0.66)); vec3 b=tur<0.5?vec3(0.66,0.64,0.60):vec3(0.46,0.58,0.70);
   col=b*(0.16+0.40*(0.5+0.5*n.y)+0.62*max(dot(n,L),0.0)+0.10*max(dot(n,vec3(-0.8,0.1,0.5)),0.0))+0.10*pow(max(dot(r,L),0.0),20.0); gl_FragColor=vec4(pow(min(col,1.0),vec3(0.85)),1.0); return; }
  if(tur<0.5){ vec3 F=C+(1.0-C)*f; float kendi=1.0-smoothstep(-0.35,0.2,r.y); vec3 env;
   if(yz<0.5) env=mix(ortam(r,0.025),ortam(r,0.45),0.22);
   else if(yz<1.5){ vec3 tg=normalize(cross(n,vec3(0.0,1.0,0.0))+vec3(1e-4)); env=(ortam(normalize(r+tg*0.25),0.16)+ortam(r,0.2)+ortam(normalize(r-tg*0.25),0.16))*0.333*0.92; }   // saten: yönlü fırça
   else if(yz<2.5) env=ortam(r,0.6)*0.85;
-  else env=ortam(r,0.008)*1.12;   /* elmas kesim gösterimi (yz 3): düz fasetler, keskin yansıma; her faset ya ışık kutusunu ya bayrağı görür */
+  else if(yz<3.5) env=ortam(r,0.008)*1.12;   /* elmas kesim gösterimi (yz 3): düz fasetler, keskin yansıma; her faset ya ışık kutusunu ya bayrağı görür */
+  else { env=ortam(r,0.0); env=env*env/(env+vec3(0.28))*1.5; }   /* desen (yz 4): ayna kesim; karşıtlık artırılır (faset ya parlar ya kararır), renk metalden */
   float oc=1.0-aoD*(1.0-smoothstep(0.08,0.62,vAo));   // kapanma yalnız gerçek girintide (yuva, ajur dibi, katman arası); yansımada zayıf
   col=F*(env*1.3*poz*mix(1.0,oc,0.55)+C*kendi*0.22*oc);
-  if(yz>2.5){ float kv=pow(max(dot(r,normalize(vec3(0.0,0.94,0.34))),0.0),420.0)+pow(max(dot(r,normalize(vec3(0.62,0.42,0.66))),0.0),420.0)+pow(max(dot(r,normalize(vec3(-0.9,0.12,0.42))),0.0),320.0)+pow(max(dot(r,normalize(vec3(-0.55,0.75,-0.35))),0.0),320.0); col+=F*kv*7.0; }
+  if(yz>2.5){ float kv=pow(max(dot(r,normalize(vec3(0.0,0.94,0.34))),0.0),420.0)+pow(max(dot(r,normalize(vec3(0.62,0.42,0.66))),0.0),420.0)+pow(max(dot(r,normalize(vec3(-0.9,0.12,0.42))),0.0),320.0)+pow(max(dot(r,normalize(vec3(-0.55,0.75,-0.35))),0.0),320.0); col+=F*kv*7.0;
+   if(yz>3.5){ float kp=0.0; kp+=pow(max(dot(r,normalize(vec3(0.0,0.94,0.34))),0.0),2400.0); kp+=pow(max(dot(r,normalize(vec3(0.62,0.42,0.66))),0.0),2400.0);
+    kp+=pow(max(dot(r,normalize(vec3(-0.9,0.12,0.42))),0.0),1800.0); kp+=pow(max(dot(r,normalize(vec3(-0.55,0.75,-0.35))),0.0),1800.0);
+    kp+=pow(max(dot(r,normalize(vec3(0.3,0.6,0.75))),0.0),3000.0); kp+=pow(max(dot(r,normalize(vec3(-0.3,0.85,0.45))),0.0),3000.0);
+    col+=mix(F,vec3(1.0),0.25)*kp*14.0; } }   // desen: dar kıvılcımlar; döndürünce yüzeycikler sırayla yanıp söner
   if(ys>0.5){ float l=dot(col,vec3(0.3,0.55,0.15)); col=mix(col,vec3(0.70,0.11,0.037)*(0.3+1.25*l),0.6); } }   // yalnız belirgin girinti koyulaşır (geniş düz yüzeyde iz kalmasın)   // aşağı bakan yansımada metal kendini görür
  else { vec3 yans=ortam(r,0.03)*(0.045+0.955*f);
   if(tur>4.5){ vec3 ic=ortam(refract(-v,n,0.66),0.22);   // taş boncuk: fasetsiz cilalı küre, yarı saydam
@@ -462,7 +526,7 @@ function hedefKur(w,h){ const yap=()=>{ const tx=gl.createTexture(); gl.bindText
   const ok=gl.checkFramebufferStatus(gl.FRAMEBUFFER)===gl.FRAMEBUFFER_COMPLETE; BK.A=yap(); gl.bindFramebuffer(gl.FRAMEBUFFER,null); BK.w=w; BK.h=h; return ok; }
 const HAL=(i,b)=>{ let f=1,r=0; while(i>0){ f/=b; r+=f*(i%b); i=Math.floor(i/b); } return r; };
 function imzaAl(){ const z=x=>typeof x==="number"?x.toFixed(4):String(x); let s=[sapma,yunus,yakin,kay[0],kay[1],p,odakK,mod,kil,metal[0],metal2?metal2[0]:"",tas[0],isik,gezinme,kucuk,etiket,gizli.join(),urun.kod,cv.clientWidth,cv.clientHeight].map(z).join("|");
-  for(const st of FZ) if(st.x) s+="|"+st.x.map(x=>x.toFixed(2)).join(",")+st.f.toFixed(3); for(const st of DN) s+="|"+st.f.toFixed(3); if(urun.rg) s+="|"+RS.map(x=>x[0]).join(); if(urun.top) s+="|t"+TOP[0]+(topSecildi?"!":""); if(mekGorAcik()) s+="|mg"; for(const st of MKS) if(st.kl) s+="|k"+st.kl.toFixed(3); if(urun.montaj) s+="|g"+gizliA.join()+aktifA; for(const st of MKS) s+="|"+st.a.toFixed(4)+(st.r?st.r.map(x=>x.toFixed(3)).join(","):""); if(urun.yi) s+="|y"+yzKip; return s; }
+  for(const st of FZ) if(st.x) s+="|"+st.x.map(x=>x.toFixed(2)).join(",")+st.f.toFixed(3); for(const st of DN) s+="|"+st.f.toFixed(3); if(urun.rg) s+="|"+RS.map(x=>x[0]).join(); if(urun.top) s+="|t"+TOP[0]+(topSecildi?"!":""); if(mekGorAcik()) s+="|mg"; for(const st of MKS) if(st.kl) s+="|k"+st.kl.toFixed(3); if(urun.montaj) s+="|g"+gizliA.join()+aktifA; for(const st of MKS) s+="|"+st.a.toFixed(4)+(st.r?st.r.map(x=>x.toFixed(3)).join(","):""); if(urun.yi) s+="|y"+yzKip+(dsKod||"")+(dsSk||"")+(dsAyri?"A"+dsB.join(",")+dsBant:"")+(performance.now()-dsVurgu<900?"v":""); return s; }
 /* Işık gezinmesi: ürün durunca ortam ±7° yatay, 14 sn dönemle yumuşak sinüs çizer; yansımalar canlı durur. Açıkken durağan birikim bitmez:
    kaydırılmış örnekler üstel ortalamayla (son ≈5 kare) karışır, kare hızı 30'a sınırlanır. Kapalıyken 16 örnek biriktirilip çizim durur. */
 let isik="studyo", gezinme=!azHareket, gezT0=performance.now(), gorunur=true, sonCizim=0;
@@ -502,7 +566,7 @@ function sahneCiz(dt,w,h,jx,jy){
   const G=urun.gruplar, top=G.map(()=>[0,0,0,0]), S=urun.sarkac, A_=ag[urun.kod];
   const soluk=mekGorAcik(), solL=[]; gl.uniform1f(U.sl,1);
   const yzk=yzGor();
-  const cizQ=(pc,gec)=>{ if(pc.rl&&(pc.rl===2?yzk!=="sonra":yzk==="sonra")) return;   /* demo yalnız "Kesimden sonra"da; yüzey grubu orada gizli */
+  const cizQ=(pc,gec)=>{ if(pc.rl&&(pc.rl===2?yzk!=="sonra":(yzk==="sonra"&&!pc._dz))) return;   /* demo yalnız "Kesimden sonra"da; yüzey grubu orada gizli (desen katmanında desenle çizilir) */
     if(soluk&&!gec&&!mekVurgu(pc)){ solL.push(pc); return; } const g=G[pc.g], tasMi=g.tur==="tas", e=etkenQ(pc); let O=pc._ev?top3(carp(pc._ev._o,etkenQ(pc._ev)),carp(pc._k,e)):carp(pc._o||[0,0,0],e);   // taş yuvasının bulunduğu parçayla gider, sonra yuvaya oturur
     if(!pc.rl){ const t=top[pc.g]; t[0]+=pc.c[0]+O[0]; t[1]+=pc.c[1]+O[1]; t[2]+=pc.c[2]+O[2]; t[3]++; }
     const topQ=!!(urun.top&&pc.tp);   // serbest top (inci, taş boncuk, altın): taş grubunda olsa da "Top" seçimiyle çizilir
@@ -518,6 +582,9 @@ function sahneCiz(dt,w,h,jx,jy){
     gl.uniformMatrix3fv(U.M,false,new Float32Array([M[0],M[3],M[6],M[1],M[4],M[7],M[2],M[5],M[8]])); gl.uniform3f(U.Tr,Tr[0],Tr[1],Tr[2]);
     const ms=Array.isArray(pc.m)?pc.m:[pc.m], a=A_[ms[0]]; gl.uniform1f(U.yz,pc.rl===2?3:(pc.yz||0)); gl.uniform1f(U.ys,pc.rl===1&&yzk==="isaret"?1:0); gl.uniform1f(U.par,tasMi&&e>0&&e<0.35&&p<0.999?Math.sin(Math.PI*e/0.35):0);
     gl.uniform4f(U.kn,0,0,0,0);
+    const dzA=pc.rl===1&&yzk==="sonra"&&pc._dz&&!gec; gl.uniform1f(U.dk,dzA?1:0);
+    if(dzA){ const z=pc._dz, g=z.y.dz.d[dsBantKod(z.b)][dsSik()].g[z.b]; gl.uniform1f(U.yz,4); gl.uniform1fv(U.dv,new Float32Array(g)); gl.uniform1f(U.dE,z.y.dz.e||0.11); gl.uniform1f(U.dD,g[0]===5?g[3]:g[2]);
+      if(dsAyri&&z.b===dsBant&&performance.now()-dsVurgu<900) gl.uniform1f(U.ys,1); }   // bant seçilince kısa süre işaretli
     if(topQ){ const t_=(!topSecildi&&pc.tv&&topBul(pc.tv))||TOP, r=t_[4]===0?METAL[0][3]:t_[3], a_=A_[Array.isArray(pc.m)?pc.m[0]:pc.m]; gl.uniform3f(U.C,r[0],r[1],r[2]); gl.uniform1f(U.tur,t_[4]); gl.uniform4f(U.kn,a_.mer[0],a_.mer[1],a_.mer[2],1); }   // küre normali: fasetsiz
     else if(tasMi){ const t_=(ayrim&&kucuk&&pc.k)?RENKSIZ:tas, r=t_[2], us=t_[3]===2?1.2:2.1;
       gl.uniform3f(U.C,Math.pow(r[0],us),Math.pow(r[1],us),Math.pow(r[2],us)); gl.uniform1f(U.tur,t_[3]===1?2:1); gl.uniform1f(U.sac,t_[3]===2?0.16:0.05); gl.uniform1f(U.kes,pc.kz||0);
@@ -526,11 +593,15 @@ function sahneCiz(dt,w,h,jx,jy){
     else if(urun.rg&&pc.rk>=0){ const m_=RS[pc.rk], r=m_[3]; gl.uniform3f(U.C,r[0],r[1],r[2]); gl.uniform1f(U.tur,urun.rg[pc.rk].m?3:0); }   // renk grubu / mine
     else { const r=(pc.dn>=0&&metal2?metal2:metal)[3]; gl.uniform3f(U.C,r[0],r[1],r[2]); gl.uniform1f(U.tur,0); }
     if((urun.montaj&&mod==="montaj"&&aktifA>=0&&adimNo(pc)===aktifA)||(soluk&&!gec)){ const c_=gl.getUniform(prog_,U.C); gl.uniform3f(U.C,c_[0]*1.35+0.05,c_[1]*1.35+0.04,c_[2]*1.35+0.02); }   // açık satırın parçaları vurgulu
-    for(const mi of ms){ const a=A_[mi];
+    for(const mi of ms){ const a=A_[mi], dq=dzA&&a.qb;
     gl.bindBuffer(gl.ARRAY_BUFFER,a.vb); gl.vertexAttribPointer(0,3,gl.FLOAT,false,0,0);
     gl.bindBuffer(gl.ARRAY_BUFFER,a.nb); gl.vertexAttribPointer(1,3,gl.FLOAT,false,0,0);
     gl.bindBuffer(gl.ARRAY_BUFFER,a.ab); gl.vertexAttribPointer(2,1,gl.FLOAT,false,0,0);
-    if(a.tas) gl.drawArrays(gl.TRIANGLES,0,a.n); else { gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,a.ib); gl.drawElements(gl.TRIANGLES,a.n,gl.UNSIGNED_SHORT,0); } } };
+    if(dq){ for(let k=3;k<7;k++) gl.enableVertexAttribArray(k); gl.bindBuffer(gl.ARRAY_BUFFER,a.qb); gl.vertexAttribPointer(3,3,gl.FLOAT,false,0,0);
+      gl.bindBuffer(gl.ARRAY_BUFFER,a.gb); for(let k=0;k<3;k++) gl.vertexAttribPointer(4+k,3,gl.FLOAT,false,36,12*k); }
+    if(a.tas) gl.drawArrays(gl.TRIANGLES,0,a.n); else { gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,a.ib); gl.drawElements(gl.TRIANGLES,a.n,gl.UNSIGNED_SHORT,0); }
+    if(dq) for(let k=3;k<7;k++) gl.disableVertexAttribArray(k); }
+    if(dzA){ gl.uniform1f(U.dk,0); gl.uniform1f(U.ys,0); } };
   urun.parcalar.forEach(pc=>cizQ(pc,false));
   if(solL.length){ gl.enable(gl.BLEND); gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA); gl.depthMask(false); gl.uniform1f(U.sl,0.2); solL.forEach(pc=>cizQ(pc,true)); gl.uniform1f(U.sl,1); gl.depthMask(true); gl.disable(gl.BLEND); }   // gövde soluk: pimler, miller arkadan görünür
   gl.uniform1f(U.ys,0); if(yzEl.length) yzCiz(w,h,R,yzk);
@@ -736,7 +807,7 @@ function sec(kod){ urun=MAN.find(u=>u.kod===kod); const G=urun.gruplar; gizli=G.
   { const taslar=urun.parcalar.filter(q=>G[q.g].tur==="tas"&&!q.tp), varT=taslar.length>0; ayrim=taslar.some(q=>q.k)&&taslar.some(q=>!q.k);
     $("b-tas").hidden=!varT; $("r-kucuk").hidden=!ayrim; $("tas-b").textContent=ayrim?"Ana taş":"Taş"; $("b-metal2").hidden=!DN.length;
     if(!tasSecildi){ tas=tasBul(urun.tas)||TAS[0]; for(const k of $("taslar").children) k.setAttribute("aria-pressed",k.id==="taslar-"+tas[0]); }
-    $("malzeme-not").textContent=varT?"Renk yalnız görünümdür; ölçüler aynı kalır. Taş yoğunluğu değişirse takılan ağırlık biraz oynar.":"Renk yalnız görünümdür; ölçüler aynı kalır. Bu modelde taş yok."; } teknikYaz(); adimYaz(); $("r-mek").hidden=!(urun.mek&&urun.mek.some(n=>n.t!=="s")); if(urun.montaj) montajListe(); renkCiz(); uretimCiz(); dugmeKur(); adimYaz(); yzKip=urun.yi?"isaret":null; yzKur(); yzYaz(); sakla("urun",kod); }
+    $("malzeme-not").textContent=varT?"Renk yalnız görünümdür; ölçüler aynı kalır. Taş yoğunluğu değişirse takılan ağırlık biraz oynar.":"Renk yalnız görünümdür; ölçüler aynı kalır. Bu modelde taş yok."; } teknikYaz(); adimYaz(); $("r-mek").hidden=!(urun.mek&&urun.mek.some(n=>n.t!=="s")); if(urun.montaj) montajListe(); renkCiz(); uretimCiz(); dugmeKur(); adimYaz(); yzKip=urun.yi?"isaret":null; dsSifirla(); yzKur(); dsAdresOku(); dsKur(); yzYaz(); sakla("urun",kod); }
 /* ── YÜZEY İŞLEMİ (u.yi; parça rl 1 yüzey grubu, 2 demo; dp döküm parçası). Vitrin ve Malzeme'de üçlü seçim: Döküm (grup gövdeyle aynı metal),
    Kesim bölgesi (grup kiremit yarı saydam boyalı, kenarı çizgili, sahnede "Elmas kesim" etiketi; açılış), Kesimden sonra (grup gizli, demo düz
    fasetlerle). Montaj ve Teknik her zaman döküm hâlini gösterir; demo orada çizilmez. Alan yoksa hiçbir şey görünmez. */
@@ -752,11 +823,47 @@ function yzSinir(a){ if(a._yz) return a._yz; const P=a.P, I=a.I; if(!P) return a
   c=carp(c,1/(W||1)); let en=0, d0=1e18; for(let i=0;i<K.length;i++){ const d=(P[3*i]-c[0])**2+(P[3*i+1]-c[1])**2+(P[3*i+2]-c[2])**2; if(d<d0){ d0=d; en=i; } }
   const lb=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,lb); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(L),gl.STATIC_DRAW);
   return a._yz={lb,n:L.length/3,m:[P[3*en],P[3*en+1],P[3*en+2]],nr:birim(nr)}; }
-function yzKur(){ yzEl.forEach(o=>o.el.remove()); yzEl=[]; if(!urun.yi) return; const A_=ag[urun.kod];
+function yzKur(){ yzEl.forEach(o=>o.el.remove()); yzEl=[]; urun.parcalar.forEach(q=>{ delete q._dz; }); if(!urun.yi) return; const A_=ag[urun.kod];
+  urun.yi.forEach(y=>{ if(y.dz) y.g.forEach((j,b)=>{ urun.parcalar[j]._dz={y,b}; }); });
   urun.yi.forEach(y=>{ const el=document.createElement("div"); el.className="et yzet"; el.hidden=true; el.innerHTML="<b>◆</b><span></span>"; el.children[1].textContent=y.t==="elmas_kesim"?"Elmas kesim":"Yüzey işlemi"; $("etiketler").appendChild(el);
     yzEl.push({el,G:y.g.map(i=>({q:urun.parcalar[i],S:[].concat(urun.parcalar[i].m).map(m=>yzSinir(A_[m]))}))}); }); }
-function yzYaz(){ const Y=urun&&urun.yi; $("v-yuzey").hidden=!Y; for(const b of $("yz-kip").children) b.setAttribute("aria-pressed",b.dataset.c===yzKip); if(!Y) return;
-  $("yz-not").textContent=yzKip==="isaret"?[...new Set(Y.map(y=>y.a).filter(Boolean))].join(" "):yzKip==="sonra"?"Gösterimdir; kesim atölyede yapılır.":"Dökümden çıktığı hâl: işaretli bölge düz, cilalı ve kesim payı kadar etli."; }
+/* ── DESEN KATMANI. yi[].dz = {v: varsayılan desen, vs: varsayılan sıklık, e: etek, d: {kod: {sıklık: {g: [bant başına
+   gölgelendirici sayıları], u: [bant başına uygun 1/0], a: açıklama}}}}; yüzey grubu (rl 1) ağında köşe başına (s, t, u) (a.so). "Kesimden
+   sonra"da yüzey grubu gizlenmez, desen gölgelendiricide analitik çizilir (normal bozma; kenarda etek). Seçici: küçük resimli desenler
+   (SET.dsk), sıklık (İnce/Orta/İri), birden çok bantta "Bantlar: aynı / ayrı". Adres: #urun=…&desen=baklava (ayrıda baklava,verev)&siklik=ince.
+   dz yoksa (eski tek demo, desensiz ürün) hiçbir şey değişmez. */
+const dsY=()=>urun&&urun.yi?urun.yi.find(y=>y.dz)||null:null;
+const dsSik=()=>{ const y=dsY(); return dsSk||(y&&y.dz.vs)||"orta"; };
+const dsTaban=()=>{ const y=dsY(); return dsKod||(y&&y.dz.v); };
+const dsBantKod=b=>dsAyri&&dsB[b]?dsB[b]:dsTaban();
+function dsSifirla(){ dsKod=null; dsSk=null; dsAyri=false; dsB=[]; dsBant=0; }
+function dsAdresOku(){ const y=dsY(); if(!y||adresUrun()!==urun.kod) return; const A=adresParca(), k=(A.get("desen")||"").split(",").filter(x=>y.dz.d[x]), sk=A.get("siklik");
+  if(sk&&y.dz.d[y.dz.v][sk]){ dsSk=sk; yzKip="sonra"; }
+  if(k.length){ yzKip="sonra"; if(k.length>1&&y.g.length>1){ dsAyri=true; dsKod=k[0]; dsB=y.g.map((_,i)=>k[Math.min(i,k.length-1)]); } else { dsAyri=false; dsKod=k[0]; } } }
+function dsAdres(){ const y=dsY(); if(GOMULU||!y) return; const a=adresParca(); a.set("urun",urun.kisa||urun.kod);
+  if(yzKip==="sonra"){ a.set("desen",dsAyri?y.g.map((_,b)=>dsBantKod(b)).join(","):dsTaban()); a.set("siklik",dsSik()); } else { a.delete("desen"); a.delete("siklik"); }
+  try{ history.replaceState(null,"","#"+a.toString().replace(/%3A/g,":").replace(/%2C/g,",")); }catch(e){} }
+function dsSec(k){ if(dsAyri) dsB[dsBant]=k; else dsKod=k; yzYaz(); dsAdres(); }
+function dsKur(){ const z=$("yz-ds"); z.textContent=""; $("ds-bn").textContent=""; const y=dsY(); if(!y) return;
+  (SET.dsk||[]).forEach(x=>{ if(!y.dz.d[x.k]) return; const b=document.createElement("button"); b.type="button"; b.dataset.k=x.k;
+    const im=document.createElement("img"); im.alt=""; im.width=56; im.height=40; im.decoding="async"; im.src=x.r; const sp=document.createElement("span"); sp.textContent=x.e;
+    b.append(im,sp); b.addEventListener("click",()=>dsSec(x.k)); z.appendChild(b); });
+  y.g.forEach((_,i)=>{ const b=document.createElement("button"); b.type="button"; b.dataset.b=i; b.textContent=(i+1)+". bant";
+    b.addEventListener("click",()=>{ dsBant=i; dsVurgu=performance.now(); yzYaz(); }); $("ds-bn").appendChild(b); }); }
+function dsYaz(){ const y=dsY(), ac=!!y&&yzKip==="sonra"; $("yz-desen").hidden=!ac; if(!ac) return;
+  const sk=dsSik(), k=dsAyri?dsBantKod(dsBant):dsTaban(), cok=y.g.length>1;
+  for(const b of $("ds-sk").children) b.setAttribute("aria-pressed",b.dataset.s===sk);
+  $("ds-bant").hidden=!cok; for(const b of $("ds-ayri").children) b.setAttribute("aria-pressed",(b.dataset.a==="1")===dsAyri);
+  $("ds-bn").hidden=!dsAyri; for(const b of $("ds-bn").children) b.setAttribute("aria-pressed",+b.dataset.b===dsBant);
+  for(const b of $("yz-ds").children){ const e=y.dz.d[b.dataset.k][sk], uy=dsAyri?e.u[dsBant]:Math.min(...e.u); b.setAttribute("aria-pressed",b.dataset.k===k); b.dataset.uy=uy;
+    b.title=uy?"":"Bu gövdeye uygun değil: bant enine yeterince sığmıyor"; }
+  const e=y.dz.d[k][sk], uy=dsAyri?e.u[dsBant]:Math.min(...e.u); $("ds-not").textContent=e.a+"."+(uy?"":" Bu gövdeye uygun değil: bant enine yeterince sığmıyor.")+" Gösterimdir; kesim atölyede yapılır."; }
+for(const b of $("ds-sk").children) b.addEventListener("click",()=>{ dsSk=b.dataset.s; yzYaz(); dsAdres(); });
+for(const b of $("ds-ayri").children) b.addEventListener("click",()=>{ const y=dsY(); if(!y) return; const ay=b.dataset.a==="1"; if(ay===dsAyri) return;
+  if(ay){ dsB=y.g.map(()=>dsTaban()); dsBant=0; dsVurgu=performance.now(); } else dsKod=dsBantKod(dsBant); dsAyri=ay; yzYaz(); dsAdres(); });
+function yzYaz(){ const Y=urun&&urun.yi; $("v-yuzey").hidden=!Y; for(const b of $("yz-kip").children) b.setAttribute("aria-pressed",b.dataset.c===yzKip);
+  dsYaz(); if(!Y) return;
+  $("yz-not").textContent=yzKip==="isaret"?[...new Set(Y.map(y=>y.a).filter(Boolean))].join(" "):yzKip==="sonra"?(dsY()?"":"Gösterimdir; kesim atölyede yapılır."):"Dökümden çıktığı hâl: işaretli bölge düz, cilalı ve kesim payı kadar etli."; }
 function yzCiz(w,h,R,yk){ const isr=yk==="isaret";
   if(isr){ gl.uniform1f(U.cz,1); gl.uniform4f(U.kn,0,0,0,0); gl.disableVertexAttribArray(1); gl.disableVertexAttribArray(2); gl.vertexAttrib3f(1,0,1,0); gl.vertexAttrib1f(2,1);
     const ox=1.6/w, oy=1.6/h;   // ~0,8 piksel kaydırılmış üç geçiş: çizgi ~2 piksel kalınlıkta (WebGL çizgisi 1 piksel)
@@ -769,7 +876,7 @@ function yzCiz(w,h,R,yk){ const isr=yk==="isaret";
     const gor=!!en&&en.z>0.08; if(o.el.hidden!==!gor) o.el.hidden=!gor; if(!gor) return;
     const e=ekranaM(en.p), gw=o.el.offsetWidth||90, x=clamp(e[0]+8,4,Math.max(4,cv.clientWidth-gw-4)), y=clamp(e[1]-11,4,Math.max(4,cv.clientHeight-30));
     o.el.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px)"; }); }
-for(const b of $("yz-kip").children) b.addEventListener("click",()=>{ yzKip=b.dataset.c; yzYaz(); });
+for(const b of $("yz-kip").children) b.addEventListener("click",()=>{ yzKip=b.dataset.c; yzYaz(); dsAdres(); });
 function montajListe(){ const L=$("liste"), E=$("etiketler"), M_=urun.montaj, kod=urun.kod; L.textContent="";
   M_.forEach((st,i)=>{ const P_=urun.parcalar.filter(q=>q.ms===i), li=document.createElement("li"); li.className="adim"; li.dataset.i=i; li.dataset.acik=0;
     const hazir=P_.length&&P_.every(q=>urun.gruplar[q.g].tur==="hazir"), y=ROZET[st.y];
@@ -806,7 +913,7 @@ $("oynat").addEventListener("click",()=>{ oynA=p; oynB=(oynuyor?oynB<0.5:p>0.5)?
 $("parcali").addEventListener("click",()=>{ kamAc(); if(urun.montaj){ oynA=p; oynB=0; oynSure=montajSure()*Math.max(0.25,p); oynT0=performance.now(); oynuyor=!azHareket; if(azHareket) p=0; adimYaz(); return; } oynuyor=false; p=0; adimYaz(); });
 $("birlesik").addEventListener("click",()=>{ kamGeri(); if(urun.montaj){ oynA=p; oynB=1; oynSure=montajSure()*Math.max(0.25,1-p); oynT0=performance.now(); oynuyor=!azHareket; if(azHareket) p=1; adimYaz(); return; } oynuyor=false; p=1; adimYaz(); });   // montaj adımlı üründe sırayla, tek tek oturarak
 $("liste").addEventListener("keydown",e=>{ if(!urun.montaj||(e.key!=="ArrowDown"&&e.key!=="ArrowUp")) return; e.preventDefault(); aktifAc(aktifA<0?0:aktifA+(e.key==="ArrowDown"?1:-1),true); });
-$("bag").addEventListener("click",async()=>{ const a=new URL("../u/"+encodeURIComponent(urun.kisa)+".html",location.href).href, b=$("bag");   // ürünün paylaşım köprüsü (u/<kod>.html)
+$("bag").addEventListener("click",async()=>{ const A_=adresParca(), ek=dsY()&&yzKip==="sonra"&&A_.get("desen")?"#desen="+A_.get("desen")+"&siklik="+dsSik():"", a=new URL("../u/"+encodeURIComponent(urun.kisa)+".html",location.href).href+ek, b=$("bag");   // ürünün paylaşım köprüsü (u/<kod>.html); desen seçiliyse u/ sayfası onu set sayfasına geçirir
   let ok=false; try{ await navigator.clipboard.writeText(a); ok=true; }catch(e){ const t=document.createElement("textarea"); t.value=a; document.body.appendChild(t); t.select(); try{ ok=document.execCommand("copy"); }catch(_){} t.remove(); }
   b.textContent=ok?"Kopyalandı":a; b.dataset.adres=a; setTimeout(()=>{ b.textContent="Bağlantıyı kopyala"; },2200); });
 $("salla").addEventListener("click",salla); $("cevir").addEventListener("click",()=>{ mekItki(ilkDg); DN.forEach((st,i)=>{ const d=urun.doner[i]; if(d.sin) st.h=st.h===d.sin[1]?d.sin[0]:d.sin[1]; else st.w+=7+3*Math.random(); }); });
@@ -842,9 +949,9 @@ function acilisKapat(){ const bekle=gec?0:Math.max(0,1500-(performance.now()-t0)
 (async()=>{ try{
   gl=cv.getContext("webgl",{alpha:true,antialias:true,premultipliedAlpha:true}); if(!gl) throw new Error("Bu cihazda 3B görüntü açılamıyor (WebGL yok).");
   const prog=gl.createProgram(); prog_=prog; gl.attachShader(prog,kabuk(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,kabuk(gl.FRAGMENT_SHADER,FS));
-  gl.bindAttribLocation(prog,0,"p"); gl.bindAttribLocation(prog,1,"n"); gl.bindAttribLocation(prog,2,"ao"); gl.linkProgram(prog);
+  gl.bindAttribLocation(prog,0,"p"); gl.bindAttribLocation(prog,1,"n"); gl.bindAttribLocation(prog,2,"ao"); ["q","gs","gt","gu"].forEach((k,i)=>gl.bindAttribLocation(prog,3+i,k)); gl.linkProgram(prog);
   if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog)); gl.useProgram(prog);
-  for(const k of ["sl","kn","P","R","M","T","Tr","C","tur","kil","Sa","Sb","Sc","Ss","sac","kes","yz","par","gok","yer","bay","bay2","poz","kut","yum","aoD","gez","ys","cz","zo"]) U[k]=gl.getUniformLocation(prog,k);
+  for(const k of ["sl","kn","P","R","M","T","Tr","C","tur","kil","Sa","Sb","Sc","Ss","sac","kes","yz","par","gok","yer","bay","bay2","poz","kut","yum","aoD","gez","ys","cz","zo","dk","dE","dD"]) U[k]=gl.getUniformLocation(prog,k); U.dv=gl.getUniformLocation(prog,"dv[0]");
   gl.enableVertexAttribArray(0); gl.enableVertexAttribArray(1); gl.enableVertexAttribArray(2); gl.enable(gl.DEPTH_TEST); dortgenKur(prog);
   secenek("metaller",METAL,0,m=>metal=m); secenek("taslar",TAS,0,m=>{ tas=m; tasSecildi=true; });
   secenek("metaller2",[["ayni","Gövdeyle aynı",null,null]].concat(METAL),0,m=>{ metal2=m[3]?m:null; });
@@ -858,7 +965,7 @@ function acilisKapat(){ const bekle=gec?0:Math.max(0,1500-(performance.now()-t0)
   const km=GOMULU?null:oku("mod"); modSec(km&&document.querySelector('[data-p="'+km+'"]')?km:"vitrin");
   const hu=adresUrun(), ku=oku("urun"); sec(hu||(ku&&MAN.some(u=>u.kod===ku)?ku:MAN[0].kod)); requestAnimationFrame(kare);
   if(GOMULU){ acilis.hidden=true; donIstek=true; sonDokunus=-1e9; } else acilisKapat();
-  addEventListener("hashchange",()=>{ const k=adresUrun(); if(k&&(!urun||k!==urun.kod)) sec(k); else if(k&&(urun.rg||urun.top)){ renkKur(); renkCiz(); } });
+  addEventListener("hashchange",()=>{ const k=adresUrun(); if(k&&(!urun||k!==urun.kod)) sec(k); else { if(k&&(urun.rg||urun.top)){ renkKur(); renkCiz(); } if(k&&dsY()){ dsSifirla(); dsAdresOku(); yzYaz(); } } });
 }catch(e){ acilis.hidden=true; durum.hidden=false; durum.textContent=e.message||String(e); } })();
 </script>
 </body>
