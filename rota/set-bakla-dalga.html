@@ -108,6 +108,14 @@ body{background:var(--zemin);margin:0;overflow:hidden;overscroll-behavior:none}
 #yz-desen h2{margin:14px 0 0} .ds-ust{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
 .ds-sk button,.ds-bant button{height:30px;min-width:0;padding:0 9px;font-size:12px}
 .ds-bant{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:8px;font-size:12px;color:var(--faint)} .ds-bant .seg{flex:none}
+/* mine seçici (yalnız mine katmanı olan üründe): Mineli / Döküm, bölgeler aynı / ayrı, bölge düğmeleri, renk çipleri */
+#mn-sec h2{margin:14px 0 0} #mn-ad{margin-left:6px;color:var(--fg);letter-spacing:.06em}
+.mn-bn{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));margin-top:6px} .mn-bn button{display:flex;align-items:center;gap:7px;height:auto;min-height:34px;padding:4px 8px;font-size:12px;line-height:1.15;white-space:normal;text-align:left}
+.mn-bn .nokta{width:12px;height:12px}
+.mn-renk{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px;margin-top:8px}
+.mn-renk button{aspect-ratio:1;min-width:0;width:100%;padding:0;border:1px solid rgba(239,230,211,.22);transition:transform .1s}
+.mn-renk button:hover{transform:translateY(-1px)} .mn-renk button[aria-pressed="true"]{outline:2px solid var(--fg);outline-offset:2px}
+.mn-renk button:focus-visible{outline:2px solid var(--kiry);outline-offset:2px}
 .ds-iz{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin-top:8px}
 .ds-iz button{display:flex;flex-direction:column;align-items:stretch;gap:4px;padding:3px 3px 5px;min-width:0;background:var(--pl);color:var(--mute);font-size:11.5px;letter-spacing:.02em;transition:background .12s,color .12s,opacity .12s}
 .ds-iz button:hover{color:var(--fg)} .ds-iz img{display:block;width:100%;height:auto;aspect-ratio:7/5;object-fit:cover;background:var(--pl2)}
@@ -138,6 +146,7 @@ body{background:var(--zemin);margin:0;overflow:hidden;overscroll-behavior:none}
   .modlar{padding-top:8px} .modlar button{height:44px}
   .kunye strong{font-size:21px} .kunye{bottom:10px} .bakis{right:8px;top:8px}
   .et span{display:none} .et.yzet span{display:grid}
+  .mn-renk{grid-template-columns:repeat(auto-fill,minmax(40px,1fr))}   /* telefon: mine çipleri dokunmaya yeter (≥ 40 px), satır kırılır */
 }
 </style>
 </head>
@@ -184,6 +193,7 @@ body{background:var(--zemin);margin:0;overflow:hidden;overscroll-behavior:none}
     </section>
     <section data-p="malzeme" hidden>
       <h2 id="metal-b">Metal</h2><div class="izgara uc" id="metaller" role="group" aria-label="Metal rengi"></div>
+      <div id="v-mine" hidden><h2>Mine</h2><div class="seg yz-kip" id="mn-kip" role="group" aria-label="Mine görünümü"><button type="button" data-c="mineli">Mineli</button><button type="button" data-c="dokum">Döküm</button></div><div id="mn-sec"><div class="ds-bant" id="mn-bant" hidden><span>Bölgeler</span><div class="seg" id="mn-ayri" role="group" aria-label="Bölgeler"><button type="button" data-a="0">Aynı</button><button type="button" data-a="1">Ayrı</button></div></div><div class="seg mn-bn" id="mn-bn" role="group" aria-label="Bölge" hidden></div><h2>Renk <span id="mn-ad"></span></h2><div class="mn-renk" id="mn-renk" role="group" aria-label="Mine rengi"></div></div></div>
       <div id="b-renk" hidden></div><div id="b-top" hidden></div>
       <div id="b-metal2"><h2>Dönen parça metali</h2><div class="izgara" id="metaller2" role="group" aria-label="Dönen parça metali"></div></div>
       <div id="b-tas"><h2 id="tas-b">Taş</h2><div class="izgara" id="taslar" role="group" aria-label="Taş türü"></div>
@@ -306,6 +316,12 @@ const BAYRAKGL=BAYRAK.map(([c,wh,k])=>{ c=birim(c); const tx=birim(cap([0,1,0],c
 // Yalnız Stüdyo'da (bay2) devreye giren geniş bayraklar: metalde belirgin açık–koyu geçiş; Aydınlık ve Sade etkilenmez
 const BAYRAK2=[[[0.3,0.92,0.22],[0.075,0.95],0.85],[[-0.36,0.9,0.12],[0.06,0.95],0.8],[[0.0,0.62,-0.78],[0.7,0.09],0.7],
   [[0.75,0.55,0.35],[0.1,0.6],0.7],[[-0.8,0.45,0.3],[0.1,0.6],0.7],[[0.5,0.15,0.85],[0.2,0.6],0.6],[[-0.6,0.18,0.78],[0.18,0.55],0.55]];
+// Mine parlamaları (yalnız mine programında): küçük, keskin pencereler (yön, yarı genişlik/yükseklik, güç). İlki önden bakışta madalyonun sol üstüne düşer.
+const MINEP=[[[-0.035,-0.105,1],[0.014,0.005],2.0],[[0.045,-0.215,1],[0.0045,0.0045],1.4],[[0,0.94,0.34],[0.06,0.02],1.6],[[0.62,0.42,0.66],[0.02,0.045],1.6],[[-0.9,0.12,0.42],[0.012,0.07],1.2],[[0.05,0.2,1],[0.05,0.025],0.8]];
+// Geniş, soluk parlaklık lekeleri (gauss): eğik bakışta üst ve yan ışık kutularının yumuşak yansıması (cam hissi); ön kutu yok (önden bakışta yüzeyi soldurmasın).
+const MINEH=[[[0,0.94,0.34],[0.16,0.08],0.16],[[0.62,0.42,0.66],[0.07,0.13],0.14],[[-0.9,0.12,0.42],[0.05,0.16],0.12],[[-0.55,0.75,-0.35],[0.1,0.06],0.12],
+  [[0.8,-0.45,0.4],[0.16,0.26],0.11],[[-0.85,-0.3,0.4],[0.16,0.26],0.11]];   // son ikisi: alçak yan yansıtıcı kartlar (yana eğik bakışta yumuşak parlaklık)
+const MINEGL=MINEH.map(([c,wh,k])=>{ c=birim(c); const tx=birim(cap([0,1,0],c)), ty=cap(c,tx); return "g+=hale(d,"+v3(c)+","+v3(tx)+","+v3(ty)+",vec2("+wh[0].toFixed(4)+","+wh[1].toFixed(4)+"),"+k.toFixed(2)+");"; }).join("\n  ")+"\n  "+MINEP.map(([c,wh,k])=>{ c=birim(c); const tx=birim(cap([0,1,0],c)), ty=cap(c,tx); return "g+=parla(d,"+v3(c)+","+v3(tx)+","+v3(ty)+",vec2("+wh[0].toFixed(4)+","+wh[1].toFixed(4)+"),"+k.toFixed(2)+");"; }).join("\n  ");
 const BAYRAK2GL=BAYRAK2.map(([c,wh,k])=>{ c=birim(c); const tx=birim(cap([0,1,0],c)), ty=cap(c,tx); return "c*=1.0-bay2*"+k.toFixed(3)+"*kutu(d,"+v3(c)+","+v3(tx)+","+v3(ty)+",vec2("+wh[0].toFixed(3)+","+wh[1].toFixed(3)+"),e*1.5+0.05);"; }).join("\n ");
 /* İki program, aynı kaynak: desensiz (ana, prog_) ve "#define DESEN" ile desenli (PD, tembel: yalnız desen taşıyan parça "Kesimden sonra"da
    çizilirken ilk gerektiğinde derlenir). Desensiz program desen öncesi programla birebir aynıdır (ek öznitelik, aktarım, dal yok). */
@@ -371,10 +387,30 @@ vec3 ortam(vec3 d,float e){
  ${ISIKGL}
  ${BAYRAK2GL}
  return c; }
+#ifdef MINE
+float parla(vec3 d,vec3 c,vec3 tx,vec3 ty,vec2 wh,float k){ float z=dot(d,c); if(z<=0.02) return 0.0; vec2 q=vec2(dot(d,tx),dot(d,ty))/(z*wh); float r2=dot(q,q);
+ return k*(exp(-r2*r2*1.5)+0.07*exp(-r2*0.25)); }   /* mine parlaması: yuvarlatılmış, keskin çekirdek + soluk hale */
+float hale(vec3 d,vec3 c,vec3 tx,vec3 ty,vec2 wh,float k){ float z=dot(d,c); if(z<=0.02) return 0.0; vec2 q=vec2(dot(d,tx),dot(d,ty))/(z*wh); return k*exp(-dot(q,q)); }
+#endif
 vec3 aces(vec3 x){ return clamp((x*(2.51*x+0.03))/(x*(2.43*x+0.59)+0.14),0.0,1.0); }
 vec3 ton(vec3 x){ float m=max(max(x.r,x.g),max(x.b,0.0001)); vec3 a=x*(aces(vec3(m)).r/m); return pow(mix(a,aces(x),0.28),vec3(0.4545)); }   // parlak yerde de metalin rengi kalsın
 void main(){ if(cz>0.5){ gl_FragColor=vec4(ton(vec3(0.70,0.11,0.037)*1.7)*sl,sl); return; }
  vec3 n=normalize(vN); vec3 v=normalize(-vV);
+#ifdef MINE
+ { if(dot(n,v)<0.0) n=-n; float nv=max(dot(n,v),0.0); vec3 r=reflect(-v,n); float f=pow(1.0-nv,5.0); float oc=1.0-aoD*(1.0-smoothstep(0.08,0.62,vAo));
+  /* soğuk mine (epoksi), çıktı palet renginde (ton eğrisinden geçmez): önden bakışta renk = palet rengi. Gövde ışığı ortamın normal yönündeki
+     parlaklığının bakış yönündekine oranı (eğildikçe hafif açılır/koyulaşır; ışık kipinden bağımsız). */
+  vec3 W=vec3(0.3,0.55,0.15); float s=clamp(dot(ortam(n,0.9),W)/max(dot(ortam(v,0.9),W),1e-3),0.72,1.08)*0.97*mix(1.0,oc,0.5);
+  /* yansıma: ortam BULANIK örneklenir (ışık kutularının kenarı yüzeyde keskin çizgi çizmesin), Fresnel ile önden zayıf, sıyırmada güçlü, üst sınırlı */
+  float F=min(0.007+0.55*f,0.4); vec3 eb=ortam(r,0.5); eb=eb/(1.0+0.4*dot(eb,W));
+  /* küçük keskin parlamalar: dünyaya bağlı birkaç küçük pencere (döndürünce yüzeyde gezer); önden bakışta biri sol üstte */
+  float cg=cos(gez), sg=sin(gez); vec3 d=vec3(cg*r.x-sg*r.z,r.y,sg*r.x+cg*r.z); float g=0.0;
+  ${MINEGL}
+  vec3 col=C*s*(1.0-F)+eb*F+vec3(1.0,0.985,0.96)*g*(0.55+0.45*f);
+  col=mix(col,0.8+0.2*(1.0-exp(-(col-0.8)*5.0)),step(0.8,col));   /* parlamada yumuşak doyma */
+  if(ys>0.5) col=mix(col,vec3(1.0),0.2);   /* bölge seçilince kısa süre açık */
+  gl_FragColor=vec4(pow(clamp(col,0.0,1.0),vec3(0.4545))*sl,sl); return; }
+#endif
 #ifdef DESEN
  { vec3 H=desenH(vQ.xy); vec3 g=H.y*vGs+H.z*vGt; if(dD*vQ.z/dE<H.x) g=(dD/dE)*vGu; n=normalize(n+g); }   // desen: n' = n + ∇h (h içeri derinlik); kenarda etek h ≤ D·u/etek
 #endif
@@ -435,6 +471,16 @@ function progYap(on){ const p=gl.createProgram(); gl.attachShader(p,kabuk(gl.VER
   if(!gl.getProgramParameter(p,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p)); return p; }
 /* desenli program (tembel): ilk desenli çizimde derlenir. Ana programın o anki bütün uniform değerleri her geçişte ona aktarılır (yalnız
    "Kesimden sonra"da desen taşıyan parça için; desensiz sayfada hiç çalışmaz). */
+/* mine programı (tembel, desenli program gibi): yalnız mineli üründe "Mineli" görünümde mine yüzeyi (rl 3) çizilirken ilk gerektiğinde derlenir.
+   Ana programın uniform değerleri her mine parçasından önce aktarılır; minesiz sayfada hiç çalışmaz (ana program değişmedi). */
+let PM=null;
+function mineProg(){ if(PM) return PM; const p=progYap("#define MINE 1\n"), L=[], n=gl.getProgramParameter(prog_,gl.ACTIVE_UNIFORMS);
+  for(let i=0;i<n;i++){ const a=gl.getActiveUniform(prog_,i), ad=a.name.replace(/\[0\]$/,""), k=gl.getUniformLocation(p,ad); if(k) L.push([gl.getUniformLocation(prog_,ad),k,a.type]); }
+  PM={p,L,C:gl.getUniformLocation(p,"C"),ys:gl.getUniformLocation(p,"ys")}; return PM; }
+function mineGec(){ const D=mineProg(), V=D.L.map(([a,,ty])=>[gl.getUniform(prog_,a),ty]); gl.useProgram(D.p);
+  D.L.forEach(([,k],i)=>{ const [v,ty]=V[i]; if(ty===gl.FLOAT) gl.uniform1f(k,v); else if(ty===gl.FLOAT_VEC3) gl.uniform3fv(k,v); else if(ty===gl.FLOAT_VEC4) gl.uniform4fv(k,v);
+    else if(ty===gl.FLOAT_MAT3) gl.uniformMatrix3fv(k,false,v); else if(ty===gl.FLOAT_MAT4) gl.uniformMatrix4fv(k,false,v); else if(ty===gl.FLOAT_VEC2) gl.uniform2fv(k,v); else gl.uniform1i(k,v); });
+  return D; }
 let PD=null;
 function desenProg(){ if(PD) return PD; const p=progYap("#define DESEN 1\n"), L=[], n=gl.getProgramParameter(prog_,gl.ACTIVE_UNIFORMS);
   for(let i=0;i<n;i++){ const a=gl.getActiveUniform(prog_,i), ad=a.name.replace(/\[0\]$/,""), k=gl.getUniformLocation(p,ad); if(k) L.push([gl.getUniformLocation(prog_,ad),k,a.type]); }
@@ -558,7 +604,7 @@ function hedefKur(w,h){ const yap=()=>{ const tx=gl.createTexture(); gl.bindText
   const ok=gl.checkFramebufferStatus(gl.FRAMEBUFFER)===gl.FRAMEBUFFER_COMPLETE; BK.A=yap(); gl.bindFramebuffer(gl.FRAMEBUFFER,null); BK.w=w; BK.h=h; return ok; }
 const HAL=(i,b)=>{ let f=1,r=0; while(i>0){ f/=b; r+=f*(i%b); i=Math.floor(i/b); } return r; };
 function imzaAl(){ const z=x=>typeof x==="number"?x.toFixed(4):String(x); let s=[sapma,yunus,yakin,kay[0],kay[1],p,odakK,mod,kil,metal[0],metal2?metal2[0]:"",tas[0],isik,gezinme,kucuk,etiket,gizli.join(),urun.kod,cv.clientWidth,cv.clientHeight].map(z).join("|");
-  for(const st of FZ) if(st.x) s+="|"+st.x.map(x=>x.toFixed(2)).join(",")+st.f.toFixed(3); for(const st of DN) s+="|"+st.f.toFixed(3); if(urun.rg) s+="|"+RS.map(x=>x[0]).join(); if(urun.top) s+="|t"+TOP[0]+(topSecildi?"!":""); if(mekGorAcik()) s+="|mg"; for(const st of MKS) if(st.kl) s+="|k"+st.kl.toFixed(3); if(urun.montaj) s+="|g"+gizliA.join()+aktifA; for(const st of MKS) s+="|"+st.a.toFixed(4)+(st.r?st.r.map(x=>x.toFixed(3)).join(","):""); if(urun.yi) s+="|y"+yzKip+(dsKod||"")+(dsSk||"")+(dsAyri?"A"+dsB.join(",")+dsBant:"")+(performance.now()-dsVurgu<900?"v":""); return s; }
+  for(const st of FZ) if(st.x) s+="|"+st.x.map(x=>x.toFixed(2)).join(",")+st.f.toFixed(3); for(const st of DN) s+="|"+st.f.toFixed(3); if(urun.rg) s+="|"+RS.map(x=>x[0]).join(); if(urun.top) s+="|t"+TOP[0]+(topSecildi?"!":""); if(mekGorAcik()) s+="|mg"; for(const st of MKS) if(st.kl) s+="|k"+st.kl.toFixed(3); if(urun.montaj) s+="|g"+gizliA.join()+aktifA; for(const st of MKS) s+="|"+st.a.toFixed(4)+(st.r?st.r.map(x=>x.toFixed(3)).join(","):""); if(urun.yi) s+="|y"+yzKip+(dsKod||"")+(dsSk||"")+(dsAyri?"A"+dsB.join(",")+dsBant:"")+(performance.now()-dsVurgu<900?"v":""); if(urun.mn) s+="|m"+mnKip+mnR.map(x=>x[0]).join()+(mnAyri?"A"+mnBolge+(performance.now()-mnVurgu<900?"v":""):""); return s; }
 /* Işık gezinmesi: ürün durunca ortam ±7° yatay, 14 sn dönemle yumuşak sinüs çizer; yansımalar canlı durur. Açıkken durağan birikim bitmez:
    kaydırılmış örnekler üstel ortalamayla (son ≈5 kare) karışır, kare hızı 30'a sınırlanır. Kapalıyken 16 örnek biriktirilip çizim durur. */
 let isik="studyo", gezinme=!azHareket, gezT0=performance.now(), gorunur=true, sonCizim=0;
@@ -597,8 +643,8 @@ function sahneCiz(dt,w,h,jx,jy){
   gl.uniformMatrix4fv(U.P,false,P); gl.uniformMatrix3fv(U.R,false,new Float32Array(R)); gl.uniform3f(U.T,kay[0]-Rf[0],kay[1]-Rf[1],-D-Rf[2]); gl.uniform1f(U.kil,mod==="teknik"&&kil?1:0);
   const G=urun.gruplar, top=G.map(()=>[0,0,0,0]), S=urun.sarkac, A_=ag[urun.kod];
   const soluk=mekGorAcik(), solL=[]; gl.uniform1f(U.sl,1);
-  const yzk=yzGor();
-  const cizQ=(pc,gec)=>{ if(pc.rl&&(pc.rl===2?yzk!=="sonra":(yzk==="sonra"&&!pc._dz))) return;   /* demo yalnız "Kesimden sonra"da; yüzey grubu orada gizli (desen katmanında desenle çizilir) */
+  const yzk=yzGor(), mnA=mnGor();
+  const cizQ=(pc,gec)=>{ if(pc.rl===3?!mnA:(pc.rl&&(pc.rl===2?yzk!=="sonra":(yzk==="sonra"&&!pc._dz)))) return;   /* mine yüzeyi (rl 3) yalnız "Mineli"de */   /* demo yalnız "Kesimden sonra"da; yüzey grubu orada gizli (desen katmanında desenle çizilir) */
     if(soluk&&!gec&&!mekVurgu(pc)){ solL.push(pc); return; } const g=G[pc.g], tasMi=g.tur==="tas", e=etkenQ(pc); let O=pc._ev?top3(carp(pc._ev._o,etkenQ(pc._ev)),carp(pc._k,e)):carp(pc._o||[0,0,0],e);   // taş yuvasının bulunduğu parçayla gider, sonra yuvaya oturur
     if(!pc.rl){ const t=top[pc.g]; t[0]+=pc.c[0]+O[0]; t[1]+=pc.c[1]+O[1]; t[2]+=pc.c[2]+O[2]; t[3]++; }
     const topQ=!!(urun.top&&pc.tp);   // serbest top (inci, taş boncuk, altın): taş grubunda olsa da "Top" seçimiyle çizilir
@@ -625,6 +671,9 @@ function sahneCiz(dt,w,h,jx,jy){
     if((urun.montaj&&mod==="montaj"&&aktifA>=0&&adimNo(pc)===aktifA)||(soluk&&!gec)){ const c_=gl.getUniform(prog_,U.C); gl.uniform3f(U.C,c_[0]*1.35+0.05,c_[1]*1.35+0.04,c_[2]*1.35+0.02); }   // açık satırın parçaları vurgulu
     if(dzA){ const D=desenGec(), z=pc._dz, g=z.y.dz.d[dsBantKod(z.b)][dsSik()].g[z.b]; gl.uniform1f(D.yz,4); gl.uniform1fv(D.dv,new Float32Array(g)); gl.uniform1f(D.dE,z.y.dz.e||0.11); gl.uniform1f(D.dD,g[0]===5?g[3]:g[2]);
       if(dsAyri&&z.b===dsBant&&performance.now()-dsVurgu<900) gl.uniform1f(D.ys,1); }   // bant seçilince kısa süre işaretli
+    const mnQ=pc.rl===3&&!gec;   // mine yüzeyi: mine programıyla, gövdenin önüne hafif kaydırılmış derinlikle (yuva kenarıyla çakışmasın)
+    if(mnQ){ const D=mineGec(), r=(mnR[pc.mb]||MINE_R[0])[3]; gl.uniform3f(D.C,r[0],r[1],r[2]); gl.uniform1f(D.ys,mnAyri&&pc.mb===mnBolge&&performance.now()-mnVurgu<900?1:0);
+      gl.enable(gl.POLYGON_OFFSET_FILL); gl.polygonOffset(-1,-2); }
     for(const mi of ms){ const a=A_[mi], dq=dzA&&a.qb;
     gl.bindBuffer(gl.ARRAY_BUFFER,a.vb); gl.vertexAttribPointer(0,3,gl.FLOAT,false,0,0);
     gl.bindBuffer(gl.ARRAY_BUFFER,a.nb); gl.vertexAttribPointer(1,3,gl.FLOAT,false,0,0);
@@ -633,7 +682,8 @@ function sahneCiz(dt,w,h,jx,jy){
       gl.bindBuffer(gl.ARRAY_BUFFER,a.gb); for(let k=0;k<3;k++) gl.vertexAttribPointer(4+k,3,gl.FLOAT,false,36,12*k); }
     if(a.tas) gl.drawArrays(gl.TRIANGLES,0,a.n); else { gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,a.ib); gl.drawElements(gl.TRIANGLES,a.n,gl.UNSIGNED_SHORT,0); }
     if(dq) for(let k=3;k<7;k++) gl.disableVertexAttribArray(k); }
-    if(dzA) gl.useProgram(prog_); };
+    if(dzA) gl.useProgram(prog_);
+    if(mnQ){ gl.disable(gl.POLYGON_OFFSET_FILL); gl.useProgram(prog_); } };
   urun.parcalar.forEach(pc=>cizQ(pc,false));
   if(solL.length){ gl.enable(gl.BLEND); gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA); gl.depthMask(false); gl.uniform1f(U.sl,0.2); solL.forEach(pc=>cizQ(pc,true)); gl.uniform1f(U.sl,1); gl.depthMask(true); gl.disable(gl.BLEND); }   // gövde soluk: pimler, miller arkadan görünür
   gl.uniform1f(U.ys,0); if(yzEl.length) yzCiz(w,h,R,yzk);
@@ -813,7 +863,7 @@ function sarkacKur(){ const S=urun.sarkac, A_=ag[urun.kod];
     const u=carp(ar,1/D0), r=k=>Math.abs(u[0])*k.yari[0]+Math.abs(u[1])*k.yari[1]+Math.abs(u[2])*k.yari[2], rr=r(a)+r(b);
     if(D0-rr<0.52*(a.Lc+b.Lc)) CIFT.push([i,j,rr>D0?D0*0.9:rr*0.9]); } }
 function teknikYaz(){ const G=urun.gruplar, s=urun.boyut.map(x=>String(x).replace(".",",")), yon=urun.taban==="-z"?[s[0],s[2],s[1]]:s, say=t=>G.filter(g=>g.tur===t).reduce((a,g)=>a+g.adet,0);
-  const satir=(a,b)=>'<div class="satir"><span>'+a+'</span><span class="deger">'+b+'</span></div>', ucgen=urun.aglar.reduce((a,m,i)=>a+(urun.parcalar.some(q=>q.rl===2&&[].concat(q.m).includes(i))?0:m.nf),0);   /* demo ağı sayılmaz */
+  const satir=(a,b)=>'<div class="satir"><span>'+a+'</span><span class="deger">'+b+'</span></div>', ucgen=urun.aglar.reduce((a,m,i)=>a+(urun.parcalar.some(q=>(q.rl===2||q.rl===3)&&[].concat(q.m).includes(i))?0:m.nf),0);   /* demo ve mine ağı sayılmaz */
   $("t-kunye").innerHTML=satir("Ölçü (G × Y × D)",yon.join(" × ")+" mm")+urun.gram.split(" · ").map(x=>{ const i=x.indexOf(" "); return satir(x.slice(0,i),x.slice(i+1)); }).join("")+
     satir("Döküm parça",say("dokum"))+satir("Hazır parça",say("hazir"))+satir("Taş",say("tas"))+satir("Sallanan parça",urun.sarkac.length||"yok")+satir("Ön izleme ağı",ucgen.toLocaleString("tr-TR")+" üçgen");
   $("t-parca").innerHTML=sira.map((gi,k)=>satir((k+1)+" · "+G[gi].ad,G[gi].adet+" × "+TUR[G[gi].tur])).join(""); }
@@ -839,7 +889,7 @@ function sec(kod){ urun=MAN.find(u=>u.kod===kod); const G=urun.gruplar; gizli=G.
   { const taslar=urun.parcalar.filter(q=>G[q.g].tur==="tas"&&!q.tp), varT=taslar.length>0; ayrim=taslar.some(q=>q.k)&&taslar.some(q=>!q.k);
     $("b-tas").hidden=!varT; $("r-kucuk").hidden=!ayrim; $("tas-b").textContent=ayrim?"Ana taş":"Taş"; $("b-metal2").hidden=!DN.length;
     if(!tasSecildi){ tas=tasBul(urun.tas)||TAS[0]; for(const k of $("taslar").children) k.setAttribute("aria-pressed",k.id==="taslar-"+tas[0]); }
-    $("malzeme-not").textContent=varT?"Renk yalnız görünümdür; ölçüler aynı kalır. Taş yoğunluğu değişirse takılan ağırlık biraz oynar.":"Renk yalnız görünümdür; ölçüler aynı kalır. Bu modelde taş yok."; } teknikYaz(); adimYaz(); $("r-mek").hidden=!(urun.mek&&urun.mek.some(n=>n.t!=="s")); if(urun.montaj) montajListe(); renkCiz(); uretimCiz(); dugmeKur(); adimYaz(); yzKip=urun.yi?"isaret":null; dsSifirla(); yzKur(); dsAdresOku(); dsKur(); yzYaz(); sakla("urun",kod); }
+    $("malzeme-not").textContent=varT?"Renk yalnız görünümdür; ölçüler aynı kalır. Taş yoğunluğu değişirse takılan ağırlık biraz oynar.":"Renk yalnız görünümdür; ölçüler aynı kalır. Bu modelde taş yok."; } teknikYaz(); adimYaz(); $("r-mek").hidden=!(urun.mek&&urun.mek.some(n=>n.t!=="s")); if(urun.montaj) montajListe(); renkCiz(); uretimCiz(); dugmeKur(); adimYaz(); yzKip=urun.yi?"isaret":null; dsSifirla(); yzKur(); dsAdresOku(); dsKur(); yzYaz(); mnSifirla(); mnAdresOku(); mnKur(); mnYaz(); sakla("urun",kod); }
 /* ── YÜZEY İŞLEMİ (u.yi; parça rl 1 yüzey grubu, 2 demo; dp döküm parçası). Vitrin ve Malzeme'de üçlü seçim: Döküm (grup gövdeyle aynı metal),
    Kesim bölgesi (grup kiremit yarı saydam boyalı, kenarı çizgili, sahnede "Elmas kesim" etiketi; açılış), Kesimden sonra (grup gizli, demo düz
    fasetlerle). Montaj ve Teknik her zaman döküm hâlini gösterir; demo orada çizilmez. Alan yoksa hiçbir şey görünmez. */
@@ -909,6 +959,43 @@ function yzCiz(w,h,R,yk){ const isr=yk==="isaret";
     const e=ekranaM(en.p), gw=o.el.offsetWidth||90, x=clamp(e[0]+8,4,Math.max(4,cv.clientWidth-gw-4)), y=clamp(e[1]-11,4,Math.max(4,cv.clientHeight-30));
     o.el.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px)"; }); }
 for(const b of $("yz-kip").children) b.addEventListener("click",()=>{ yzKip=b.dataset.c; yzYaz(); dsAdres(); });
+/* ── MİNE (u.mn = [{a: bölge adı, k: bölge anahtarı, v: varsayılan renk, p: [mine yüzeyi parça sıraları]}]; parça rl 3 = mine yüzeyi (yuvayı
+   dolduran hacmin görünen üstü), mb bölge sırası, dp döküm parçası). Vitrin ve Malzeme'de "Mineli" (açılış) / "Döküm" (yuva boş, metal);
+   Montaj ve Teknik döküm hâlini gösterir. Renk bölge başına; birden çok bölgede "Bölgeler: aynı / ayrı". Renk değişince model yeniden kurulmaz.
+   Adres: #urun=…&mine=lacivert (bütün bölgeler) ya da mine=zemin:lacivert,simge:bordo (ayrı); Döküm'e dönünce mine adresten kalkar.
+   mn yoksa hiçbir şey görünmez ve çizim değişmez. */
+const MINE_R=[["lacivert","Lacivert","#1f3290"],["gece_mavisi","Gece mavisi","#16204a"],["turkuaz","Turkuaz","#14aab3"],["acik_mavi","Açık mavi","#72b8ea"],
+  ["zumrut","Zümrüt","#0b7d4e"],["cimen","Çimen","#3f9b2c"],["fistik","Fıstık","#a7c45a"],["sari","Sarı","#f3c516"],["turuncu","Turuncu","#ef7718"],
+  ["mercan","Mercan","#f06650"],["ates_kirmizisi","Ateş kırmızısı","#d2191c"],["bordo","Bordo","#6d0f24"],["pembe","Pembe","#f08db5"],["eflatun","Eflatun","#b58ad8"],
+  ["mor","Mor","#5a2386"],["kahve","Kahve","#6a3f25"],["siyah","Siyah","#121214"],["gri","Gri","#8d9096"],["krem","Krem","#eddcb4"],["beyaz","Beyaz","#f4f2ed"]];
+MINE_R.forEach(m=>{ m[3]=[1,3,5].map(i=>Math.pow(parseInt(m[2].substr(i,2),16)/255,2.2)); });   // [anahtar, ad, örnek (sRGB), doğrusal renk]
+const MINE_ESA={fildisi:"krem",kirmizi:"ates_kirmizisi",ates:"ates_kirmizisi",yesil:"zumrut",mavi:"lacivert",toprak_yesili:"zumrut"};   // kayıttaki eski/eş adlar (toprak_yesili: Burçlar toprak grubu, motor rengi #3f7d4a; paletteki en yakın Zümrüt, ΔE≈10)
+const mnBul=k=>MINE_R.find(m=>m[0]===(MINE_ESA[k]||k))||null;
+let mnKip=null, mnR=[], mnAyri=false, mnBolge=0, mnVurgu=-1e9;
+const mnGor=()=>!!(urun&&urun.mn&&(mod==="vitrin"||mod==="malzeme")&&mnKip==="mineli");
+function mnSifirla(){ const M=urun&&urun.mn; mnKip=M?"mineli":null; mnR=M?M.map(b=>mnBul(b.v)||MINE_R[0]):[]; mnAyri=!!M&&M.length>1&&new Set(mnR).size>1; mnBolge=0; }
+function mnAdresOku(){ const M=urun.mn; if(!M||adresUrun()!==urun.kod) return; const s=adresParca().get("mine"); if(!s) return;
+  if(s.includes(":")){ s.split(",").forEach(x=>{ const [b,r]=x.split(":"), i=M.findIndex(m=>m.k===b), m=mnBul(r); if(i>=0&&m) mnR[i]=m; }); mnAyri=M.length>1; }
+  else { const m=mnBul(s); if(m){ mnR=M.map(()=>m); mnAyri=false; } }
+  mnKip="mineli"; }
+function mnAdres(){ const M=urun.mn; if(GOMULU||!M) return; const a=adresParca(); a.set("urun",urun.kisa||urun.kod);
+  if(mnKip==="mineli") a.set("mine",mnAyri?M.map((b,i)=>b.k+":"+mnR[i][0]).join(","):mnR[0][0]); else a.delete("mine");
+  try{ history.replaceState(null,"","#"+a.toString().replace(/%3A/g,":").replace(/%2C/g,",")); }catch(e){} }
+function mnKur(){ const z=$("mn-renk"), bn=$("mn-bn"); z.textContent=""; bn.textContent=""; const M=urun.mn; if(!M) return;
+  MINE_R.forEach(m=>{ const b=document.createElement("button"); b.type="button"; b.dataset.k=m[0]; b.style.background=m[2]; b.title=m[1]; b.setAttribute("aria-label",m[1]);
+    b.addEventListener("click",()=>{ if(mnAyri) mnR[mnBolge]=m; else mnR=M.map(()=>m); mnYaz(); mnAdres(); }); z.appendChild(b); });
+  M.forEach((g,i)=>{ const b=document.createElement("button"); b.type="button"; b.dataset.b=i; b.innerHTML='<span class="nokta"></span><span></span>'; b.lastChild.textContent=g.a;
+    b.addEventListener("click",()=>{ mnBolge=i; mnVurgu=performance.now(); mnYaz(); }); bn.appendChild(b); }); }
+function mnYaz(){ const M=urun&&urun.mn; $("v-mine").hidden=!M; if(!M) return; const ac=mnKip==="mineli", cok=M.length>1;
+  for(const b of $("mn-kip").children) b.setAttribute("aria-pressed",b.dataset.c===mnKip);
+  $("mn-sec").hidden=!ac; $("mn-bant").hidden=!cok; $("mn-bn").hidden=!(cok&&mnAyri);
+  for(const b of $("mn-ayri").children) b.setAttribute("aria-pressed",(b.dataset.a==="1")===mnAyri);
+  for(const b of $("mn-bn").children){ const i=+b.dataset.b; b.setAttribute("aria-pressed",i===mnBolge); b.firstChild.style.background=mnR[i][2]; b.title=M[i].a+" · "+mnR[i][1]; }
+  const sc=mnR[mnAyri?mnBolge:0]; for(const b of $("mn-renk").children) b.setAttribute("aria-pressed",b.dataset.k===sc[0]);
+  $("mn-ad").textContent=(mnAyri?M[mnBolge].a+" · ":"")+sc[1]; }
+for(const b of $("mn-kip").children) b.addEventListener("click",()=>{ mnKip=b.dataset.c; mnYaz(); mnAdres(); });
+for(const b of $("mn-ayri").children) b.addEventListener("click",()=>{ const M=urun.mn; if(!M) return; const ay=b.dataset.a==="1"; if(ay===mnAyri) return;
+  if(ay){ mnBolge=0; mnVurgu=performance.now(); } else mnR=M.map(()=>mnR[mnBolge]); mnAyri=ay; mnYaz(); mnAdres(); });
 function montajListe(){ const L=$("liste"), E=$("etiketler"), M_=urun.montaj, kod=urun.kod; L.textContent="";
   M_.forEach((st,i)=>{ const P_=urun.parcalar.filter(q=>q.ms===i), li=document.createElement("li"); li.className="adim"; li.dataset.i=i; li.dataset.acik=0;
     const hazir=P_.length&&P_.every(q=>urun.gruplar[q.g].tur==="hazir"), y=ROZET[st.y];
@@ -945,7 +1032,7 @@ $("oynat").addEventListener("click",()=>{ oynA=p; oynB=(oynuyor?oynB<0.5:p>0.5)?
 $("parcali").addEventListener("click",()=>{ kamAc(); if(urun.montaj){ oynA=p; oynB=0; oynSure=montajSure()*Math.max(0.25,p); oynT0=performance.now(); oynuyor=!azHareket; if(azHareket) p=0; adimYaz(); return; } oynuyor=false; p=0; adimYaz(); });
 $("birlesik").addEventListener("click",()=>{ kamGeri(); if(urun.montaj){ oynA=p; oynB=1; oynSure=montajSure()*Math.max(0.25,1-p); oynT0=performance.now(); oynuyor=!azHareket; if(azHareket) p=1; adimYaz(); return; } oynuyor=false; p=1; adimYaz(); });   // montaj adımlı üründe sırayla, tek tek oturarak
 $("liste").addEventListener("keydown",e=>{ if(!urun.montaj||(e.key!=="ArrowDown"&&e.key!=="ArrowUp")) return; e.preventDefault(); aktifAc(aktifA<0?0:aktifA+(e.key==="ArrowDown"?1:-1),true); });
-$("bag").addEventListener("click",async()=>{ const A_=adresParca(), ek=dsY()&&yzKip==="sonra"&&A_.get("desen")?"#desen="+A_.get("desen")+"&siklik="+dsSik():"", a=new URL("../u/"+encodeURIComponent(urun.kisa)+".html",location.href).href+ek, b=$("bag");   // ürünün paylaşım köprüsü (u/<kod>.html); desen seçiliyse u/ sayfası onu set sayfasına geçirir
+$("bag").addEventListener("click",async()=>{ const A_=adresParca(), ek=dsY()&&yzKip==="sonra"&&A_.get("desen")?"#desen="+A_.get("desen")+"&siklik="+dsSik():(urun.mn&&mnKip==="mineli"&&A_.get("mine")?"#mine="+A_.get("mine"):""), a=new URL("../u/"+encodeURIComponent(urun.kisa)+".html",location.href).href+ek, b=$("bag");   // ürünün paylaşım köprüsü (u/<kod>.html); desen seçiliyse u/ sayfası onu set sayfasına geçirir
   let ok=false; try{ await navigator.clipboard.writeText(a); ok=true; }catch(e){ const t=document.createElement("textarea"); t.value=a; document.body.appendChild(t); t.select(); try{ ok=document.execCommand("copy"); }catch(_){} t.remove(); }
   b.textContent=ok?"Kopyalandı":a; b.dataset.adres=a; setTimeout(()=>{ b.textContent="Bağlantıyı kopyala"; },2200); });
 $("salla").addEventListener("click",salla); $("cevir").addEventListener("click",()=>{ mekItki(ilkDg); DN.forEach((st,i)=>{ const d=urun.doner[i]; if(d.sin) st.h=st.h===d.sin[1]?d.sin[0]:d.sin[1]; else st.w+=7+3*Math.random(); }); });
@@ -995,7 +1082,7 @@ function acilisKapat(){ const bekle=gec?0:Math.max(0,1500-(performance.now()-t0)
   const km=GOMULU?null:oku("mod"); modSec(km&&document.querySelector('[data-p="'+km+'"]')?km:"vitrin");
   const hu=adresUrun(), ku=oku("urun"); sec(hu||(ku&&MAN.some(u=>u.kod===ku)?ku:MAN[0].kod)); requestAnimationFrame(kare);
   if(GOMULU){ acilis.hidden=true; donIstek=true; sonDokunus=-1e9; } else acilisKapat();
-  addEventListener("hashchange",()=>{ const k=adresUrun(); if(k&&(!urun||k!==urun.kod)) sec(k); else { if(k&&(urun.rg||urun.top)){ renkKur(); renkCiz(); } if(k&&dsY()){ dsSifirla(); dsAdresOku(); yzYaz(); } } });
+  addEventListener("hashchange",()=>{ const k=adresUrun(); if(k&&(!urun||k!==urun.kod)) sec(k); else { if(k&&(urun.rg||urun.top)){ renkKur(); renkCiz(); } if(k&&dsY()){ dsSifirla(); dsAdresOku(); yzYaz(); } if(k&&urun.mn){ mnSifirla(); mnAdresOku(); mnYaz(); } } });
 }catch(e){ acilis.hidden=true; durum.hidden=false; durum.textContent=e.message||String(e); } })();
 </script>
 </body>
