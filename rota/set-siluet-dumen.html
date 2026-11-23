@@ -307,16 +307,25 @@ const BAYRAKGL=BAYRAK.map(([c,wh,k])=>{ c=birim(c); const tx=birim(cap([0,1,0],c
 const BAYRAK2=[[[0.3,0.92,0.22],[0.075,0.95],0.85],[[-0.36,0.9,0.12],[0.06,0.95],0.8],[[0.0,0.62,-0.78],[0.7,0.09],0.7],
   [[0.75,0.55,0.35],[0.1,0.6],0.7],[[-0.8,0.45,0.3],[0.1,0.6],0.7],[[0.5,0.15,0.85],[0.2,0.6],0.6],[[-0.6,0.18,0.78],[0.18,0.55],0.55]];
 const BAYRAK2GL=BAYRAK2.map(([c,wh,k])=>{ c=birim(c); const tx=birim(cap([0,1,0],c)), ty=cap(c,tx); return "c*=1.0-bay2*"+k.toFixed(3)+"*kutu(d,"+v3(c)+","+v3(tx)+","+v3(ty)+",vec2("+wh[0].toFixed(3)+","+wh[1].toFixed(3)+"),e*1.5+0.05);"; }).join("\n ");
-const VS=`attribute float ao; attribute vec3 p; attribute vec3 n; attribute vec3 q; attribute vec3 gs; attribute vec3 gt; attribute vec3 gu; uniform mat4 P; uniform mat3 R; uniform mat3 M; uniform vec3 T; uniform vec3 Tr; uniform vec4 kn; uniform vec3 zo; varying vec3 vN; varying vec3 vM; varying vec3 vV; varying float vAo;
-varying vec3 vQ; varying vec3 vGs; varying vec3 vGt; varying vec3 vGu;   // desen: (s, t, sınır uzaklığı) ve s, t, u'nun yüzey eğimleri (dünya)
-void main(){ vAo=ao; vQ=q; vGs=R*(M*gs); vGt=R*(M*gt); vGu=R*(M*gu); vec3 m=M*p+Tr; vM=R*m; vec3 nn=kn.w>0.5?normalize(p-kn.xyz):n; vN=R*(M*nn); vV=vM+T; gl_Position=P*vec4(vV,1.0); gl_Position.xy+=zo.xy*gl_Position.w; gl_Position.z-=zo.z*gl_Position.w; }`;
+/* İki program, aynı kaynak: desensiz (ana, prog_) ve "#define DESEN" ile desenli (PD, tembel: yalnız desen taşıyan parça "Kesimden sonra"da
+   çizilirken ilk gerektiğinde derlenir). Desensiz program desen öncesi programla birebir aynıdır (ek öznitelik, aktarım, dal yok). */
+const VS=`attribute float ao; attribute vec3 p; attribute vec3 n; uniform mat4 P; uniform mat3 R; uniform mat3 M; uniform vec3 T; uniform vec3 Tr; uniform vec4 kn; uniform vec3 zo; varying vec3 vN; varying vec3 vM; varying vec3 vV; varying float vAo;
+#ifdef DESEN
+attribute vec3 q; attribute vec3 gs; attribute vec3 gt; attribute vec3 gu; varying vec3 vQ; varying vec3 vGs; varying vec3 vGt; varying vec3 vGu;   // desen: (s, t, sınır uzaklığı) ve s, t, u'nun yüzey eğimleri (dünya)
+#endif
+void main(){ vAo=ao;
+#ifdef DESEN
+ vQ=q; vGs=R*(M*gs); vGt=R*(M*gt); vGu=R*(M*gu);
+#endif
+ vec3 m=M*p+Tr; vM=R*m; vec3 nn=kn.w>0.5?normalize(p-kn.xyz):n; vN=R*(M*nn); vV=vM+T; gl_Position=P*vec4(vV,1.0); gl_Position.xy+=zo.xy*gl_Position.w; gl_Position.z-=zo.z*gl_Position.w; }`;
 const FS=`#ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
 precision mediump float;
 #endif
 varying vec3 vN; varying vec3 vM; varying vec3 vV; varying float vAo; uniform float yz; uniform float par; uniform vec3 C; uniform float tur; uniform float kil; uniform vec3 Sa; uniform vec3 Sb; uniform vec3 Sc; uniform float Ss; uniform float sac; uniform float sl; uniform float kes; uniform float ys; uniform float cz;
-varying vec3 vQ; varying vec3 vGs; varying vec3 vGt; varying vec3 vGu; uniform float dk; uniform float dv[13]; uniform float dE; uniform float dD;
+#ifdef DESEN
+varying vec3 vQ; varying vec3 vGs; varying vec3 vGt; varying vec3 vGu; uniform float dv[13]; uniform float dE; uniform float dD;
 /* DESEN (kesim deseni kütüphanesinin alan() işleviyle birebir): h(s,t) parçalı doğrusal derinlik, dönüş (h, ∂h/∂s, ∂h/∂t).
    dv[0] tip: 1 oluk aileleri (en çok 3, max; balık sırtında t<0 açı ters), 2 dalga, 3 ışın, 4 kum/buz kafesi, 5 yüzeycik, 6 çekiç. */
 float hs(vec2 ij,float k){ vec2 p=ij+vec2(k*101.0,k*57.0); vec3 p3=fract(vec3(p.xyx)*0.1031); p3+=dot(p3,p3.yzx+33.33); return fract((p3.x+p3.y)*p3.z); }
@@ -350,6 +359,7 @@ vec3 desenH(vec2 x){ float tp=dv[0]; vec3 r=vec3(-1.0,0.0,0.0);
    for(int a=0;a<3;a++) for(int c=0;c<3;c++){ vec2 ij=b+vec2(a==0?0.0:(a==1?-1.0:1.0),c==0?0.0:(c==1?-1.0:1.0)); vec3 M=ckT(ij);
      vec3 K0=ckK(ij,0.0), K1=ckK(ij+vec2(-1.0,0.0),1.0), K2=ckK(ij+vec2(-1.0,0.0),0.0), K3=ckK(ij+vec2(-1.0,-1.0),1.0), K4=ckK(ij+vec2(0.0,-1.0),0.0), K5=ckK(ij+vec2(0.0,-1.0),1.0);
      if(ucg(x,M,K0,K1,r)||ucg(x,M,K1,K2,r)||ucg(x,M,K2,K3,r)||ucg(x,M,K3,K4,r)||ucg(x,M,K4,K5,r)||ucg(x,M,K5,K0,r)) return r; } return r; } }
+#endif
 float kutu(vec3 d,vec3 c,vec3 tx,vec3 ty,vec2 wh,float e){ float z=dot(d,c); if(z<=0.02) return 0.0; vec2 uv=abs(vec2(dot(d,tx),dot(d,ty))/z); vec2 m=1.0-smoothstep(wh-e,wh+e,uv); return m.x*m.y; }
 uniform vec3 gok; uniform vec3 yer; uniform float bay; uniform float bay2; uniform float poz; uniform float kut; uniform float yum; uniform float aoD; uniform float gez;
 vec3 ortam(vec3 d,float e){
@@ -365,7 +375,9 @@ vec3 aces(vec3 x){ return clamp((x*(2.51*x+0.03))/(x*(2.43*x+0.59)+0.14),0.0,1.0
 vec3 ton(vec3 x){ float m=max(max(x.r,x.g),max(x.b,0.0001)); vec3 a=x*(aces(vec3(m)).r/m); return pow(mix(a,aces(x),0.28),vec3(0.4545)); }   // parlak yerde de metalin rengi kalsın
 void main(){ if(cz>0.5){ gl_FragColor=vec4(ton(vec3(0.70,0.11,0.037)*1.7)*sl,sl); return; }
  vec3 n=normalize(vN); vec3 v=normalize(-vV);
- if(dk>0.5){ vec3 H=desenH(vQ.xy); vec3 g=H.y*vGs+H.z*vGt; if(dD*vQ.z/dE<H.x) g=(dD/dE)*vGu; n=normalize(n+g); }   // desen: n' = n + ∇h (h içeri derinlik); kenarda etek h ≤ D·u/etek
+#ifdef DESEN
+ { vec3 H=desenH(vQ.xy); vec3 g=H.y*vGs+H.z*vGt; if(dD*vQ.z/dE<H.x) g=(dD/dE)*vGu; n=normalize(n+g); }   // desen: n' = n + ∇h (h içeri derinlik); kenarda etek h ≤ D·u/etek
+#endif
  if(dot(n,v)<0.0) n=-n; float nv=max(dot(n,v),0.0); vec3 r=reflect(-v,n); float f=pow(1.0-nv,5.0); vec3 col;
  if(kil>0.5){ vec3 L=normalize(vec3(0.42,0.62,0.66)); vec3 b=tur<0.5?vec3(0.66,0.64,0.60):vec3(0.46,0.58,0.70);
   col=b*(0.16+0.40*(0.5+0.5*n.y)+0.62*max(dot(n,L),0.0)+0.10*max(dot(n,vec3(-0.8,0.1,0.5)),0.0))+0.10*pow(max(dot(r,L),0.0),20.0); gl_FragColor=vec4(pow(min(col,1.0),vec3(0.85)),1.0); return; }
@@ -373,15 +385,22 @@ void main(){ if(cz>0.5){ gl_FragColor=vec4(ton(vec3(0.70,0.11,0.037)*1.7)*sl,sl)
   if(yz<0.5) env=mix(ortam(r,0.025),ortam(r,0.45),0.22);
   else if(yz<1.5){ vec3 tg=normalize(cross(n,vec3(0.0,1.0,0.0))+vec3(1e-4)); env=(ortam(normalize(r+tg*0.25),0.16)+ortam(r,0.2)+ortam(normalize(r-tg*0.25),0.16))*0.333*0.92; }   // saten: yönlü fırça
   else if(yz<2.5) env=ortam(r,0.6)*0.85;
-  else if(yz<3.5) env=ortam(r,0.008)*1.12;   /* elmas kesim gösterimi (yz 3): düz fasetler, keskin yansıma; her faset ya ışık kutusunu ya bayrağı görür */
+#ifdef DESEN
+  else if(yz<3.5) env=ortam(r,0.008)*1.12;
   else { env=ortam(r,0.0); env=env*env/(env+vec3(0.28))*1.5; }   /* desen (yz 4): ayna kesim; karşıtlık artırılır (faset ya parlar ya kararır), renk metalden */
+#else
+  else env=ortam(r,0.008)*1.12;   /* elmas kesim gösterimi (yz 3): düz fasetler, keskin yansıma; her faset ya ışık kutusunu ya bayrağı görür */
+#endif
   float oc=1.0-aoD*(1.0-smoothstep(0.08,0.62,vAo));   // kapanma yalnız gerçek girintide (yuva, ajur dibi, katman arası); yansımada zayıf
   col=F*(env*1.3*poz*mix(1.0,oc,0.55)+C*kendi*0.22*oc);
   if(yz>2.5){ float kv=pow(max(dot(r,normalize(vec3(0.0,0.94,0.34))),0.0),420.0)+pow(max(dot(r,normalize(vec3(0.62,0.42,0.66))),0.0),420.0)+pow(max(dot(r,normalize(vec3(-0.9,0.12,0.42))),0.0),320.0)+pow(max(dot(r,normalize(vec3(-0.55,0.75,-0.35))),0.0),320.0); col+=F*kv*7.0;
+#ifdef DESEN
    if(yz>3.5){ float kp=0.0; kp+=pow(max(dot(r,normalize(vec3(0.0,0.94,0.34))),0.0),2400.0); kp+=pow(max(dot(r,normalize(vec3(0.62,0.42,0.66))),0.0),2400.0);
     kp+=pow(max(dot(r,normalize(vec3(-0.9,0.12,0.42))),0.0),1800.0); kp+=pow(max(dot(r,normalize(vec3(-0.55,0.75,-0.35))),0.0),1800.0);
     kp+=pow(max(dot(r,normalize(vec3(0.3,0.6,0.75))),0.0),3000.0); kp+=pow(max(dot(r,normalize(vec3(-0.3,0.85,0.45))),0.0),3000.0);
-    col+=mix(F,vec3(1.0),0.25)*kp*14.0; } }   // desen: dar kıvılcımlar; döndürünce yüzeycikler sırayla yanıp söner
+    col+=mix(F,vec3(1.0),0.25)*kp*14.0; }   // desen: dar kıvılcımlar; döndürünce yüzeycikler sırayla yanıp söner
+#endif
+  }
   if(ys>0.5){ float l=dot(col,vec3(0.3,0.55,0.15)); col=mix(col,vec3(0.70,0.11,0.037)*(0.3+1.25*l),0.6); } }   // yalnız belirgin girinti koyulaşır (geniş düz yüzeyde iz kalmasın)   // aşağı bakan yansımada metal kendini görür
  else { vec3 yans=ortam(r,0.03)*(0.045+0.955*f);
   if(tur>4.5){ vec3 ic=ortam(refract(-v,n,0.66),0.22);   // taş boncuk: fasetsiz cilalı küre, yarı saydam
@@ -411,6 +430,19 @@ void main(){ if(cz>0.5){ gl_FragColor=vec4(ton(vec3(0.70,0.11,0.037)*1.7)*sl,sl)
    col+=vec3(kv)*mix(vec3(5.0),C*5.0+1.5,0.35); } }   // küçük taşta da faset parlaması ve kıvılcım
  if(tur>0.5) col*=1.0+par*1.6;   // montaj: taş yuvasına otururken kısa parıltı
  gl_FragColor=vec4(ton(col)*sl,sl); }`;
+function progYap(on){ const p=gl.createProgram(); gl.attachShader(p,kabuk(gl.VERTEX_SHADER,on+VS)); gl.attachShader(p,kabuk(gl.FRAGMENT_SHADER,on+FS));
+  gl.bindAttribLocation(p,0,"p"); gl.bindAttribLocation(p,1,"n"); gl.bindAttribLocation(p,2,"ao"); if(on) ["q","gs","gt","gu"].forEach((k,i)=>gl.bindAttribLocation(p,3+i,k)); gl.linkProgram(p);
+  if(!gl.getProgramParameter(p,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p)); return p; }
+/* desenli program (tembel): ilk desenli çizimde derlenir. Ana programın o anki bütün uniform değerleri her geçişte ona aktarılır (yalnız
+   "Kesimden sonra"da desen taşıyan parça için; desensiz sayfada hiç çalışmaz). */
+let PD=null;
+function desenProg(){ if(PD) return PD; const p=progYap("#define DESEN 1\n"), L=[], n=gl.getProgramParameter(prog_,gl.ACTIVE_UNIFORMS);
+  for(let i=0;i<n;i++){ const a=gl.getActiveUniform(prog_,i), ad=a.name.replace(/\[0\]$/,""), k=gl.getUniformLocation(p,ad); if(k) L.push([gl.getUniformLocation(prog_,ad),k,a.type]); }
+  PD={p,L,dv:gl.getUniformLocation(p,"dv[0]"),dE:gl.getUniformLocation(p,"dE"),dD:gl.getUniformLocation(p,"dD"),yz:gl.getUniformLocation(p,"yz"),ys:gl.getUniformLocation(p,"ys")}; return PD; }
+function desenGec(){ const D=desenProg(), V=D.L.map(([a,,ty])=>[gl.getUniform(prog_,a),ty]); gl.useProgram(D.p);
+  D.L.forEach(([,k],i)=>{ const [v,ty]=V[i]; if(ty===gl.FLOAT) gl.uniform1f(k,v); else if(ty===gl.FLOAT_VEC3) gl.uniform3fv(k,v); else if(ty===gl.FLOAT_VEC4) gl.uniform4fv(k,v);
+    else if(ty===gl.FLOAT_MAT3) gl.uniformMatrix3fv(k,false,v); else if(ty===gl.FLOAT_MAT4) gl.uniformMatrix4fv(k,false,v); else if(ty===gl.FLOAT_VEC2) gl.uniform2fv(k,v); else gl.uniform1i(k,v); });
+  return D; }
 function kabuk(t,s){ const k=gl.createShader(t); gl.shaderSource(k,s); gl.compileShader(k); if(!gl.getShaderParameter(k,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(k)); return k; }
 /* Montaj: ayrılma yönleri veriden. Gövde (en büyük döküm grubu) yerinde kalır; öteki parçalar ürünün ağırlık merkezinden kendi merkezlerine
    doğru açılır (küçük gruplar daha uzağa); pim/mil kendi uzun ekseni boyunca çekilir; sarkan parçalar zincir sırasına göre kademeli iner;
@@ -582,9 +614,7 @@ function sahneCiz(dt,w,h,jx,jy){
     gl.uniformMatrix3fv(U.M,false,new Float32Array([M[0],M[3],M[6],M[1],M[4],M[7],M[2],M[5],M[8]])); gl.uniform3f(U.Tr,Tr[0],Tr[1],Tr[2]);
     const ms=Array.isArray(pc.m)?pc.m:[pc.m], a=A_[ms[0]]; gl.uniform1f(U.yz,pc.rl===2?3:(pc.yz||0)); gl.uniform1f(U.ys,pc.rl===1&&yzk==="isaret"?1:0); gl.uniform1f(U.par,tasMi&&e>0&&e<0.35&&p<0.999?Math.sin(Math.PI*e/0.35):0);
     gl.uniform4f(U.kn,0,0,0,0);
-    const dzA=pc.rl===1&&yzk==="sonra"&&pc._dz&&!gec; gl.uniform1f(U.dk,dzA?1:0);
-    if(dzA){ const z=pc._dz, g=z.y.dz.d[dsBantKod(z.b)][dsSik()].g[z.b]; gl.uniform1f(U.yz,4); gl.uniform1fv(U.dv,new Float32Array(g)); gl.uniform1f(U.dE,z.y.dz.e||0.11); gl.uniform1f(U.dD,g[0]===5?g[3]:g[2]);
-      if(dsAyri&&z.b===dsBant&&performance.now()-dsVurgu<900) gl.uniform1f(U.ys,1); }   // bant seçilince kısa süre işaretli
+    const dzA=pc.rl===1&&yzk==="sonra"&&pc._dz&&!gec;   // desen taşıyan yüzey grubu: desenli programla çizilir (aşağıda)
     if(topQ){ const t_=(!topSecildi&&pc.tv&&topBul(pc.tv))||TOP, r=t_[4]===0?METAL[0][3]:t_[3], a_=A_[Array.isArray(pc.m)?pc.m[0]:pc.m]; gl.uniform3f(U.C,r[0],r[1],r[2]); gl.uniform1f(U.tur,t_[4]); gl.uniform4f(U.kn,a_.mer[0],a_.mer[1],a_.mer[2],1); }   // küre normali: fasetsiz
     else if(tasMi){ const t_=(ayrim&&kucuk&&pc.k)?RENKSIZ:tas, r=t_[2], us=t_[3]===2?1.2:2.1;
       gl.uniform3f(U.C,Math.pow(r[0],us),Math.pow(r[1],us),Math.pow(r[2],us)); gl.uniform1f(U.tur,t_[3]===1?2:1); gl.uniform1f(U.sac,t_[3]===2?0.16:0.05); gl.uniform1f(U.kes,pc.kz||0);
@@ -593,6 +623,8 @@ function sahneCiz(dt,w,h,jx,jy){
     else if(urun.rg&&pc.rk>=0){ const m_=RS[pc.rk], r=m_[3]; gl.uniform3f(U.C,r[0],r[1],r[2]); gl.uniform1f(U.tur,urun.rg[pc.rk].m?3:0); }   // renk grubu / mine
     else { const r=(pc.dn>=0&&metal2?metal2:metal)[3]; gl.uniform3f(U.C,r[0],r[1],r[2]); gl.uniform1f(U.tur,0); }
     if((urun.montaj&&mod==="montaj"&&aktifA>=0&&adimNo(pc)===aktifA)||(soluk&&!gec)){ const c_=gl.getUniform(prog_,U.C); gl.uniform3f(U.C,c_[0]*1.35+0.05,c_[1]*1.35+0.04,c_[2]*1.35+0.02); }   // açık satırın parçaları vurgulu
+    if(dzA){ const D=desenGec(), z=pc._dz, g=z.y.dz.d[dsBantKod(z.b)][dsSik()].g[z.b]; gl.uniform1f(D.yz,4); gl.uniform1fv(D.dv,new Float32Array(g)); gl.uniform1f(D.dE,z.y.dz.e||0.11); gl.uniform1f(D.dD,g[0]===5?g[3]:g[2]);
+      if(dsAyri&&z.b===dsBant&&performance.now()-dsVurgu<900) gl.uniform1f(D.ys,1); }   // bant seçilince kısa süre işaretli
     for(const mi of ms){ const a=A_[mi], dq=dzA&&a.qb;
     gl.bindBuffer(gl.ARRAY_BUFFER,a.vb); gl.vertexAttribPointer(0,3,gl.FLOAT,false,0,0);
     gl.bindBuffer(gl.ARRAY_BUFFER,a.nb); gl.vertexAttribPointer(1,3,gl.FLOAT,false,0,0);
@@ -601,7 +633,7 @@ function sahneCiz(dt,w,h,jx,jy){
       gl.bindBuffer(gl.ARRAY_BUFFER,a.gb); for(let k=0;k<3;k++) gl.vertexAttribPointer(4+k,3,gl.FLOAT,false,36,12*k); }
     if(a.tas) gl.drawArrays(gl.TRIANGLES,0,a.n); else { gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,a.ib); gl.drawElements(gl.TRIANGLES,a.n,gl.UNSIGNED_SHORT,0); }
     if(dq) for(let k=3;k<7;k++) gl.disableVertexAttribArray(k); }
-    if(dzA){ gl.uniform1f(U.dk,0); gl.uniform1f(U.ys,0); } };
+    if(dzA) gl.useProgram(prog_); };
   urun.parcalar.forEach(pc=>cizQ(pc,false));
   if(solL.length){ gl.enable(gl.BLEND); gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA); gl.depthMask(false); gl.uniform1f(U.sl,0.2); solL.forEach(pc=>cizQ(pc,true)); gl.uniform1f(U.sl,1); gl.depthMask(true); gl.disable(gl.BLEND); }   // gövde soluk: pimler, miller arkadan görünür
   gl.uniform1f(U.ys,0); if(yzEl.length) yzCiz(w,h,R,yzk);
@@ -948,10 +980,8 @@ function acilisKapat(){ const bekle=gec?0:Math.max(0,1500-(performance.now()-t0)
   setTimeout(kapat,bekle); acilis.addEventListener("pointerdown",kapat); }
 (async()=>{ try{
   gl=cv.getContext("webgl",{alpha:true,antialias:true,premultipliedAlpha:true}); if(!gl) throw new Error("Bu cihazda 3B görüntü açılamıyor (WebGL yok).");
-  const prog=gl.createProgram(); prog_=prog; gl.attachShader(prog,kabuk(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,kabuk(gl.FRAGMENT_SHADER,FS));
-  gl.bindAttribLocation(prog,0,"p"); gl.bindAttribLocation(prog,1,"n"); gl.bindAttribLocation(prog,2,"ao"); ["q","gs","gt","gu"].forEach((k,i)=>gl.bindAttribLocation(prog,3+i,k)); gl.linkProgram(prog);
-  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog)); gl.useProgram(prog);
-  for(const k of ["sl","kn","P","R","M","T","Tr","C","tur","kil","Sa","Sb","Sc","Ss","sac","kes","yz","par","gok","yer","bay","bay2","poz","kut","yum","aoD","gez","ys","cz","zo","dk","dE","dD"]) U[k]=gl.getUniformLocation(prog,k); U.dv=gl.getUniformLocation(prog,"dv[0]");
+  const prog=progYap(""); prog_=prog; gl.useProgram(prog);
+  for(const k of ["sl","kn","P","R","M","T","Tr","C","tur","kil","Sa","Sb","Sc","Ss","sac","kes","yz","par","gok","yer","bay","bay2","poz","kut","yum","aoD","gez","ys","cz","zo"]) U[k]=gl.getUniformLocation(prog,k);
   gl.enableVertexAttribArray(0); gl.enableVertexAttribArray(1); gl.enableVertexAttribArray(2); gl.enable(gl.DEPTH_TEST); dortgenKur(prog);
   secenek("metaller",METAL,0,m=>metal=m); secenek("taslar",TAS,0,m=>{ tas=m; tasSecildi=true; });
   secenek("metaller2",[["ayni","Gövdeyle aynı",null,null]].concat(METAL),0,m=>{ metal2=m[3]?m:null; });
