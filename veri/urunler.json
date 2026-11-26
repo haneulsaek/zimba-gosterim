@@ -16,6 +16,9 @@
  ],
  "urunler": [
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0049",
    "kisa": "R-MD-16",
    "kod": "yuzuk",
@@ -34,7 +37,7 @@
     "yok"
    ],
    "gram": 1.92,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 2,
@@ -49,6 +52,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0050",
    "kisa": "R-MD-17",
    "kod": "kupe",
@@ -67,7 +73,7 @@
     "sallanan"
    ],
    "gram": 1.47,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 12,
@@ -82,6 +88,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0051",
    "kisa": "R-MD-18",
    "kod": "kolye",
@@ -100,7 +109,7 @@
     "sallanan"
    ],
    "gram": 1.53,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -115,6 +124,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0052",
    "kisa": "R-MD-19",
    "kod": "bileklik",
@@ -148,6 +160,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0053",
    "kisa": "R-MD-20",
    "kod": "bilezik",
@@ -166,7 +181,7 @@
     "yok"
    ],
    "gram": 6.32,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 2,
@@ -181,6 +196,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0059",
    "kisa": "R-MD-26",
    "kod": "yuzuk",
@@ -214,6 +232,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0060",
    "kisa": "R-MD-27",
    "kod": "kupe",
@@ -232,7 +253,7 @@
     "sallanan"
    ],
    "gram": 1.52,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 12,
@@ -247,6 +268,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0061",
    "kisa": "R-MD-28",
    "kod": "kolye",
@@ -265,7 +289,7 @@
     "sallanan"
    ],
    "gram": 1.68,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -280,6 +304,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0062",
    "kisa": "R-MD-29",
    "kod": "bileklik",
@@ -313,6 +340,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0063",
    "kisa": "R-MD-30",
    "kod": "bilezik",
@@ -331,7 +361,7 @@
     "yok"
    ],
    "gram": 6.5,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 2,
@@ -346,6 +376,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0054",
    "kisa": "R-MD-21",
    "kod": "yuzuk",
@@ -364,7 +397,7 @@
     "yok"
    ],
    "gram": 1.9,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -379,6 +412,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0055",
    "kisa": "R-MD-22",
    "kod": "kupe",
@@ -397,7 +433,7 @@
     "sallanan"
    ],
    "gram": 1.4,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -412,6 +448,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0056",
    "kisa": "R-MD-23",
    "kod": "kolye",
@@ -430,7 +469,7 @@
     "sallanan"
    ],
    "gram": 1.71,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 9,
@@ -445,6 +484,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0057",
    "kisa": "R-MD-24",
    "kod": "bileklik",
@@ -478,6 +520,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0058",
    "kisa": "R-MD-25",
    "kod": "bilezik",
@@ -496,7 +541,7 @@
     "yok"
    ],
    "gram": 6.54,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -511,6 +556,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0017",
    "kisa": "R-MD-01",
    "kod": "yuzuk",
@@ -544,6 +592,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0018",
    "kisa": "R-MD-02",
    "kod": "kupe",
@@ -562,7 +613,7 @@
     "sallanan"
    ],
    "gram": 1.72,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 12,
@@ -577,6 +628,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0019",
    "kisa": "R-MD-03",
    "kod": "kolye",
@@ -611,6 +665,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0020",
    "kisa": "R-MD-04",
    "kod": "bileklik",
@@ -644,6 +701,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0021",
    "kisa": "R-MD-05",
    "kod": "bilezik",
@@ -662,7 +722,7 @@
     "yok"
    ],
    "gram": 6.62,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 2,
@@ -677,6 +737,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0044",
    "kisa": "R-MD-11",
    "kod": "yuzuk",
@@ -710,6 +773,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0045",
    "kisa": "R-MD-12",
    "kod": "kupe",
@@ -728,7 +794,7 @@
     "sallanan"
    ],
    "gram": 1.44,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -743,6 +809,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0046",
    "kisa": "R-MD-13",
    "kod": "kolye",
@@ -761,7 +830,7 @@
     "sallanan"
    ],
    "gram": 1.66,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -776,6 +845,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0047",
    "kisa": "R-MD-14",
    "kod": "bileklik",
@@ -809,6 +881,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0048",
    "kisa": "R-MD-15",
    "kod": "bilezik",
@@ -827,7 +902,7 @@
     "yok"
    ],
    "gram": 6.47,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 2,
@@ -842,6 +917,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0039",
    "kisa": "R-MD-06",
    "kod": "yuzuk",
@@ -875,6 +953,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0040",
    "kisa": "R-MD-07",
    "kod": "kupe",
@@ -893,7 +974,7 @@
     "sallanan"
    ],
    "gram": 1.58,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 12,
@@ -908,6 +989,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0041",
    "kisa": "R-MD-08",
    "kod": "kolye",
@@ -926,7 +1010,7 @@
     "sallanan"
    ],
    "gram": 1.76,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -941,6 +1025,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0042",
    "kisa": "R-MD-09",
    "kod": "bileklik",
@@ -974,6 +1061,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0043",
    "kisa": "R-MD-10",
    "kod": "bilezik",
@@ -992,7 +1082,7 @@
     "yok"
    ],
    "gram": 6.6,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 2,
@@ -1007,6 +1097,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0026",
    "kisa": "R-TC-05",
    "kod": "yuzuk",
@@ -1025,7 +1118,7 @@
     "yok"
    ],
    "gram": 1.32,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -1040,6 +1133,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0027",
    "kisa": "R-TC-06",
    "kod": "kupe",
@@ -1058,7 +1154,7 @@
     "sallanan"
    ],
    "gram": 0.81,
-   "gram_dilim": "≤ 1 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 6,
@@ -1073,6 +1169,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0028",
    "kisa": "R-TC-07",
    "kod": "kolye",
@@ -1091,7 +1190,7 @@
     "yok"
    ],
    "gram": 0.33,
-   "gram_dilim": "≤ 1 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 6,
@@ -1106,6 +1205,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0029",
    "kisa": "R-TC-08",
    "kod": "bilezik",
@@ -1124,7 +1226,7 @@
     "yok"
    ],
    "gram": 5.03,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -1139,6 +1241,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0022",
    "kisa": "R-TC-01",
    "kod": "yuzuk",
@@ -1157,7 +1262,7 @@
     "yok"
    ],
    "gram": 1.33,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -1172,6 +1277,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0023",
    "kisa": "R-TC-02",
    "kod": "kupe",
@@ -1190,7 +1298,7 @@
     "sallanan"
    ],
    "gram": 0.96,
-   "gram_dilim": "≤ 1 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 6,
@@ -1205,6 +1313,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0024",
    "kisa": "R-TC-03",
    "kod": "kolye",
@@ -1223,7 +1334,7 @@
     "yok"
    ],
    "gram": 0.68,
-   "gram_dilim": "≤ 1 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 5,
@@ -1238,6 +1349,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0025",
    "kisa": "R-TC-04",
    "kod": "bilezik",
@@ -1256,7 +1370,7 @@
     "yok"
    ],
    "gram": 5.13,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -1271,6 +1385,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0036",
    "kisa": "R-BK-07",
    "kod": "bileklik",
@@ -1304,6 +1421,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0037",
    "kisa": "R-BK-08",
    "kod": "kolye",
@@ -1322,7 +1442,7 @@
     "menteseli"
    ],
    "gram": 1.76,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -1337,6 +1457,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0038",
    "kisa": "R-BK-09",
    "kod": "alyans",
@@ -1355,7 +1478,7 @@
     "yok"
    ],
    "gram": 1.83,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -1370,6 +1493,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0030",
    "kisa": "R-BK-01",
    "kod": "bileklik",
@@ -1403,6 +1529,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0031",
    "kisa": "R-BK-02",
    "kod": "kolye",
@@ -1436,6 +1565,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0032",
    "kisa": "R-BK-03",
    "kod": "alyans",
@@ -1469,6 +1601,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0033",
    "kisa": "R-BK-04",
    "kod": "bileklik",
@@ -1502,6 +1637,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0034",
    "kisa": "R-BK-05",
    "kod": "kolye",
@@ -1535,6 +1673,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0035",
    "kisa": "R-BK-06",
    "kod": "alyans",
@@ -1553,7 +1694,7 @@
     "yok"
    ],
    "gram": 1.68,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -1568,6 +1709,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0072",
    "kisa": "R-TM-09",
    "kod": "yuzuk",
@@ -1601,6 +1745,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0073",
    "kisa": "R-TM-10",
    "kod": "kupe",
@@ -1634,6 +1781,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0074",
    "kisa": "R-TM-11",
    "kod": "kolye",
@@ -1652,7 +1802,7 @@
     "sallanan"
    ],
    "gram": 1.76,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -1667,6 +1817,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0075",
    "kisa": "R-TM-12",
    "kod": "bileklik",
@@ -1700,6 +1853,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0068",
    "kisa": "R-TM-05",
    "kod": "yuzuk",
@@ -1733,6 +1889,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0069",
    "kisa": "R-TM-06",
    "kod": "kupe",
@@ -1751,7 +1910,7 @@
     "sallanan"
    ],
    "gram": 1.79,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 12,
@@ -1766,6 +1925,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0070",
    "kisa": "R-TM-07",
    "kod": "kolye",
@@ -1784,7 +1946,7 @@
     "sallanan"
    ],
    "gram": 1.61,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -1799,6 +1961,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0071",
    "kisa": "R-TM-08",
    "kod": "bileklik",
@@ -1817,7 +1982,7 @@
     "yok"
    ],
    "gram": 1.83,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 22,
@@ -1832,6 +1997,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0064",
    "kisa": "R-TM-01",
    "kod": "yuzuk",
@@ -1865,6 +2033,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0065",
    "kisa": "R-TM-02",
    "kod": "kupe",
@@ -1883,7 +2054,7 @@
     "sallanan"
    ],
    "gram": 1.68,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 12,
@@ -1898,6 +2069,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0066",
    "kisa": "R-TM-03",
    "kod": "kolye",
@@ -1916,7 +2090,7 @@
     "sallanan"
    ],
    "gram": 1.69,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 14,
@@ -1931,6 +2105,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0067",
    "kisa": "R-TM-04",
    "kod": "bileklik",
@@ -1949,7 +2126,7 @@
     "yok"
    ],
    "gram": 1.82,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 22,
@@ -1964,6 +2141,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0076",
    "kisa": "R-SL-01",
    "kod": "kolye",
@@ -1982,7 +2162,7 @@
     "sallanan"
    ],
    "gram": 1.66,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -1997,6 +2177,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0077",
    "kisa": "R-SL-02",
    "kod": "kupe",
@@ -2015,7 +2198,7 @@
     "sallanan"
    ],
    "gram": 1.18,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 6,
@@ -2030,6 +2213,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0078",
    "kisa": "R-SL-03",
    "kod": "bileklik",
@@ -2048,7 +2234,7 @@
     "yok"
    ],
    "gram": 1.83,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 20,
@@ -2063,6 +2249,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0079",
    "kisa": "R-SL-04",
    "kod": "yuzuk",
@@ -2081,7 +2270,7 @@
     "yok"
    ],
    "gram": 1.75,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 2,
@@ -2096,6 +2285,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0084",
    "kisa": "R-SL-09",
    "kod": "kolye",
@@ -2114,7 +2306,7 @@
     "sallanan"
    ],
    "gram": 1.91,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -2129,6 +2321,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0085",
    "kisa": "R-SL-10",
    "kod": "kupe",
@@ -2147,7 +2342,7 @@
     "sallanan"
    ],
    "gram": 1.41,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 4,
@@ -2162,6 +2357,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0086",
    "kisa": "R-SL-11",
    "kod": "bileklik",
@@ -2195,6 +2393,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0080",
    "kisa": "R-SL-05",
    "kod": "kolye",
@@ -2213,7 +2414,7 @@
     "sallanan"
    ],
    "gram": 1.73,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -2228,6 +2429,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0081",
    "kisa": "R-SL-06",
    "kod": "kupe",
@@ -2246,7 +2450,7 @@
     "sallanan"
    ],
    "gram": 1.3,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 6,
@@ -2261,6 +2465,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0082",
    "kisa": "R-SL-07",
    "kod": "bileklik",
@@ -2279,7 +2486,7 @@
     "yok"
    ],
    "gram": 1.86,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 20,
@@ -2294,6 +2501,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0083",
    "kisa": "R-SL-08",
    "kod": "yuzuk",
@@ -2312,7 +2522,7 @@
     "yok"
    ],
    "gram": 1.72,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 2,
@@ -2327,6 +2537,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0087",
    "kisa": "R-KT-01",
    "kod": "kolye-pusula-dumen",
@@ -2361,6 +2574,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0088",
    "kisa": "R-KT-02",
    "kod": "kolye-dalga-yildiz",
@@ -2395,6 +2611,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0089",
    "kisa": "R-KT-03",
    "kod": "yuzuk-pusula-dumen",
@@ -2428,6 +2647,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0090",
    "kisa": "R-KT-04",
    "kod": "kolye-pusula-dumen-tassiz",
@@ -2462,6 +2684,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0091",
    "kisa": "R-KT-05",
    "kod": "kolye-dalga-yildiz-tassiz",
@@ -2496,6 +2721,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0092",
    "kisa": "R-KT-06",
    "kod": "yuzuk-pusula-dumen-tassiz",
@@ -2529,6 +2757,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0008",
    "kisa": "D-01",
    "kod": "kolye",
@@ -2547,7 +2778,7 @@
     "sallanan"
    ],
    "gram": 12.38,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 43,
@@ -2562,6 +2793,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0009",
    "kisa": "D-02",
    "kod": "kupe",
@@ -2580,7 +2814,7 @@
     "sallanan"
    ],
    "gram": 9.22,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 16,
@@ -2595,6 +2829,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0010",
    "kisa": "D-03",
    "kod": "kelepce",
@@ -2613,7 +2850,7 @@
     "sallanan"
    ],
    "gram": 12.96,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 24,
@@ -2628,6 +2865,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0011",
    "kisa": "D-04",
    "kod": "yuzuk",
@@ -2661,6 +2901,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0012",
    "kisa": "DY-01",
    "kod": "muhur",
@@ -2679,7 +2922,7 @@
     "yok"
    ],
    "gram": 9.8,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -2694,6 +2937,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0014",
    "kisa": "DY-03",
    "kod": "ajur",
@@ -2712,7 +2958,7 @@
     "yok"
    ],
    "gram": 9.05,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -2727,6 +2973,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0015",
    "kisa": "DY-04",
    "kod": "pusula",
@@ -2745,7 +2994,7 @@
     "yok"
    ],
    "gram": 10.01,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 10,
@@ -2760,6 +3009,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0013",
    "kisa": "DY-02",
    "kod": "blok",
@@ -2778,7 +3030,7 @@
     "yok"
    ],
    "gram": 9.93,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 1,
@@ -2793,6 +3045,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0016",
    "kisa": "DY-05",
    "kod": "donen",
@@ -2811,7 +3066,7 @@
     "donen"
    ],
    "gram": 10.35,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 3,
@@ -2826,6 +3081,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "dis:altin-kelepce",
    "kisa": "K-02",
    "kod": "altin",
@@ -2844,7 +3102,7 @@
     "menteseli"
    ],
    "gram": 24.79,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 34,
@@ -2859,6 +3117,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0002",
    "kisa": "K-01",
    "kod": "tasli-oval",
@@ -2877,7 +3138,7 @@
     "menteseli"
    ],
    "gram": 24.26,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-20",
    "yeni": true,
    "parca": 15,
@@ -2892,6 +3153,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0093",
    "kisa": "M-01",
    "kod": "m0093",
@@ -2925,6 +3189,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0094",
    "kisa": "M-02",
    "kod": "m0094",
@@ -2943,7 +3210,7 @@
     "yok"
    ],
    "gram": 4.3,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-21",
    "yeni": true,
    "parca": 16,
@@ -2958,6 +3225,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0095",
    "kisa": "M-03",
    "kod": "m0095",
@@ -2991,6 +3261,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0097",
    "kisa": "M-04",
    "kod": "m0097",
@@ -3024,6 +3297,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0098",
    "kisa": "M-05",
    "kod": "m0098",
@@ -3057,6 +3333,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0100",
    "kisa": "M-06",
    "kod": "m0100",
@@ -3075,7 +3354,7 @@
     "yok"
    ],
    "gram": 4.58,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-21",
    "yeni": true,
    "parca": 21,
@@ -3090,6 +3369,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0101",
    "kisa": "M-07",
    "kod": "m0101",
@@ -3123,6 +3405,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0102",
    "kisa": "M-08",
    "kod": "m0102",
@@ -3156,6 +3441,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0103",
    "kisa": "M-09",
    "kod": "m0103",
@@ -3189,6 +3477,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0099",
    "kisa": "M-10",
    "kod": "m0099",
@@ -3222,6 +3513,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0104",
    "kisa": "M-11",
    "kod": "m0104",
@@ -3258,6 +3552,9 @@
    "etiketler": [
     "Mekanik"
    ],
+   "tm": [
+    "tasli"
+   ],
    "no": "0107",
    "kisa": "DV-01",
    "kod": "kolye",
@@ -3276,7 +3573,7 @@
     "disli"
    ],
    "gram": 6.05,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 10,
@@ -3293,6 +3590,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "sade"
    ],
    "no": "0143",
    "kisa": "DV-02",
@@ -3312,7 +3612,7 @@
     "disli"
    ],
    "gram": 8.49,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 8,
@@ -3329,6 +3629,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "sade"
    ],
    "no": "0144",
    "kisa": "DV-03",
@@ -3348,7 +3651,7 @@
     "disli"
    ],
    "gram": 1.74,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 6,
@@ -3365,6 +3668,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "sade"
    ],
    "no": "0145",
    "kisa": "DV-04",
@@ -3402,6 +3708,9 @@
    "etiketler": [
     "Mekanik"
    ],
+   "tm": [
+    "sade"
+   ],
    "no": "0146",
    "kisa": "DV-05",
    "kod": "kol-dugmesi",
@@ -3420,7 +3729,7 @@
     "disli"
    ],
    "gram": 8.28,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 7,
@@ -3437,6 +3746,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0147",
    "kisa": "DV-06",
@@ -3456,7 +3768,7 @@
     "disli"
    ],
    "gram": 11.07,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 13,
@@ -3473,6 +3785,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0109",
    "kisa": "DV-07",
@@ -3511,6 +3826,9 @@
    "etiketler": [
     "Mekanik"
    ],
+   "tm": [
+    "tasli"
+   ],
    "no": "0148",
    "kisa": "DV-08",
    "kod": "kupe",
@@ -3547,6 +3865,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0149",
    "kisa": "DV-09",
@@ -3585,6 +3906,9 @@
    "etiketler": [
     "Mekanik"
    ],
+   "tm": [
+    "tasli"
+   ],
    "no": "0150",
    "kisa": "DV-10",
    "kod": "yuzuk",
@@ -3604,7 +3928,7 @@
     "serbest-tas"
    ],
    "gram": 5.35,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 5,
@@ -3621,6 +3945,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0151",
    "kisa": "DV-11",
@@ -3641,7 +3968,7 @@
     "serbest-tas"
    ],
    "gram": 1.79,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 6,
@@ -3658,6 +3985,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0152",
    "kisa": "DV-12",
@@ -3696,6 +4026,9 @@
    "etiketler": [
     "Mekanik"
    ],
+   "tm": [
+    "tasli"
+   ],
    "no": "0108",
    "kisa": "DV-13",
    "kod": "kolye",
@@ -3714,7 +4047,7 @@
     "ic-ice-donen"
    ],
    "gram": 6.09,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 15,
@@ -3731,6 +4064,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "sade"
    ],
    "no": "0153",
    "kisa": "DV-14",
@@ -3750,7 +4086,7 @@
     "donen"
    ],
    "gram": 1.44,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 5,
@@ -3767,6 +4103,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0154",
    "kisa": "DV-15",
@@ -3786,7 +4125,7 @@
     "ic-ice-donen"
    ],
    "gram": 4.99,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 8,
@@ -3803,6 +4142,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "sade"
    ],
    "no": "0155",
    "kisa": "DV-16",
@@ -3822,7 +4164,7 @@
     "ic-ice-donen"
    ],
    "gram": 7.46,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 7,
@@ -3839,6 +4181,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "sade"
    ],
    "no": "0156",
    "kisa": "DV-17",
@@ -3858,7 +4203,7 @@
     "donen"
    ],
    "gram": 1.26,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 5,
@@ -3875,6 +4220,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0157",
    "kisa": "DV-18",
@@ -3912,6 +4260,9 @@
    "etiketler": [
     "Mekanik"
    ],
+   "tm": [
+    "tasli"
+   ],
    "no": "0106",
    "kisa": "DV-19",
    "kod": "balik",
@@ -3930,7 +4281,7 @@
     "eklemli"
    ],
    "gram": 12.28,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 23,
@@ -3947,6 +4298,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0158",
    "kisa": "DV-20",
@@ -3966,7 +4320,7 @@
     "eklemli"
    ],
    "gram": 7.51,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 16,
@@ -3983,6 +4337,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0159",
    "kisa": "DV-21",
@@ -4002,7 +4359,7 @@
     "eklemli"
    ],
    "gram": 6.51,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 13,
@@ -4019,6 +4376,9 @@
   {
    "etiketler": [
     "Mekanik"
+   ],
+   "tm": [
+    "tasli"
    ],
    "no": "0160",
    "kisa": "DV-22",
@@ -4038,7 +4398,7 @@
     "eklemli"
    ],
    "gram": 7.93,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 14,
@@ -4053,6 +4413,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0111",
    "kisa": "BH-01",
    "kod": "yuzuk",
@@ -4086,6 +4449,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0112",
    "kisa": "BH-02",
    "kod": "kupe",
@@ -4104,7 +4470,7 @@
     "sallanan"
    ],
    "gram": 1.85,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 10,
@@ -4119,6 +4485,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0113",
    "kisa": "BH-03",
    "kod": "kolye",
@@ -4152,6 +4521,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0114",
    "kisa": "BH-04",
    "kod": "bileklik",
@@ -4185,6 +4557,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0115",
    "kisa": "BH-05",
    "kod": "bilezik",
@@ -4203,7 +4578,7 @@
     "yok"
    ],
    "gram": 10.29,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 1,
@@ -4218,6 +4593,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0116",
    "kisa": "BH-06",
    "kod": "yuzuk",
@@ -4251,6 +4629,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0117",
    "kisa": "BH-07",
    "kod": "kupe",
@@ -4269,7 +4650,7 @@
     "sallanan"
    ],
    "gram": 1.92,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 10,
@@ -4284,6 +4665,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0118",
    "kisa": "BH-08",
    "kod": "kolye",
@@ -4317,6 +4701,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0119",
    "kisa": "BH-09",
    "kod": "bileklik",
@@ -4350,6 +4737,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0120",
    "kisa": "BH-10",
    "kod": "bilezik",
@@ -4368,7 +4758,7 @@
     "yok"
    ],
    "gram": 10.41,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 1,
@@ -4383,6 +4773,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0121",
    "kisa": "BH-11",
    "kod": "kolye-tasli",
@@ -4416,6 +4809,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0122",
    "kisa": "BH-12",
    "kod": "yuzuk",
@@ -4449,6 +4845,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0123",
    "kisa": "BH-13",
    "kod": "kupe",
@@ -4467,7 +4866,7 @@
     "sallanan"
    ],
    "gram": 1.88,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 10,
@@ -4482,6 +4881,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0124",
    "kisa": "BH-14",
    "kod": "kolye",
@@ -4515,6 +4917,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0125",
    "kisa": "BH-15",
    "kod": "bileklik",
@@ -4548,6 +4953,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0126",
    "kisa": "BH-16",
    "kod": "bilezik",
@@ -4566,7 +4974,7 @@
     "yok"
    ],
    "gram": 10.39,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 1,
@@ -4581,6 +4989,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0137",
    "kisa": "BH-17",
    "kod": "yuzuk",
@@ -4614,6 +5025,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0138",
    "kisa": "BH-18",
    "kod": "kupe",
@@ -4632,7 +5046,7 @@
     "sallanan"
    ],
    "gram": 1.89,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 10,
@@ -4647,6 +5061,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0139",
    "kisa": "BH-19",
    "kod": "kolye",
@@ -4680,6 +5097,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0140",
    "kisa": "BH-20",
    "kod": "bileklik",
@@ -4713,6 +5133,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0141",
    "kisa": "BH-21",
    "kod": "bilezik",
@@ -4731,7 +5154,7 @@
     "yok"
    ],
    "gram": 10.51,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 1,
@@ -4746,6 +5169,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0163",
    "kisa": "SY-01",
    "kod": "burma-alyans",
@@ -4779,6 +5205,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0165",
    "kisa": "SY-03",
    "kod": "ince-alyans",
@@ -4797,7 +5226,7 @@
     "yok"
    ],
    "gram": 1.79,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 1,
@@ -4812,6 +5241,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0166",
    "kisa": "SY-04",
    "kod": "genis",
@@ -4845,6 +5277,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0167",
    "kisa": "SY-05",
    "kod": "dort-lob",
@@ -4878,6 +5313,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0168",
    "kisa": "SY-06",
    "kod": "tam-tur",
@@ -4913,6 +5351,9 @@
   {
    "etiketler": [
     "Elmas kesim"
+   ],
+   "tm": [
+    "sade"
    ],
    "no": "0169",
    "kisa": "SY-07",
@@ -4950,6 +5391,9 @@
    "etiketler": [
     "Elmas kesim"
    ],
+   "tm": [
+    "sade"
+   ],
    "no": "0164",
    "kisa": "SY-02",
    "kod": "elmas-kubbe",
@@ -4968,7 +5412,7 @@
     "yok"
    ],
    "gram": 6.47,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 1,
@@ -4985,6 +5429,9 @@
   {
    "etiketler": [
     "Elmas kesim"
+   ],
+   "tm": [
+    "sade"
    ],
    "no": "0170",
    "kisa": "SY-08",
@@ -5004,7 +5451,7 @@
     "yok"
    ],
    "gram": 5.0,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 1,
@@ -5019,6 +5466,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0171",
    "kisa": "SY-09",
    "kod": "cilali-kubbe",
@@ -5037,7 +5487,7 @@
     "yok"
    ],
    "gram": 6.47,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-22",
    "yeni": true,
    "parca": 1,
@@ -5054,6 +5504,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0195",
    "kisa": "BR-01",
@@ -5091,6 +5544,9 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "mineli"
+   ],
    "no": "0196",
    "kisa": "BR-02",
    "kod": "boga",
@@ -5126,6 +5582,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0197",
    "kisa": "BR-03",
@@ -5163,6 +5622,9 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "mineli"
+   ],
    "no": "0198",
    "kisa": "BR-04",
    "kod": "yengec",
@@ -5198,6 +5660,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0193",
    "kisa": "BR-05",
@@ -5235,6 +5700,9 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "mineli"
+   ],
    "no": "0199",
    "kisa": "BR-06",
    "kod": "basak",
@@ -5270,6 +5738,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0200",
    "kisa": "BR-07",
@@ -5307,6 +5778,9 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "mineli"
+   ],
    "no": "0201",
    "kisa": "BR-08",
    "kod": "akrep",
@@ -5342,6 +5816,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0202",
    "kisa": "BR-09",
@@ -5379,6 +5856,9 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "mineli"
+   ],
    "no": "0203",
    "kisa": "BR-10",
    "kod": "oglak",
@@ -5414,6 +5894,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0204",
    "kisa": "BR-11",
@@ -5451,6 +5934,9 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "mineli"
+   ],
    "no": "0205",
    "kisa": "BR-12",
    "kod": "balik",
@@ -5487,6 +5973,10 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "tasli",
+    "mineli"
+   ],
    "no": "0206",
    "kisa": "BR-13",
    "kod": "koc",
@@ -5505,7 +5995,7 @@
     "sallanan"
    ],
    "gram": 4.5,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 11,
@@ -5522,6 +6012,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0207",
    "kisa": "BR-14",
@@ -5541,7 +6035,7 @@
     "sallanan"
    ],
    "gram": 4.52,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 11,
@@ -5558,6 +6052,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0208",
    "kisa": "BR-15",
@@ -5577,7 +6075,7 @@
     "sallanan"
    ],
    "gram": 4.54,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 11,
@@ -5594,6 +6092,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0209",
    "kisa": "BR-16",
@@ -5613,7 +6115,7 @@
     "sallanan"
    ],
    "gram": 4.49,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 10,
@@ -5630,6 +6132,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0194",
    "kisa": "BR-17",
@@ -5649,7 +6155,7 @@
     "sallanan"
    ],
    "gram": 4.55,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 11,
@@ -5666,6 +6172,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0210",
    "kisa": "BR-18",
@@ -5685,7 +6195,7 @@
     "sallanan"
    ],
    "gram": 4.53,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 10,
@@ -5702,6 +6212,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0211",
    "kisa": "BR-19",
@@ -5721,7 +6235,7 @@
     "sallanan"
    ],
    "gram": 4.54,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 10,
@@ -5738,6 +6252,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0212",
    "kisa": "BR-20",
@@ -5757,7 +6275,7 @@
     "sallanan"
    ],
    "gram": 4.53,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 11,
@@ -5774,6 +6292,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0213",
    "kisa": "BR-21",
@@ -5793,7 +6315,7 @@
     "sallanan"
    ],
    "gram": 4.61,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 11,
@@ -5810,6 +6332,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0214",
    "kisa": "BR-22",
@@ -5829,7 +6355,7 @@
     "sallanan"
    ],
    "gram": 4.53,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 10,
@@ -5846,6 +6372,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0215",
    "kisa": "BR-23",
@@ -5865,7 +6395,7 @@
     "sallanan"
    ],
    "gram": 4.5,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 10,
@@ -5882,6 +6412,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0216",
    "kisa": "BR-24",
@@ -5901,7 +6435,7 @@
     "sallanan"
    ],
    "gram": 4.52,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-23",
    "yeni": true,
    "parca": 10,
@@ -5916,6 +6450,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0226",
    "kisa": "GS-YL-01",
    "kod": "rozet-uc",
@@ -5934,7 +6471,7 @@
     "yok"
    ],
    "gram": 1.71,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -5949,6 +6486,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0219",
    "kisa": "GS-YL-21",
    "kod": "ajur-uc",
@@ -5982,6 +6522,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0217",
    "kisa": "GS-YL-19",
    "kod": "ajur-kupe",
@@ -6000,7 +6543,7 @@
     "yok"
    ],
    "gram": 1.68,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 4,
@@ -6015,6 +6558,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0218",
    "kisa": "GS-YL-20",
    "kod": "ajur-yuzuk",
@@ -6033,7 +6579,7 @@
     "yok"
    ],
    "gram": 4.75,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -6048,6 +6594,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0234",
    "kisa": "GS-YL-04",
    "kod": "ince-bant",
@@ -6084,6 +6633,9 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "mineli"
+   ],
    "no": "0237",
    "kisa": "GS-YL-08",
    "kod": "mineli-bant",
@@ -6102,7 +6654,7 @@
     "yok"
    ],
    "gram": 6.8,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -6117,6 +6669,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0239",
    "kisa": "GS-YL-02",
    "kod": "rozet-uc-orta",
@@ -6150,6 +6705,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0240",
    "kisa": "GS-YL-03",
    "kod": "rozet-kupe",
@@ -6168,7 +6726,7 @@
     "yok"
    ],
    "gram": 1.2,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 2,
@@ -6183,6 +6741,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0261",
    "kisa": "GS-YL-10",
    "kod": "sira-kolye",
@@ -6201,7 +6762,7 @@
     "yok"
    ],
    "gram": 4.94,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 13,
@@ -6216,6 +6777,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0262",
    "kisa": "GS-YL-11",
    "kod": "sallanti-kupe",
@@ -6234,7 +6798,7 @@
     "yok"
    ],
    "gram": 4.29,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 14,
@@ -6249,6 +6813,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0263",
    "kisa": "GS-YL-13",
    "kod": "istif-yuzuk",
@@ -6267,7 +6834,7 @@
     "yok"
    ],
    "gram": 9.22,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 3,
@@ -6282,6 +6849,10 @@
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0271",
    "kisa": "GS-YL-12",
    "kod": "sekizgen-bileklik",
@@ -6300,7 +6871,7 @@
     "yok"
    ],
    "gram": 17.55,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 25,
@@ -6309,12 +6880,16 @@
    "kucuk": "geoselcuklu/kucuk/0271.webp",
    "olcu": "12 × 9 mm plaka",
    "kart_ad": "Yıldız sekizgen plakalı bileklik",
+   "kucuk2": "geoselcuklu/kucuk/0271-y.webp",
    "paylas": "paylas/GS-YL-12.jpg",
    "u": "u/GS-YL-12.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0276",
    "kisa": "GS-YL-14",
    "kod": "tamamlanan-cift-yuzuk",
@@ -6333,7 +6908,7 @@
     "yok"
    ],
    "gram": 6.99,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 2,
@@ -6348,6 +6923,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0288",
    "kisa": "GS-YL-09",
    "kod": "yildiz-muhur-yuzuk",
@@ -6366,7 +6944,7 @@
     "yok"
    ],
    "gram": 8.02,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 2,
@@ -6381,6 +6959,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0367",
    "kisa": "GS-YL-15",
    "kod": "sarmal-yildiz-yuzuk",
@@ -6399,7 +6980,7 @@
     "yok"
    ],
    "gram": 5.19,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 3,
@@ -6414,6 +6995,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0335",
    "kisa": "GS-YL-06",
    "kod": "kalem-yildiz-uc",
@@ -6447,6 +7031,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0336",
    "kisa": "GS-YL-07",
    "kod": "kalem-yildiz-kupe",
@@ -6465,7 +7052,7 @@
     "yok"
    ],
    "gram": 1.71,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 8,
@@ -6482,6 +7069,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "tasli",
+    "mineli"
    ],
    "no": "0337",
    "kisa": "GS-YL-05",
@@ -6501,7 +7092,7 @@
     "yok"
    ],
    "gram": 6.46,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 2,
@@ -6516,6 +7107,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0227",
    "kisa": "GS-CN-02",
    "kod": "karo-kupe",
@@ -6534,7 +7128,7 @@
     "yok"
    ],
    "gram": 0.94,
-   "gram_dilim": "≤ 1 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 2,
@@ -6551,6 +7145,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0231",
    "kisa": "GS-CN-04",
@@ -6588,6 +7185,10 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "tasli",
+    "mineli"
+   ],
    "no": "0232",
    "kisa": "GS-CN-06",
    "kod": "buyuk-uc",
@@ -6606,7 +7207,7 @@
     "yok"
    ],
    "gram": 5.77,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 2,
@@ -6621,6 +7222,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0244",
    "kisa": "GS-CN-01",
    "kod": "kucuk-karo-uc",
@@ -6639,7 +7243,7 @@
     "yok"
    ],
    "gram": 1.39,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -6656,6 +7260,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0246",
    "kisa": "GS-CN-05",
@@ -6675,7 +7282,7 @@
     "yok"
    ],
    "gram": 7.87,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -6692,6 +7299,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0247",
    "kisa": "GS-CN-07",
@@ -6711,7 +7321,7 @@
     "yok"
    ],
    "gram": 1.37,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 2,
@@ -6726,6 +7336,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0245",
    "kisa": "GS-CN-03",
    "kod": "karo-bant",
@@ -6744,7 +7357,7 @@
     "yok"
    ],
    "gram": 4.4,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -6759,6 +7372,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0268",
    "kisa": "GS-CN-11",
    "kod": "cini-sallanti-kupe",
@@ -6792,6 +7408,10 @@
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0281",
    "kisa": "GS-CN-12",
    "kod": "plakali-bileklik",
@@ -6810,7 +7430,7 @@
     "yok"
    ],
    "gram": 20.89,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 23,
@@ -6819,6 +7439,7 @@
    "kucuk": "geoselcuklu/kucuk/0281.webp",
    "olcu": "10,8 mm kare karo",
    "kart_ad": "Çini plakalı bileklik",
+   "kucuk2": "geoselcuklu/kucuk/0281-y.webp",
    "paylas": "paylas/GS-CN-12.jpg",
    "u": "u/GS-CN-12.html",
    "w": 640,
@@ -6827,6 +7448,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0340",
    "kisa": "GS-CN-08",
@@ -6846,7 +7470,7 @@
     "yok"
    ],
    "gram": 5.4,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 4,
@@ -6861,6 +7485,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0222",
    "kisa": "GS-KF-18",
    "kod": "kabartma-kupe",
@@ -6894,6 +7521,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0228",
    "kisa": "GS-KF-04",
    "kod": "kare-kupe",
@@ -6930,6 +7560,9 @@
    "etiketler": [
     "Mineli"
    ],
+   "tm": [
+    "mineli"
+   ],
    "no": "0233",
    "kisa": "GS-KF-05",
    "kod": "siyah-mineli-uc",
@@ -6948,7 +7581,7 @@
     "yok"
    ],
    "gram": 5.21,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -6963,6 +7596,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0235",
    "kisa": "GS-KF-03",
    "kod": "meander-bant",
@@ -6981,7 +7617,7 @@
     "yok"
    ],
    "gram": 5.75,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -6996,6 +7632,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0223",
    "kisa": "GS-KF-19",
    "kod": "kabartma-yuzuk",
@@ -7014,7 +7653,7 @@
     "yok"
    ],
    "gram": 8.57,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -7029,6 +7668,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0243",
    "kisa": "GS-KF-01",
    "kod": "kare-uc",
@@ -7062,6 +7704,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0270",
    "kisa": "GS-KF-10",
    "kod": "katmanli-kolye",
@@ -7095,6 +7740,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0277",
    "kisa": "GS-KF-14",
    "kod": "kenet-istif-yuzuk",
@@ -7113,7 +7761,7 @@
     "yok"
    ],
    "gram": 9.47,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 2,
@@ -7128,6 +7776,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0278",
    "kisa": "GS-KF-13",
    "kod": "tamamlanan-cift-kolye",
@@ -7146,7 +7797,7 @@
     "yok"
    ],
    "gram": 6.24,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 4,
@@ -7161,6 +7812,10 @@
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0280",
    "kisa": "GS-KF-09",
    "kod": "plakali-bileklik",
@@ -7179,7 +7834,7 @@
     "yok"
    ],
    "gram": 22.55,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 23,
@@ -7188,12 +7843,16 @@
    "kucuk": "geoselcuklu/kucuk/0280.webp",
    "olcu": "11,3 mm kare plaka",
    "kart_ad": "Kûfî plakalı bileklik",
+   "kucuk2": "geoselcuklu/kucuk/0280-y.webp",
    "paylas": "paylas/GS-KF-09.jpg",
    "u": "u/GS-KF-09.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0286",
    "kisa": "GS-KF-02",
    "kod": "labirent-uc",
@@ -7212,7 +7871,7 @@
     "yok"
    ],
    "gram": 8.29,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -7229,6 +7888,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0289",
    "kisa": "GS-KF-07",
@@ -7248,7 +7910,7 @@
     "yok"
    ],
    "gram": 8.7,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -7263,6 +7925,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0339",
    "kisa": "GS-KF-06",
    "kod": "kalem-meander-bant",
@@ -7281,7 +7946,7 @@
     "yok"
    ],
    "gram": 8.31,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -7296,6 +7961,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0366",
    "kisa": "GS-KF-11",
    "kod": "kulak-boyu-kupe",
@@ -7329,6 +7997,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0229",
    "kisa": "GS-KL-01",
    "kod": "baklava-uc",
@@ -7347,7 +8018,7 @@
     "yok"
    ],
    "gram": 1.46,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -7364,6 +8035,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0220",
    "kisa": "GS-KL-18",
@@ -7383,7 +8057,7 @@
     "yok"
    ],
    "gram": 4.28,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -7400,6 +8074,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0221",
    "kisa": "GS-KL-19",
@@ -7419,7 +8096,7 @@
     "yok"
    ],
    "gram": 9.07,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -7436,6 +8113,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0250",
    "kisa": "GS-KL-06",
@@ -7455,7 +8135,7 @@
     "yok"
    ],
    "gram": 8.52,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -7472,6 +8152,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0257",
    "kisa": "GS-KL-05",
@@ -7506,6 +8189,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0248",
    "kisa": "GS-KL-02",
    "kod": "baklava-kupe",
@@ -7524,7 +8210,7 @@
     "yok"
    ],
    "gram": 1.94,
-   "gram_dilim": "1–2 g",
+   "gram_dilim": "< 2 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 2,
@@ -7539,6 +8225,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0249",
    "kisa": "GS-KL-03",
    "kod": "zikzak-ince-bant",
@@ -7572,6 +8261,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0269",
    "kisa": "GS-KL-10",
    "kod": "kilim-sallanti-kupe",
@@ -7590,7 +8282,7 @@
     "yok"
    ],
    "gram": 5.98,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 14,
@@ -7605,6 +8297,13 @@
    "h": 640
   },
   {
+   "urun_ek": [
+    "kupe"
+   ],
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0279",
    "kisa": "GS-KL-14",
    "kod": "tamamlanan-kupe-kolye",
@@ -7617,13 +8316,13 @@
    "tip_ad": null,
    "motif": "Kilim",
    "urun": "kolye",
-   "urun_ad": "Kolye",
+   "urun_ad": "Kolye + küpe takımı",
    "tas": "tassiz",
    "hareket": [
     "yok"
    ],
    "gram": 4.68,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 3,
@@ -7632,12 +8331,17 @@
    "kucuk": "geoselcuklu/kucuk/0279.webp",
    "olcu": "24 × 26,5 mm (birleşik, göz dahil)",
    "kart_ad": "Kilim tamamlanan küpe–kolye",
+   "kucuk2": "geoselcuklu/kucuk/0279-y.webp",
    "paylas": "paylas/GS-KL-14.jpg",
    "u": "u/GS-KL-14.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0283",
    "kisa": "GS-KL-11",
    "kod": "bakla-bileklik",
@@ -7656,7 +8360,7 @@
     "yok"
    ],
    "gram": 16.27,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 27,
@@ -7665,12 +8369,16 @@
    "kucuk": "geoselcuklu/kucuk/0283.webp",
    "olcu": "11,2 mm baklava",
    "kart_ad": "Kilim bakla bileklik",
+   "kucuk2": "geoselcuklu/kucuk/0283-y.webp",
    "paylas": "paylas/GS-KL-11.jpg",
    "u": "u/GS-KL-11.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0282",
    "kisa": "GS-KL-09",
    "kod": "plakali-gerdanlik",
@@ -7689,7 +8397,7 @@
     "yok"
    ],
    "gram": 13.86,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 17,
@@ -7706,6 +8414,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0363",
    "kisa": "GS-KL-08",
@@ -7725,7 +8436,7 @@
     "yok"
    ],
    "gram": 8.83,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -7742,6 +8453,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0364",
    "kisa": "GS-KL-07",
@@ -7761,7 +8475,7 @@
     "yok"
    ],
    "gram": 5.05,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 4,
@@ -7778,6 +8492,9 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "tm": [
+    "mineli"
    ],
    "no": "0230",
    "kisa": "GS-GC-05",
@@ -7812,6 +8529,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0236",
    "kisa": "GS-GC-03",
    "kod": "zincirleme-bant",
@@ -7830,7 +8550,7 @@
     "yok"
    ],
    "gram": 6.31,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 1,
@@ -7845,6 +8565,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0241",
    "kisa": "GS-GC-01",
    "kod": "orgu-baklava-uc",
@@ -7878,6 +8601,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0242",
    "kisa": "GS-GC-02",
    "kod": "orgu-baklava-kupe",
@@ -7911,6 +8637,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0266",
    "kisa": "GS-GC-08",
    "kod": "orgu-gerdanlik",
@@ -7929,7 +8658,7 @@
     "yok"
    ],
    "gram": 9.68,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 17,
@@ -7944,6 +8673,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0267",
    "kisa": "GS-GC-09",
    "kod": "orgu-y-kolye",
@@ -7977,6 +8709,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0284",
    "kisa": "GS-GC-04",
    "kod": "ajur-kafes-uc",
@@ -8010,6 +8745,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "tasli"
+   ],
    "no": "0285",
    "kisa": "GS-GC-07",
    "kod": "tasli-zincirleme-bant",
@@ -8028,7 +8766,7 @@
     "yok"
    ],
    "gram": 7.71,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 19,
@@ -8043,6 +8781,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0338",
    "kisa": "GS-GC-06",
    "kod": "kalem-orgu-bant",
@@ -8061,7 +8802,7 @@
     "yok"
    ],
    "gram": 8.29,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -8076,6 +8817,9 @@
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0365",
    "kisa": "GS-GC-17",
    "kod": "orgu-kol-dugmesi",
@@ -8094,7 +8838,7 @@
     "yok"
    ],
    "gram": 5.11,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "4–10 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 6,
@@ -8109,10 +8853,14 @@
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0251",
    "kisa": "SB-01",
    "kod": "tek-sira",
-   "ad": "Selim Tek Sıra",
+   "ad": "Selim tek sıra",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8127,7 +8875,7 @@
     "yok"
    ],
    "gram": 20.54,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 73,
@@ -8135,17 +8883,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0251.webp",
    "olcu": "173,1 × 4,8 × 3,9 mm",
-   "kart_ad": "Bakla selim tek sıra",
+   "kart_ad": "Selim tek sıra",
+   "kucuk2": "selim-bileklik/kucuk/0251-y.webp",
    "paylas": "paylas/SB-01.jpg",
    "u": "u/SB-01.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0252",
    "kisa": "SB-04",
    "kod": "basik-kare",
-   "ad": "Basık Kare",
+   "ad": "Basık kare",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8160,7 +8913,7 @@
     "yok"
    ],
    "gram": 23.15,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 71,
@@ -8168,17 +8921,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0252.webp",
    "olcu": "175 × 5 × 3,5 mm",
-   "kart_ad": "Bakla basık kare",
+   "kart_ad": "Basık kare",
+   "kucuk2": "selim-bileklik/kucuk/0252-y.webp",
    "paylas": "paylas/SB-04.jpg",
    "u": "u/SB-04.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0253",
    "kisa": "SB-38",
    "kod": "sari-beyaz",
-   "ad": "Sarı-Beyaz 1–1",
+   "ad": "Sarı-beyaz 1–1",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8193,7 +8951,7 @@
     "yok"
    ],
    "gram": 21.7,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 71,
@@ -8201,17 +8959,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0253.webp",
    "olcu": "175 × 5 × 3,8 mm",
-   "kart_ad": "Bakla sarı-beyaz 1–1",
+   "kart_ad": "Sarı-beyaz 1–1",
+   "kucuk2": "selim-bileklik/kucuk/0253-y.webp",
    "paylas": "paylas/SB-38.jpg",
    "u": "u/SB-38.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0255",
    "kisa": "SB-31",
    "kod": "basik-genis",
-   "ad": "Basık Geniş Kare",
+   "ad": "Basık geniş kare",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8226,7 +8989,7 @@
     "yok"
    ],
    "gram": 30.0,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 59,
@@ -8234,17 +8997,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0255.webp",
    "olcu": "172,8 × 6 × 3,7 mm",
-   "kart_ad": "Bakla basık geniş kare",
+   "kart_ad": "Basık geniş kare",
+   "kucuk2": "selim-bileklik/kucuk/0255-y.webp",
    "paylas": "paylas/SB-31.jpg",
    "u": "u/SB-31.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0256",
    "kisa": "SB-72",
    "kod": "uzun-bar",
-   "ad": "Uzun Bar",
+   "ad": "Uzun bar",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8259,7 +9027,7 @@
     "yok"
    ],
    "gram": 16.11,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 33,
@@ -8267,17 +9035,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0256.webp",
    "olcu": "171,2 × 4,5 × 3,4 mm",
-   "kart_ad": "Bakla uzun bar",
+   "kart_ad": "Uzun bar",
+   "kucuk2": "selim-bileklik/kucuk/0256-y.webp",
    "paylas": "paylas/SB-72.jpg",
    "u": "u/SB-72.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0258",
    "kisa": "SB-74",
    "kod": "kare-dikdortgen",
-   "ad": "Kare–Dikdörtgen",
+   "ad": "Kare–dikdörtgen",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8292,7 +9065,7 @@
     "yok"
    ],
    "gram": 23.44,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 55,
@@ -8300,17 +9073,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0258.webp",
    "olcu": "176,6 × 5 × 3,8 mm",
-   "kart_ad": "Bakla kare–dikdörtgen",
+   "kart_ad": "Kare–dikdörtgen",
+   "kucuk2": "selim-bileklik/kucuk/0258-y.webp",
    "paylas": "paylas/SB-74.jpg",
    "u": "u/SB-74.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0259",
    "kisa": "SB-15",
    "kod": "duz-ayna",
-   "ad": "Düz Ayna",
+   "ad": "Düz ayna",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8325,7 +9103,7 @@
     "yok"
    ],
    "gram": 23.05,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-25",
    "yeni": true,
    "parca": 59,
@@ -8333,17 +9111,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0259.webp",
    "olcu": "172,8 × 6 × 2,5 mm",
-   "kart_ad": "Bakla düz ayna",
+   "kart_ad": "Düz ayna",
+   "kucuk2": "selim-bileklik/kucuk/0259-y.webp",
    "paylas": "paylas/SB-15.jpg",
    "u": "u/SB-15.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0260",
    "kisa": "SB-78",
    "kod": "enine-ikili",
-   "ad": "Enine İkili",
+   "ad": "Enine ikili",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8358,7 +9141,7 @@
     "yok"
    ],
    "gram": 35.24,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 43,
@@ -8366,17 +9149,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0260.webp",
    "olcu": "171 × 6 × 4,49 mm",
-   "kart_ad": "Bakla enine ikili",
+   "kart_ad": "Enine ikili",
+   "kucuk2": "selim-bileklik/kucuk/0260-y.webp",
    "paylas": "paylas/SB-78.jpg",
    "u": "u/SB-78.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0324",
    "kisa": "SB-15-KL",
    "kod": "verev-ayna-kalem",
-   "ad": "Verev Ayna (Kalem İşli)",
+   "ad": "Verev ayna (kalem işli)",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8391,25 +9179,30 @@
     "yok"
    ],
    "gram": 22.22,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 59,
    "sayfa": "selim-bileklik/set.html#urun=verev-ayna-kalem",
    "set_sayfa": "selim-bileklik/set.html",
-   "kucuk": "selim-bileklik/kucuk/0324.webp",
+   "kucuk": "selim-bileklik/kucuk/0324-y.webp",
    "olcu": "172,8 × 6 × 2,55 mm",
-   "kart_ad": "Bakla verev ayna (kalem işli)",
+   "kart_ad": "Verev ayna (kalem işli)",
+   "kucuk2": "selim-bileklik/kucuk/0324.webp",
    "paylas": "paylas/SB-15-KL.jpg",
    "u": "u/SB-15-KL.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0325",
    "kisa": "SB-08",
    "kod": "sekiz-kubbe",
-   "ad": "Sekiz Kubbe",
+   "ad": "Sekiz kubbe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8424,7 +9217,7 @@
     "yok"
    ],
    "gram": 27.98,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 49,
@@ -8432,13 +9225,18 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0325.webp",
    "olcu": "172,8 × 6,9 × 4,38 mm",
-   "kart_ad": "Bakla sekiz kubbe",
+   "kart_ad": "Sekiz kubbe",
+   "kucuk2": "selim-bileklik/kucuk/0325-y.webp",
    "paylas": "paylas/SB-08.jpg",
    "u": "u/SB-08.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0326",
    "kisa": "SB-07",
    "kod": "petek",
@@ -8457,7 +9255,7 @@
     "yok"
    ],
    "gram": 17.61,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 65,
@@ -8465,17 +9263,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0326.webp",
    "olcu": "172,7 × 6 × 4,56 mm",
-   "kart_ad": "Bakla petek",
+   "kart_ad": "Petek",
+   "kucuk2": "selim-bileklik/kucuk/0326-y.webp",
    "paylas": "paylas/SB-07.jpg",
    "u": "u/SB-07.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0342",
    "kisa": "SB-10",
    "kod": "yastik-ayna",
-   "ad": "Yastık Ayna",
+   "ad": "Yastık ayna",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8490,7 +9293,7 @@
     "yok"
    ],
    "gram": 17.32,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 57,
@@ -8498,17 +9301,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0342.webp",
    "olcu": "173,6 × 6 × 3 mm",
-   "kart_ad": "Bakla yastık ayna",
+   "kart_ad": "Yastık ayna",
+   "kucuk2": "selim-bileklik/kucuk/0342-y.webp",
    "paylas": "paylas/SB-10.jpg",
    "u": "u/SB-10.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0343",
    "kisa": "SB-11",
    "kod": "fici-pah",
-   "ad": "Fıçı Pah",
+   "ad": "Fıçı pah",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8523,7 +9331,7 @@
     "yok"
    ],
    "gram": 25.61,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 59,
@@ -8531,17 +9339,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0343.webp",
    "olcu": "172,3 × 7 × 2,7 mm",
-   "kart_ad": "Bakla fıçı pah",
+   "kart_ad": "Fıçı pah",
+   "kucuk2": "selim-bileklik/kucuk/0343-y.webp",
    "paylas": "paylas/SB-11.jpg",
    "u": "u/SB-11.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0353",
    "kisa": "SB-79",
    "kod": "bar-ile-kare",
-   "ad": "Bar ile Kare 2–1",
+   "ad": "Bar ile kare 2–1",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik",
@@ -8556,7 +9369,7 @@
     "yok"
    ],
    "gram": 20.57,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 45,
@@ -8564,17 +9377,22 @@
    "set_sayfa": "selim-bileklik/set.html",
    "kucuk": "selim-bileklik/kucuk/0353.webp",
    "olcu": "173 × 5 × 3,83 mm",
-   "kart_ad": "Bakla bar ile kare 2–1",
+   "kart_ad": "Bar ile kare 2–1",
+   "kucuk2": "selim-bileklik/kucuk/0353-y.webp",
    "paylas": "paylas/SB-79.jpg",
    "u": "u/SB-79.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0264",
    "kisa": "SB-49",
    "kod": "iki-sira-boyuna",
-   "ad": "İki Sıra Boyuna",
+   "ad": "İki sıra boyuna",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8589,7 +9407,7 @@
     "yok"
    ],
    "gram": 32.92,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 67,
@@ -8597,17 +9415,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0264.webp",
    "olcu": "175,2 × 7,5 × 3,15 mm",
-   "kart_ad": "Bakla iki sıra boyuna",
+   "kart_ad": "İki sıra boyuna",
+   "kucuk2": "selim-bileklik/kucuk/0264-y.webp",
    "paylas": "paylas/SB-49.jpg",
    "u": "u/SB-49.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0265",
    "kisa": "SB-70",
    "kod": "cift-sira-bar-tugla",
-   "ad": "Çift Sıra Bar Tuğla",
+   "ad": "Çift sıra bar tuğla",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8622,7 +9445,7 @@
     "yok"
    ],
    "gram": 37.16,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 35,
@@ -8630,17 +9453,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0265.webp",
    "olcu": "173,4 × 7,9 × 3,2 mm",
-   "kart_ad": "Bakla çift sıra bar tuğla",
+   "kart_ad": "Çift sıra bar tuğla",
+   "kucuk2": "selim-bileklik/kucuk/0265-y.webp",
    "paylas": "paylas/SB-70.jpg",
    "u": "u/SB-70.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0272",
    "kisa": "SB-55",
    "kod": "dort-sira-manset",
-   "ad": "Dört Sıra Manşet",
+   "ad": "Dört sıra manşet",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8655,7 +9483,7 @@
     "yok"
    ],
    "gram": 63.08,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "> 50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 63,
@@ -8663,17 +9491,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0272.webp",
    "olcu": "170,5 × 15,3 × 3,3 mm",
-   "kart_ad": "Bakla dört sıra manşet",
+   "kart_ad": "Dört sıra manşet",
+   "kucuk2": "selim-bileklik/kucuk/0272-y.webp",
    "paylas": "paylas/SB-55.jpg",
    "u": "u/SB-55.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0273",
    "kisa": "SB-41",
    "kod": "cift-sira-piramit",
-   "ad": "Çift Sıra Piramit",
+   "ad": "Çift sıra piramit",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8688,7 +9521,7 @@
     "yok"
    ],
    "gram": 42.87,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 42,
@@ -8696,17 +9529,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0273.webp",
    "olcu": "172 × 8 × 3,67 mm",
-   "kart_ad": "Bakla çift sıra piramit",
+   "kart_ad": "Çift sıra piramit",
+   "kucuk2": "selim-bileklik/kucuk/0273-y.webp",
    "paylas": "paylas/SB-41.jpg",
    "u": "u/SB-41.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0274",
    "kisa": "SB-43",
    "kod": "uc-sira",
-   "ad": "Üç Sıra",
+   "ad": "Üç sıra",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8721,7 +9559,7 @@
     "yok"
    ],
    "gram": 38.23,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 61,
@@ -8729,17 +9567,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0274.webp",
    "olcu": "172,3 × 8 × 3,24 mm",
-   "kart_ad": "Bakla üç sıra",
+   "kart_ad": "Üç sıra",
+   "kucuk2": "selim-bileklik/kucuk/0274-y.webp",
    "paylas": "paylas/SB-43.jpg",
    "u": "u/SB-43.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0275",
    "kisa": "SB-50",
    "kod": "tugla-orgu",
-   "ad": "Tuğla Örgü (İki Sıra)",
+   "ad": "Tuğla örgü (iki sıra)",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8754,7 +9597,7 @@
     "yok"
    ],
    "gram": 45.46,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 41,
@@ -8762,17 +9605,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0275.webp",
    "olcu": "173,6 × 8,3 × 3,84 mm",
-   "kart_ad": "Bakla tuğla örgü (iki sıra)",
+   "kart_ad": "Tuğla örgü (iki sıra)",
+   "kucuk2": "selim-bileklik/kucuk/0275-y.webp",
    "paylas": "paylas/SB-50.jpg",
    "u": "u/SB-50.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0327",
    "kisa": "SB-56",
    "kod": "bes-sira-tugla-manset",
-   "ad": "Beş Sıra Tuğla Manşet",
+   "ad": "Beş sıra tuğla manşet",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8787,7 +9635,7 @@
     "yok"
    ],
    "gram": 103.75,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "> 50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 47,
@@ -8795,17 +9643,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0327.webp",
    "olcu": "173,2 × 18,2 × 3,43 mm",
-   "kart_ad": "Bakla beş sıra tuğla manşet",
+   "kart_ad": "Beş sıra tuğla manşet",
+   "kucuk2": "selim-bileklik/kucuk/0327-y.webp",
    "paylas": "paylas/SB-56.jpg",
    "u": "u/SB-56.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0328",
    "kisa": "SB-66",
    "kod": "bes-sira-mini-tugla",
-   "ad": "Beş Sıra Mini Tuğla",
+   "ad": "Beş sıra mini tuğla",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8820,7 +9673,7 @@
     "yok"
    ],
    "gram": 72.11,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "> 50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 59,
@@ -8828,17 +9681,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0328.webp",
    "olcu": "173,8 × 14,2 × 3,29 mm",
-   "kart_ad": "Bakla beş sıra mini tuğla",
+   "kart_ad": "Beş sıra mini tuğla",
+   "kucuk2": "selim-bileklik/kucuk/0328-y.webp",
    "paylas": "paylas/SB-66.jpg",
    "u": "u/SB-66.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0329",
    "kisa": "SB-67",
    "kod": "dort-sira-uc-renk",
-   "ad": "Dört Sıra Üç Renk",
+   "ad": "Dört sıra üç renk",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cok",
@@ -8853,7 +9711,7 @@
     "yok"
    ],
    "gram": 85.58,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "> 50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 45,
@@ -8861,17 +9719,22 @@
    "set_sayfa": "selim-bileklik/set-cok-sirali.html",
    "kucuk": "selim-bileklik/kucuk/0329.webp",
    "olcu": "174,2 × 15,3 × 3,61 mm",
-   "kart_ad": "Bakla dört sıra üç renk",
+   "kart_ad": "Dört sıra üç renk",
+   "kucuk2": "selim-bileklik/kucuk/0329-y.webp",
    "paylas": "paylas/SB-67.jpg",
    "u": "u/SB-67.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0345",
    "kisa": "SB-13",
    "kod": "boyuna-kesik",
-   "ad": "Boyuna Kesik",
+   "ad": "Boyuna kesik",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kalem",
@@ -8886,25 +9749,30 @@
     "yok"
    ],
    "gram": 23.9,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 49,
    "sayfa": "selim-bileklik/set-kalem.html#urun=boyuna-kesik",
    "set_sayfa": "selim-bileklik/set-kalem.html",
-   "kucuk": "selim-bileklik/kucuk/0345.webp",
+   "kucuk": "selim-bileklik/kucuk/0345-y.webp",
    "olcu": "175 × 5 × 3,5 mm",
-   "kart_ad": "Bakla boyuna kesik",
+   "kart_ad": "Boyuna kesik",
+   "kucuk2": "selim-bileklik/kucuk/0345.webp",
    "paylas": "paylas/SB-13.jpg",
    "u": "u/SB-13.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0346",
    "kisa": "SB-16",
    "kod": "baklava-kalem",
-   "ad": "Baklava Kalem 1–1",
+   "ad": "Baklava kalem 1–1",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kalem",
@@ -8919,21 +9787,26 @@
     "yok"
    ],
    "gram": 28.85,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 59,
    "sayfa": "selim-bileklik/set-kalem.html#urun=baklava-kalem",
    "set_sayfa": "selim-bileklik/set-kalem.html",
-   "kucuk": "selim-bileklik/kucuk/0346.webp",
+   "kucuk": "selim-bileklik/kucuk/0346-y.webp",
    "olcu": "172,8 × 6 × 4,14 mm",
-   "kart_ad": "Baklava Kalem 1–1",
+   "kart_ad": "Baklava kalem 1–1",
+   "kucuk2": "selim-bileklik/kucuk/0346.webp",
    "paylas": "paylas/SB-16.jpg",
    "u": "u/SB-16.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0347",
    "kisa": "SB-17",
    "kod": "dama-2-1",
@@ -8952,25 +9825,30 @@
     "yok"
    ],
    "gram": 32.08,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 51,
    "sayfa": "selim-bileklik/set-kalem.html#urun=dama-2-1",
    "set_sayfa": "selim-bileklik/set-kalem.html",
-   "kucuk": "selim-bileklik/kucuk/0347.webp",
+   "kucuk": "selim-bileklik/kucuk/0347-y.webp",
    "olcu": "173 × 7 × 4,46 mm",
-   "kart_ad": "Bakla dama 2–1",
+   "kart_ad": "Dama 2–1",
+   "kucuk2": "selim-bileklik/kucuk/0347.webp",
    "paylas": "paylas/SB-17.jpg",
    "u": "u/SB-17.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0348",
    "kisa": "SB-19",
    "kod": "tirtil-kemer",
-   "ad": "Tırtıl Kemer",
+   "ad": "Tırtıl kemer",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kalem",
@@ -8985,25 +9863,30 @@
     "yok"
    ],
    "gram": 30.13,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 69,
    "sayfa": "selim-bileklik/set-kalem.html#urun=tirtil-kemer",
    "set_sayfa": "selim-bileklik/set-kalem.html",
-   "kucuk": "selim-bileklik/kucuk/0348.webp",
+   "kucuk": "selim-bileklik/kucuk/0348-y.webp",
    "olcu": "175,1 × 8 × 2,55 mm",
-   "kart_ad": "Bakla tırtıl kemer",
+   "kart_ad": "Tırtıl kemer",
+   "kucuk2": "selim-bileklik/kucuk/0348.webp",
    "paylas": "paylas/SB-19.jpg",
    "u": "u/SB-19.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0349",
    "kisa": "SB-20",
    "kod": "dalga-yastik",
-   "ad": "Dalga Yastık",
+   "ad": "Dalga yastık",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kalem",
@@ -9018,25 +9901,30 @@
     "yok"
    ],
    "gram": 16.48,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 57,
    "sayfa": "selim-bileklik/set-kalem.html#urun=dalga-yastik",
    "set_sayfa": "selim-bileklik/set-kalem.html",
-   "kucuk": "selim-bileklik/kucuk/0349.webp",
+   "kucuk": "selim-bileklik/kucuk/0349-y.webp",
    "olcu": "173,6 × 6 × 3 mm",
-   "kart_ad": "Bakla dalga yastık",
+   "kart_ad": "Dalga yastık",
+   "kucuk2": "selim-bileklik/kucuk/0349.webp",
    "paylas": "paylas/SB-20.jpg",
    "u": "u/SB-20.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0350",
    "kisa": "SB-44",
    "kod": "erkek-verev-plaka",
-   "ad": "Erkek Verev Plaka",
+   "ad": "Erkek verev plaka",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kalem",
@@ -9051,25 +9939,30 @@
     "yok"
    ],
    "gram": 44.52,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 51,
    "sayfa": "selim-bileklik/set-kalem.html#urun=erkek-verev-plaka",
    "set_sayfa": "selim-bileklik/set-kalem.html",
-   "kucuk": "selim-bileklik/kucuk/0350.webp",
+   "kucuk": "selim-bileklik/kucuk/0350-y.webp",
    "olcu": "169,8 × 8 × 4,25 mm",
-   "kart_ad": "Bakla erkek verev plaka",
+   "kart_ad": "Erkek verev plaka",
+   "kucuk2": "selim-bileklik/kucuk/0350.webp",
    "paylas": "paylas/SB-44.jpg",
    "u": "u/SB-44.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0341",
    "kisa": "SB-05",
    "kod": "kiremit-cati",
-   "ad": "Kiremit Çatı",
+   "ad": "Kiremit çatı",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cati",
@@ -9084,7 +9977,7 @@
     "yok"
    ],
    "gram": 21.79,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 71,
@@ -9092,17 +9985,22 @@
    "set_sayfa": "selim-bileklik/set-cati-basamak.html",
    "kucuk": "selim-bileklik/kucuk/0341.webp",
    "olcu": "175 × 5 × 3,53 mm",
-   "kart_ad": "Bakla kiremit çatı",
+   "kart_ad": "Kiremit çatı",
+   "kucuk2": "selim-bileklik/kucuk/0341-y.webp",
    "paylas": "paylas/SB-05.jpg",
    "u": "u/SB-05.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0354",
    "kisa": "SB-80",
    "kod": "enine-sirtli-bar",
-   "ad": "Enine Sırtlı Bar",
+   "ad": "Enine sırtlı bar",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cati",
@@ -9117,7 +10015,7 @@
     "yok"
    ],
    "gram": 22.64,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 49,
@@ -9125,17 +10023,22 @@
    "set_sayfa": "selim-bileklik/set-cati-basamak.html",
    "kucuk": "selim-bileklik/kucuk/0354.webp",
    "olcu": "175 × 5 × 3,53 mm",
-   "kart_ad": "Bakla enine sırtlı bar",
+   "kart_ad": "Enine sırtlı bar",
+   "kucuk2": "selim-bileklik/kucuk/0354-y.webp",
    "paylas": "paylas/SB-80.jpg",
    "u": "u/SB-80.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0344",
    "kisa": "SB-12",
    "kod": "enine-cati",
-   "ad": "Enine Çatı",
+   "ad": "Enine çatı",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cati",
@@ -9150,7 +10053,7 @@
     "yok"
    ],
    "gram": 43.43,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 38,
@@ -9158,17 +10061,22 @@
    "set_sayfa": "selim-bileklik/set-cati-basamak.html",
    "kucuk": "selim-bileklik/kucuk/0344.webp",
    "olcu": "172,4 × 7 × 4,39 mm",
-   "kart_ad": "Bakla enine çatı",
+   "kart_ad": "Enine çatı",
+   "kucuk2": "selim-bileklik/kucuk/0344-y.webp",
    "paylas": "paylas/SB-12.jpg",
    "u": "u/SB-12.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0351",
    "kisa": "SB-76",
    "kod": "baget-faset",
-   "ad": "Baget Faset",
+   "ad": "Baget faset",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cati",
@@ -9183,7 +10091,7 @@
     "yok"
    ],
    "gram": 23.17,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 49,
@@ -9191,17 +10099,22 @@
    "set_sayfa": "selim-bileklik/set-cati-basamak.html",
    "kucuk": "selim-bileklik/kucuk/0351.webp",
    "olcu": "175 × 5 × 3,1 mm",
-   "kart_ad": "Bakla baget faset",
+   "kart_ad": "Baget faset",
+   "kucuk2": "selim-bileklik/kucuk/0351-y.webp",
    "paylas": "paylas/SB-76.jpg",
    "u": "u/SB-76.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0352",
    "kisa": "SB-77",
    "kod": "enine-basamak",
-   "ad": "Enine Basamak",
+   "ad": "Enine basamak",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cati",
@@ -9216,7 +10129,7 @@
     "yok"
    ],
    "gram": 39.93,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 38,
@@ -9224,17 +10137,22 @@
    "set_sayfa": "selim-bileklik/set-cati-basamak.html",
    "kucuk": "selim-bileklik/kucuk/0352.webp",
    "olcu": "172,1 × 7 × 3,34 mm",
-   "kart_ad": "Bakla enine basamak",
+   "kart_ad": "Enine basamak",
+   "kucuk2": "selim-bileklik/kucuk/0352-y.webp",
    "paylas": "paylas/SB-77.jpg",
    "u": "u/SB-77.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0355",
    "kisa": "SB-82",
    "kod": "basamak-piramit",
-   "ad": "Basamak–Piramit",
+   "ad": "Basamak–piramit",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-cati",
@@ -9249,7 +10167,7 @@
     "yok"
    ],
    "gram": 42.74,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 39,
@@ -9257,17 +10175,22 @@
    "set_sayfa": "selim-bileklik/set-cati-basamak.html",
    "kucuk": "selim-bileklik/kucuk/0355.webp",
    "olcu": "177,2 × 7 × 4,8 mm",
-   "kart_ad": "Bakla basamak–piramit",
+   "kart_ad": "Basamak–piramit",
+   "kucuk2": "selim-bileklik/kucuk/0355-y.webp",
    "paylas": "paylas/SB-82.jpg",
    "u": "u/SB-82.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0305",
    "kisa": "SB-01-K",
    "kod": "tek-sira-kanal",
-   "ad": "Selim Tek Sıra · Kanal",
+   "ad": "Selim tek sıra · Kanal",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kanal",
@@ -9282,7 +10205,7 @@
     "yok"
    ],
    "gram": 26.29,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 36,
@@ -9290,17 +10213,22 @@
    "set_sayfa": "selim-bileklik/set-kanal.html",
    "kucuk": "selim-bileklik/kucuk/0305.webp",
    "olcu": "172 × 4,8 × 4,21 mm",
-   "kart_ad": "Bakla selim tek sıra · kanal",
+   "kart_ad": "Selim tek sıra · Kanal",
+   "kucuk2": "selim-bileklik/kucuk/0305-y.webp",
    "paylas": "paylas/SB-01-K.jpg",
    "u": "u/SB-01-K.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0306",
    "kisa": "SB-04-K",
    "kod": "basik-kare-kanal",
-   "ad": "Basık Kare · Kanal",
+   "ad": "Basık kare · Kanal",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kanal",
@@ -9315,7 +10243,7 @@
     "yok"
    ],
    "gram": 29.14,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 35,
@@ -9323,17 +10251,22 @@
    "set_sayfa": "selim-bileklik/set-kanal.html",
    "kucuk": "selim-bileklik/kucuk/0306.webp",
    "olcu": "173,2 × 5 × 3,85 mm",
-   "kart_ad": "Bakla basık kare · kanal",
+   "kart_ad": "Basık kare · Kanal",
+   "kucuk2": "selim-bileklik/kucuk/0306-y.webp",
    "paylas": "paylas/SB-04-K.jpg",
    "u": "u/SB-04-K.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0307",
    "kisa": "SB-38-K",
    "kod": "sari-beyaz-kanal",
-   "ad": "Sarı-Beyaz 1–1 · Kanal",
+   "ad": "Sarı-beyaz 1–1 · Kanal",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kanal",
@@ -9348,7 +10281,7 @@
     "yok"
    ],
    "gram": 27.77,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 35,
@@ -9356,17 +10289,22 @@
    "set_sayfa": "selim-bileklik/set-kanal.html",
    "kucuk": "selim-bileklik/kucuk/0307.webp",
    "olcu": "173,2 × 5 × 4,18 mm",
-   "kart_ad": "Bakla sarı-beyaz 1–1 · kanal",
+   "kart_ad": "Sarı-beyaz 1–1 · Kanal",
+   "kucuk2": "selim-bileklik/kucuk/0307-y.webp",
    "paylas": "paylas/SB-38-K.jpg",
    "u": "u/SB-38-K.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0308",
    "kisa": "SB-31-K",
    "kod": "basik-genis-kanal",
-   "ad": "Basık Geniş Kare · Kanal",
+   "ad": "Basık geniş kare · Kanal",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kanal",
@@ -9381,7 +10319,7 @@
     "yok"
    ],
    "gram": 38.26,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 30,
@@ -9389,17 +10327,22 @@
    "set_sayfa": "selim-bileklik/set-kanal.html",
    "kucuk": "selim-bileklik/kucuk/0308.webp",
    "olcu": "173,9 × 6 × 4,1 mm",
-   "kart_ad": "Bakla basık geniş kare · kanal",
+   "kart_ad": "Basık geniş kare · Kanal",
+   "kucuk2": "selim-bileklik/kucuk/0308-y.webp",
    "paylas": "paylas/SB-31-K.jpg",
    "u": "u/SB-31-K.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0317",
    "kisa": "SB-74-K",
    "kod": "kare-dikdortgen-kanal",
-   "ad": "Kare–Dikdörtgen · Kanal",
+   "ad": "Kare–dikdörtgen · Kanal",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kanal",
@@ -9414,7 +10357,7 @@
     "yok"
    ],
    "gram": 28.61,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 27,
@@ -9422,17 +10365,22 @@
    "set_sayfa": "selim-bileklik/set-kanal.html",
    "kucuk": "selim-bileklik/kucuk/0317.webp",
    "olcu": "169,7 × 5 × 4,18 mm",
-   "kart_ad": "Bakla kare–dikdörtgen · kanal",
+   "kart_ad": "Kare–dikdörtgen · Kanal",
+   "kucuk2": "selim-bileklik/kucuk/0317-y.webp",
    "paylas": "paylas/SB-74-K.jpg",
    "u": "u/SB-74-K.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0318",
    "kisa": "SB-49-K",
    "kod": "iki-sira-boyuna-kanal",
-   "ad": "İki Sıra Boyuna · Kanal",
+   "ad": "İki sıra boyuna · Kanal",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kanal",
@@ -9447,7 +10395,7 @@
     "yok"
    ],
    "gram": 43.27,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 33,
@@ -9455,17 +10403,22 @@
    "set_sayfa": "selim-bileklik/set-kanal.html",
    "kucuk": "selim-bileklik/kucuk/0318.webp",
    "olcu": "172,4 × 7,5 × 3,48 mm",
-   "kart_ad": "Bakla iki sıra boyuna · kanal",
+   "kart_ad": "İki sıra boyuna · Kanal",
+   "kucuk2": "selim-bileklik/kucuk/0318-y.webp",
    "paylas": "paylas/SB-49-K.jpg",
    "u": "u/SB-49-K.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0319",
    "kisa": "SB-55-K",
    "kod": "dort-sira-manset-kanal",
-   "ad": "Dört Sıra Manşet · Kanal",
+   "ad": "Dört sıra manşet · Kanal",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kanal",
@@ -9480,7 +10433,7 @@
     "yok"
    ],
    "gram": 89.62,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "> 50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 32,
@@ -9488,17 +10441,22 @@
    "set_sayfa": "selim-bileklik/set-kanal.html",
    "kucuk": "selim-bileklik/kucuk/0319.webp",
    "olcu": "172,5 × 15,3 × 3,63 mm",
-   "kart_ad": "Bakla dört sıra manşet · kanal",
+   "kart_ad": "Dört sıra manşet · Kanal",
+   "kucuk2": "selim-bileklik/kucuk/0319-y.webp",
    "paylas": "paylas/SB-55-K.jpg",
    "u": "u/SB-55-K.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0356",
    "kisa": "SB-15-KL-K",
    "kod": "verev-ayna-kalem-kanal",
-   "ad": "Verev Ayna (Kalem İşli) · Kanal",
+   "ad": "Verev ayna (kalem işli) · Kanal",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-kanal",
@@ -9513,25 +10471,29 @@
     "yok"
    ],
    "gram": 30.74,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 30,
    "sayfa": "selim-bileklik/set-kanal.html#urun=verev-ayna-kalem-kanal",
    "set_sayfa": "selim-bileklik/set-kanal.html",
-   "kucuk": "selim-bileklik/kucuk/0356.webp",
+   "kucuk": "selim-bileklik/kucuk/0356-y.webp",
    "olcu": "173,9 × 6 × 2,9 mm",
-   "kart_ad": "Bakla verev ayna (kalem işli) · kanal",
+   "kart_ad": "Verev ayna (kalem işli) · Kanal",
+   "kucuk2": "selim-bileklik/kucuk/0356.webp",
    "paylas": "paylas/SB-15-KL-K.jpg",
    "u": "u/SB-15-KL-K.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0290",
    "kisa": "SB-01-R",
    "kod": "tek-sira-rijit",
-   "ad": "Selim Tek Sıra · Rijit kelepçe",
+   "ad": "Selim tek sıra · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9546,7 +10508,7 @@
     "yok"
    ],
    "gram": 14.41,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9554,17 +10516,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0290.webp",
    "olcu": "iç 57,7 × 45 mm, en 4,8 mm",
-   "kart_ad": "Bakla selim tek sıra · rijit kelepçe",
+   "kart_ad": "Selim tek sıra · Rijit kelepçe",
    "paylas": "paylas/SB-01-R.jpg",
    "u": "u/SB-01-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0309",
    "kisa": "SB-04-R",
    "kod": "basik-kare-rijit",
-   "ad": "Basık Kare · Rijit kelepçe",
+   "ad": "Basık kare · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9579,7 +10544,7 @@
     "yok"
    ],
    "gram": 15.54,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9587,17 +10552,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0309.webp",
    "olcu": "iç 57,7 × 45,5 mm, en 5 mm",
-   "kart_ad": "Bakla basık kare · rijit kelepçe",
+   "kart_ad": "Basık kare · Rijit kelepçe",
    "paylas": "paylas/SB-04-R.jpg",
    "u": "u/SB-04-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0310",
    "kisa": "SB-38-R",
    "kod": "sari-beyaz-rijit",
-   "ad": "Sarı-Beyaz 1–1 · Rijit kelepçe",
+   "ad": "Kare piramit · Rijit kelepçe (tek renk)",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9612,7 +10580,7 @@
     "yok"
    ],
    "gram": 14.68,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9620,17 +10588,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0310.webp",
    "olcu": "iç 57,7 × 45 mm, en 5 mm",
-   "kart_ad": "Bakla sarı-beyaz 1–1 · rijit kelepçe",
+   "kart_ad": "Kare piramit · Rijit kelepçe (tek renk)",
    "paylas": "paylas/SB-38-R.jpg",
    "u": "u/SB-38-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0311",
    "kisa": "SB-31-R",
    "kod": "basik-genis-rijit",
-   "ad": "Basık Geniş Kare · Rijit kelepçe",
+   "ad": "Basık geniş kare · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9645,7 +10616,7 @@
     "yok"
    ],
    "gram": 18.06,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9653,17 +10624,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0311.webp",
    "olcu": "iç 57,8 × 45 mm, en 6 mm",
-   "kart_ad": "Bakla basık geniş kare · rijit kelepçe",
+   "kart_ad": "Basık geniş kare · Rijit kelepçe",
    "paylas": "paylas/SB-31-R.jpg",
    "u": "u/SB-31-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0312",
    "kisa": "SB-72-R",
    "kod": "uzun-bar-rijit",
-   "ad": "Uzun Bar · Rijit kelepçe",
+   "ad": "Uzun bar · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9678,7 +10652,7 @@
     "yok"
    ],
    "gram": 13.92,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9686,17 +10660,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0312.webp",
    "olcu": "iç 57,7 × 46 mm, en 4,5 mm",
-   "kart_ad": "Bakla uzun bar · rijit kelepçe",
+   "kart_ad": "Uzun bar · Rijit kelepçe",
    "paylas": "paylas/SB-72-R.jpg",
    "u": "u/SB-72-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0291",
    "kisa": "SB-74-R",
    "kod": "kare-dikdortgen-rijit",
-   "ad": "Kare–Dikdörtgen · Rijit kelepçe",
+   "ad": "Kare–dikdörtgen · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9711,7 +10688,7 @@
     "yok"
    ],
    "gram": 14.92,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9719,17 +10696,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0291.webp",
    "olcu": "iç 57,7 × 45,3 mm, en 5 mm",
-   "kart_ad": "Bakla kare–dikdörtgen · rijit kelepçe",
+   "kart_ad": "Kare–dikdörtgen · Rijit kelepçe",
    "paylas": "paylas/SB-74-R.jpg",
    "u": "u/SB-74-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0300",
    "kisa": "SB-78-R",
    "kod": "enine-ikili-rijit",
-   "ad": "Enine İkili · Rijit kelepçe",
+   "ad": "Enine ikili · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9744,7 +10724,7 @@
     "yok"
    ],
    "gram": 18.42,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9752,17 +10732,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0300.webp",
    "olcu": "iç 57,8 × 45 mm, en 6 mm",
-   "kart_ad": "Bakla enine ikili · rijit kelepçe",
+   "kart_ad": "Enine ikili · Rijit kelepçe",
    "paylas": "paylas/SB-78-R.jpg",
    "u": "u/SB-78-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0320",
    "kisa": "SB-49-R",
    "kod": "iki-sira-boyuna-rijit",
-   "ad": "İki Sıra Boyuna · Rijit kelepçe",
+   "ad": "İki sıra boyuna · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9777,7 +10760,7 @@
     "yok"
    ],
    "gram": 21.42,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9785,17 +10768,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0320.webp",
    "olcu": "iç 57,8 × 46,2 mm, en 7,5 mm",
-   "kart_ad": "Bakla iki sıra boyuna · rijit kelepçe",
+   "kart_ad": "İki sıra boyuna · Rijit kelepçe",
    "paylas": "paylas/SB-49-R.jpg",
    "u": "u/SB-49-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0321",
    "kisa": "SB-70-R",
    "kod": "cift-sira-bar-tugla-rijit",
-   "ad": "Çift Sıra Bar Tuğla · Rijit kelepçe",
+   "ad": "Çift sıra bar tuğla · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9810,7 +10796,7 @@
     "yok"
    ],
    "gram": 22.47,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9818,17 +10804,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0321.webp",
    "olcu": "iç 57,8 × 46 mm, en 7,9 mm",
-   "kart_ad": "Bakla çift sıra bar tuğla · rijit kelepçe",
+   "kart_ad": "Çift sıra bar tuğla · Rijit kelepçe",
    "paylas": "paylas/SB-70-R.jpg",
    "u": "u/SB-70-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0292",
    "kisa": "SB-55-R",
    "kod": "dort-sira-manset-rijit",
-   "ad": "Dört Sıra Manşet · Rijit kelepçe",
+   "ad": "Dört sıra manşet · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9843,7 +10832,7 @@
     "yok"
    ],
    "gram": 38.27,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9851,17 +10840,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0292.webp",
    "olcu": "iç 57,9 × 45,9 mm, en 15,3 mm",
-   "kart_ad": "Bakla dört sıra manşet · rijit kelepçe",
+   "kart_ad": "Dört sıra manşet · Rijit kelepçe",
    "paylas": "paylas/SB-55-R.jpg",
    "u": "u/SB-55-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0297",
    "kisa": "SB-41-R",
    "kod": "cift-sira-piramit-rijit",
-   "ad": "Çift Sıra Piramit · Rijit kelepçe",
+   "ad": "Çift sıra piramit · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9876,7 +10868,7 @@
     "yok"
    ],
    "gram": 21.27,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9884,17 +10876,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0297.webp",
    "olcu": "iç 57,8 × 45,9 mm, en 8 mm",
-   "kart_ad": "Bakla çift sıra piramit · rijit kelepçe",
+   "kart_ad": "Çift sıra piramit · Rijit kelepçe",
    "paylas": "paylas/SB-41-R.jpg",
    "u": "u/SB-41-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0298",
    "kisa": "SB-43-R",
    "kod": "uc-sira-rijit",
-   "ad": "Üç Sıra · Rijit kelepçe",
+   "ad": "Üç sıra · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9909,7 +10904,7 @@
     "yok"
    ],
    "gram": 20.67,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9917,17 +10912,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0298.webp",
    "olcu": "iç 57,8 × 45 mm, en 8 mm",
-   "kart_ad": "Bakla üç sıra · rijit kelepçe",
+   "kart_ad": "Üç sıra · Rijit kelepçe",
    "paylas": "paylas/SB-43-R.jpg",
    "u": "u/SB-43-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0299",
    "kisa": "SB-50-R",
    "kod": "tugla-orgu-rijit",
-   "ad": "Tuğla Örgü (İki Sıra) · Rijit kelepçe",
+   "ad": "Tuğla örgü (iki sıra) · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9942,7 +10940,7 @@
     "yok"
    ],
    "gram": 22.15,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9950,17 +10948,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0299.webp",
    "olcu": "iç 57,8 × 45,4 mm, en 8,3 mm",
-   "kart_ad": "Bakla tuğla örgü (iki sıra) · rijit kelepçe",
+   "kart_ad": "Tuğla örgü (iki sıra) · Rijit kelepçe",
    "paylas": "paylas/SB-50-R.jpg",
    "u": "u/SB-50-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0357",
    "kisa": "SB-56-R",
    "kod": "bes-sira-tugla-manset-rijit",
-   "ad": "Beş Sıra Tuğla Manşet · Rijit kelepçe",
+   "ad": "Beş sıra tuğla manşet · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -9975,7 +10976,7 @@
     "yok"
    ],
    "gram": 47.61,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -9983,17 +10984,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0357.webp",
    "olcu": "iç 57,9 × 46,3 mm, en 18,2 mm",
-   "kart_ad": "Bakla beş sıra tuğla manşet · rijit kelepçe",
+   "kart_ad": "Beş sıra tuğla manşet · Rijit kelepçe",
    "paylas": "paylas/SB-56-R.jpg",
    "u": "u/SB-56-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0358",
    "kisa": "SB-66-R",
    "kod": "bes-sira-mini-tugla-rijit",
-   "ad": "Beş Sıra Mini Tuğla · Rijit kelepçe",
+   "ad": "Beş sıra mini tuğla · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -10008,7 +11012,7 @@
     "yok"
    ],
    "gram": 35.36,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -10016,17 +11020,20 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0358.webp",
    "olcu": "iç 57,9 × 45 mm, en 14,2 mm",
-   "kart_ad": "Bakla beş sıra mini tuğla · rijit kelepçe",
+   "kart_ad": "Beş sıra mini tuğla · Rijit kelepçe",
    "paylas": "paylas/SB-66-R.jpg",
    "u": "u/SB-66-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "tm": [
+    "sade"
+   ],
    "no": "0359",
    "kisa": "SB-67-R",
    "kod": "dort-sira-uc-renk-rijit",
-   "ad": "Dört Sıra Üç Renk · Rijit kelepçe",
+   "ad": "Dört sıra üç renk · Rijit kelepçe",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-rijit",
@@ -10041,7 +11048,7 @@
     "yok"
    ],
    "gram": 38.34,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 1,
@@ -10049,17 +11056,21 @@
    "set_sayfa": "selim-bileklik/set-rijit.html",
    "kucuk": "selim-bileklik/kucuk/0359.webp",
    "olcu": "iç 57,9 × 46,1 mm, en 15,3 mm",
-   "kart_ad": "Bakla dört sıra üç renk · rijit kelepçe",
+   "kart_ad": "Dört sıra üç renk · Rijit kelepçe",
    "paylas": "paylas/SB-67-R.jpg",
    "u": "u/SB-67-R.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0293",
    "kisa": "SB-01-T",
    "kod": "tek-sira-tasiyici",
-   "ad": "Selim Tek Sıra · Taşıyıcı zincir",
+   "ad": "Selim tek sıra · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10074,7 +11085,7 @@
     "yok"
    ],
    "gram": 13.73,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 35,
@@ -10082,17 +11093,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0293.webp",
    "olcu": "172,5 mm, başlık en 4,8 mm",
-   "kart_ad": "Bakla selim tek sıra · taşıyıcı zincir",
+   "kart_ad": "Selim tek sıra · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0293-y.webp",
    "paylas": "paylas/SB-01-T.jpg",
    "u": "u/SB-01-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0313",
    "kisa": "SB-04-T",
    "kod": "basik-kare-tasiyici",
-   "ad": "Basık Kare · Taşıyıcı zincir",
+   "ad": "Basık kare · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10107,7 +11123,7 @@
     "yok"
    ],
    "gram": 17.23,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 34,
@@ -10115,17 +11131,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0313.webp",
    "olcu": "174,2 mm, başlık en 5 mm",
-   "kart_ad": "Bakla basık kare · taşıyıcı zincir",
+   "kart_ad": "Basık kare · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0313-y.webp",
    "paylas": "paylas/SB-04-T.jpg",
    "u": "u/SB-04-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0314",
    "kisa": "SB-38-T",
    "kod": "sari-beyaz-tasiyici",
-   "ad": "Sarı-Beyaz 1–1 · Taşıyıcı zincir",
+   "ad": "Sarı-beyaz 1–1 · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10140,7 +11161,7 @@
     "yok"
    ],
    "gram": 15.87,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 34,
@@ -10148,17 +11169,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0314.webp",
    "olcu": "174,2 mm, başlık en 5 mm",
-   "kart_ad": "Bakla sarı-beyaz 1–1 · taşıyıcı zincir",
+   "kart_ad": "Sarı-beyaz 1–1 · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0314-y.webp",
    "paylas": "paylas/SB-38-T.jpg",
    "u": "u/SB-38-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0315",
    "kisa": "SB-31-T",
    "kod": "basik-genis-tasiyici",
-   "ad": "Basık Geniş Kare · Taşıyıcı zincir",
+   "ad": "Basık geniş kare · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10173,7 +11199,7 @@
     "yok"
    ],
    "gram": 21.94,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 28,
@@ -10181,17 +11207,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0315.webp",
    "olcu": "173,6 mm, başlık en 6 mm",
-   "kart_ad": "Bakla basık geniş kare · taşıyıcı zincir",
+   "kart_ad": "Basık geniş kare · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0315-y.webp",
    "paylas": "paylas/SB-31-T.jpg",
    "u": "u/SB-31-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0316",
    "kisa": "SB-72-T",
    "kod": "uzun-bar-tasiyici",
-   "ad": "Uzun Bar · Taşıyıcı zincir",
+   "ad": "Uzun bar · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10206,7 +11237,7 @@
     "yok"
    ],
    "gram": 14.81,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 16,
@@ -10214,17 +11245,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0316.webp",
    "olcu": "173,8 mm, başlık en 4,5 mm",
-   "kart_ad": "Bakla uzun bar · taşıyıcı zincir",
+   "kart_ad": "Uzun bar · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0316-y.webp",
    "paylas": "paylas/SB-72-T.jpg",
    "u": "u/SB-72-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0294",
    "kisa": "SB-74-T",
    "kod": "kare-dikdortgen-tasiyici",
-   "ad": "Kare–Dikdörtgen · Taşıyıcı zincir",
+   "ad": "Kare–dikdörtgen · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10239,7 +11275,7 @@
     "yok"
    ],
    "gram": 11.76,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 26,
@@ -10247,17 +11283,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0294.webp",
    "olcu": "173,4 mm, başlık en 5 mm",
-   "kart_ad": "Bakla kare–dikdörtgen · taşıyıcı zincir",
+   "kart_ad": "Kare–dikdörtgen · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0294-y.webp",
    "paylas": "paylas/SB-74-T.jpg",
    "u": "u/SB-74-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0304",
    "kisa": "SB-78-T",
    "kod": "enine-ikili-tasiyici",
-   "ad": "Enine İkili · Taşıyıcı zincir",
+   "ad": "Enine ikili · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10272,7 +11313,7 @@
     "yok"
    ],
    "gram": 19.58,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 40,
@@ -10280,17 +11321,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0304.webp",
    "olcu": "172,2 mm, başlık en 6 mm",
-   "kart_ad": "Bakla enine ikili · taşıyıcı zincir",
+   "kart_ad": "Enine ikili · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0304-y.webp",
    "paylas": "paylas/SB-78-T.jpg",
    "u": "u/SB-78-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0295",
    "kisa": "SB-49-T",
    "kod": "iki-sira-boyuna-tasiyici",
-   "ad": "İki Sıra Boyuna · Taşıyıcı zincir",
+   "ad": "İki sıra boyuna · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10305,7 +11351,7 @@
     "yok"
    ],
    "gram": 23.06,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 32,
@@ -10313,17 +11359,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0295.webp",
    "olcu": "172,7 mm, başlık en 7,5 mm",
-   "kart_ad": "Bakla iki sıra boyuna · taşıyıcı zincir",
+   "kart_ad": "İki sıra boyuna · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0295-y.webp",
    "paylas": "paylas/SB-49-T.jpg",
    "u": "u/SB-49-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0322",
    "kisa": "SB-70-T",
    "kod": "cift-sira-bar-tugla-tasiyici",
-   "ad": "Çift Sıra Bar Tuğla · Taşıyıcı zincir",
+   "ad": "Çift sıra bar tuğla · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10338,7 +11389,7 @@
     "yok"
    ],
    "gram": 25.8,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 17,
@@ -10346,17 +11397,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0322.webp",
    "olcu": "172,8 mm, başlık en 7,9 mm",
-   "kart_ad": "Bakla çift sıra bar tuğla · taşıyıcı zincir",
+   "kart_ad": "Çift sıra bar tuğla · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0322-y.webp",
    "paylas": "paylas/SB-70-T.jpg",
    "u": "u/SB-70-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0323",
    "kisa": "SB-55-T",
    "kod": "dort-sira-manset-tasiyici",
-   "ad": "Dört Sıra Manşet · Taşıyıcı zincir",
+   "ad": "Dört sıra manşet · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10371,7 +11427,7 @@
     "yok"
    ],
    "gram": 43.34,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 31,
@@ -10379,17 +11435,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0323.webp",
    "olcu": "172,8 mm, başlık en 15,3 mm",
-   "kart_ad": "Bakla dört sıra manşet · taşıyıcı zincir",
+   "kart_ad": "Dört sıra manşet · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0323-y.webp",
    "paylas": "paylas/SB-55-T.jpg",
    "u": "u/SB-55-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0301",
    "kisa": "SB-41-T",
    "kod": "cift-sira-piramit-tasiyici",
-   "ad": "Çift Sıra Piramit · Taşıyıcı zincir",
+   "ad": "Çift sıra piramit · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10404,7 +11465,7 @@
     "yok"
    ],
    "gram": 21.61,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 41,
@@ -10412,17 +11473,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0301.webp",
    "olcu": "173,6 mm, başlık en 8 mm",
-   "kart_ad": "Bakla çift sıra piramit · taşıyıcı zincir",
+   "kart_ad": "Çift sıra piramit · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0301-y.webp",
    "paylas": "paylas/SB-41-T.jpg",
    "u": "u/SB-41-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0303",
    "kisa": "SB-50-T",
    "kod": "tugla-orgu-tasiyici",
-   "ad": "Tuğla Örgü (İki Sıra) · Taşıyıcı zincir",
+   "ad": "Tuğla örgü (iki sıra) · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10437,7 +11503,7 @@
     "yok"
    ],
    "gram": 22.67,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 39,
@@ -10445,17 +11511,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0303.webp",
    "olcu": "172,7 mm, başlık en 8,3 mm",
-   "kart_ad": "Bakla tuğla örgü (iki sıra) · taşıyıcı zincir",
+   "kart_ad": "Tuğla örgü (iki sıra) · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0303-y.webp",
    "paylas": "paylas/SB-50-T.jpg",
    "u": "u/SB-50-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0302",
    "kisa": "SB-43-T",
    "kod": "uc-sira-tasiyici",
-   "ad": "Üç Sıra · Taşıyıcı zincir",
+   "ad": "Üç sıra · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10470,7 +11541,7 @@
     "yok"
    ],
    "gram": 18.74,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 62,
@@ -10478,17 +11549,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0302.webp",
    "olcu": "173,6 mm, başlık en 8 mm",
-   "kart_ad": "Bakla üç sıra · taşıyıcı zincir",
+   "kart_ad": "Üç sıra · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0302-y.webp",
    "paylas": "paylas/SB-43-T.jpg",
    "u": "u/SB-43-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0360",
    "kisa": "SB-56-T",
    "kod": "bes-sira-tugla-manset-tasiyici",
-   "ad": "Beş Sıra Tuğla Manşet · Taşıyıcı zincir",
+   "ad": "Beş sıra tuğla manşet · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10503,7 +11579,7 @@
     "yok"
    ],
    "gram": 48.28,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 44,
@@ -10511,17 +11587,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0360.webp",
    "olcu": "172,9 mm, başlık en 18,2 mm",
-   "kart_ad": "Bakla beş sıra tuğla manşet · taşıyıcı zincir",
+   "kart_ad": "Beş sıra tuğla manşet · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0360-y.webp",
    "paylas": "paylas/SB-56-T.jpg",
    "u": "u/SB-56-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0361",
    "kisa": "SB-66-T",
    "kod": "bes-sira-mini-tugla-tasiyici",
-   "ad": "Beş Sıra Mini Tuğla · Taşıyıcı zincir",
+   "ad": "Beş sıra mini tuğla · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10536,7 +11617,7 @@
     "yok"
    ],
    "gram": 32.74,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 58,
@@ -10544,17 +11625,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0361.webp",
    "olcu": "173 mm, başlık en 14,2 mm",
-   "kart_ad": "Bakla beş sıra mini tuğla · taşıyıcı zincir",
+   "kart_ad": "Beş sıra mini tuğla · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0361-y.webp",
    "paylas": "paylas/SB-66-T.jpg",
    "u": "u/SB-66-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "ikincil",
+   "tm": [
+    "sade"
+   ],
    "no": "0362",
    "kisa": "SB-67-T",
    "kod": "dort-sira-uc-renk-tasiyici",
-   "ad": "Dört Sıra Üç Renk · Taşıyıcı zincir",
+   "ad": "Dört sıra üç renk · Taşıyıcı zincir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasiyici",
@@ -10569,7 +11655,7 @@
     "yok"
    ],
    "gram": 39.58,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 43,
@@ -10577,17 +11663,22 @@
    "set_sayfa": "selim-bileklik/set-tasiyici.html",
    "kucuk": "selim-bileklik/kucuk/0362.webp",
    "olcu": "172,8 mm, başlık en 15,3 mm",
-   "kart_ad": "Bakla dört sıra üç renk · taşıyıcı zincir",
+   "kart_ad": "Dört sıra üç renk · Taşıyıcı zincir",
+   "kucuk2": "selim-bileklik/kucuk/0362-y.webp",
    "paylas": "paylas/SB-67-T.jpg",
    "u": "u/SB-67-T.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "tasli"
+   ],
    "no": "0287",
    "kisa": "SB-29",
    "kod": "gomme-tas-3-1",
-   "ad": "Gömme Taş 3–1",
+   "ad": "Gömme taş 3–1",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasli",
@@ -10602,25 +11693,30 @@
     "yok"
    ],
    "gram": 26.56,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 66,
    "sayfa": "selim-bileklik/set-tasli-mineli.html#urun=gomme-tas-3-1",
    "set_sayfa": "selim-bileklik/set-tasli-mineli.html",
-   "kucuk": "selim-bileklik/kucuk/0287.webp",
+   "kucuk": "selim-bileklik/kucuk/0287-y.webp",
    "olcu": "172,8 × 6 × 4,14 mm",
-   "kart_ad": "Bakla gömme taş 3–1",
+   "kart_ad": "Gömme taş 3–1",
+   "kucuk2": "selim-bileklik/kucuk/0287.webp",
    "paylas": "paylas/SB-29.jpg",
    "u": "u/SB-29.html",
    "w": 640,
    "h": 640
   },
   {
+   "yakin": "birincil",
+   "tm": [
+    "tasli"
+   ],
    "no": "0330",
    "kisa": "SB-86",
    "kod": "bes-safir",
-   "ad": "Beş Safir",
+   "ad": "Beş safir",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasli",
@@ -10635,15 +11731,16 @@
     "yok"
    ],
    "gram": 27.16,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 64,
    "sayfa": "selim-bileklik/set-tasli-mineli.html#urun=bes-safir",
    "set_sayfa": "selim-bileklik/set-tasli-mineli.html",
-   "kucuk": "selim-bileklik/kucuk/0330.webp",
+   "kucuk": "selim-bileklik/kucuk/0330-y.webp",
    "olcu": "172,8 × 6 × 4,14 mm",
-   "kart_ad": "Bakla beş safir",
+   "kart_ad": "Beş safir",
+   "kucuk2": "selim-bileklik/kucuk/0330.webp",
    "paylas": "paylas/SB-86.jpg",
    "u": "u/SB-86.html",
    "w": 640,
@@ -10652,6 +11749,10 @@
   {
    "etiketler": [
     "Mineli"
+   ],
+   "yakin": "birincil",
+   "tm": [
+    "mineli"
    ],
    "no": "0296",
    "kisa": "SB-33",
@@ -10671,15 +11772,16 @@
     "yok"
    ],
    "gram": 25.08,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 59,
    "sayfa": "selim-bileklik/set-tasli-mineli.html#urun=gece-1-1",
    "set_sayfa": "selim-bileklik/set-tasli-mineli.html",
-   "kucuk": "selim-bileklik/kucuk/0296.webp",
+   "kucuk": "selim-bileklik/kucuk/0296-y.webp",
    "olcu": "172,8 × 6 × 4,14 mm",
-   "kart_ad": "Bakla gece 1–1",
+   "kart_ad": "Gece 1–1",
+   "kucuk2": "selim-bileklik/kucuk/0296.webp",
    "paylas": "paylas/SB-33.jpg",
    "u": "u/SB-33.html",
    "w": 640,
@@ -10689,10 +11791,14 @@
    "etiketler": [
     "Mineli"
    ],
+   "yakin": "birincil",
+   "tm": [
+    "mineli"
+   ],
    "no": "0331",
    "kisa": "SB-101",
    "kod": "cizgi-mine",
-   "ad": "Çizgi Mine",
+   "ad": "Çizgi mine",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasli",
@@ -10707,15 +11813,16 @@
     "yok"
    ],
    "gram": 22.29,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 59,
    "sayfa": "selim-bileklik/set-tasli-mineli.html#urun=cizgi-mine",
    "set_sayfa": "selim-bileklik/set-tasli-mineli.html",
-   "kucuk": "selim-bileklik/kucuk/0331.webp",
+   "kucuk": "selim-bileklik/kucuk/0331-y.webp",
    "olcu": "172,8 × 6 × 2,55 mm",
-   "kart_ad": "Bakla çizgi mine",
+   "kart_ad": "Çizgi mine",
+   "kucuk2": "selim-bileklik/kucuk/0331.webp",
    "paylas": "paylas/SB-101.jpg",
    "u": "u/SB-101.html",
    "w": 640,
@@ -10725,10 +11832,14 @@
    "etiketler": [
     "Mineli"
    ],
+   "yakin": "birincil",
+   "tm": [
+    "mineli"
+   ],
    "no": "0333",
    "kisa": "SB-105",
    "kod": "bordo-krem",
-   "ad": "Bordo–Krem",
+   "ad": "Bordo–krem",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasli",
@@ -10743,15 +11854,16 @@
     "yok"
    ],
    "gram": 18.23,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 71,
    "sayfa": "selim-bileklik/set-tasli-mineli.html#urun=bordo-krem",
    "set_sayfa": "selim-bileklik/set-tasli-mineli.html",
-   "kucuk": "selim-bileklik/kucuk/0333.webp",
+   "kucuk": "selim-bileklik/kucuk/0333-y.webp",
    "olcu": "175 × 5 × 2,55 mm",
-   "kart_ad": "Bakla bordo–krem",
+   "kart_ad": "Bordo–krem",
+   "kucuk2": "selim-bileklik/kucuk/0333.webp",
    "paylas": "paylas/SB-105.jpg",
    "u": "u/SB-105.html",
    "w": 640,
@@ -10761,10 +11873,14 @@
    "etiketler": [
     "Mineli"
    ],
+   "yakin": "birincil",
+   "tm": [
+    "mineli"
+   ],
    "no": "0332",
    "kisa": "SB-103",
    "kod": "dama-mine",
-   "ad": "Dama Mine",
+   "ad": "Dama mine",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasli",
@@ -10779,15 +11895,16 @@
     "yok"
    ],
    "gram": 30.86,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 51,
    "sayfa": "selim-bileklik/set-tasli-mineli.html#urun=dama-mine",
    "set_sayfa": "selim-bileklik/set-tasli-mineli.html",
-   "kucuk": "selim-bileklik/kucuk/0332.webp",
+   "kucuk": "selim-bileklik/kucuk/0332-y.webp",
    "olcu": "173 × 7 × 4,46 mm",
-   "kart_ad": "Bakla dama mine",
+   "kart_ad": "Dama mine",
+   "kucuk2": "selim-bileklik/kucuk/0332.webp",
    "paylas": "paylas/SB-103.jpg",
    "u": "u/SB-103.html",
    "w": 640,
@@ -10797,10 +11914,14 @@
    "etiketler": [
     "Mineli"
    ],
+   "yakin": "birincil",
+   "tm": [
+    "mineli"
+   ],
    "no": "0334",
    "kisa": "SB-108",
    "kod": "erkek-cizgi-mine",
-   "ad": "Erkek Çizgi Mine",
+   "ad": "Erkek çizgi mine",
    "koleksiyon": "selim-bileklik",
    "koleksiyon_ad": "Selim'in Bileklikleri",
    "set": "selim-bileklik-tasli",
@@ -10815,15 +11936,16 @@
     "yok"
    ],
    "gram": 29.1,
-   "gram_dilim": "> 4 g",
+   "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
    "parca": 51,
    "sayfa": "selim-bileklik/set-tasli-mineli.html#urun=erkek-cizgi-mine",
    "set_sayfa": "selim-bileklik/set-tasli-mineli.html",
-   "kucuk": "selim-bileklik/kucuk/0334.webp",
+   "kucuk": "selim-bileklik/kucuk/0334-y.webp",
    "olcu": "169,8 × 8 × 2,55 mm",
-   "kart_ad": "Bakla erkek çizgi mine",
+   "kart_ad": "Erkek çizgi mine",
+   "kucuk2": "selim-bileklik/kucuk/0334.webp",
    "paylas": "paylas/SB-108.jpg",
    "u": "u/SB-108.html",
    "w": 640,

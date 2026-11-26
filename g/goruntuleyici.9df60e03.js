@@ -502,7 +502,11 @@ function uretimCiz(){ const U_=urun.uretim, B=$("uretim"); B.textContent=""; B.h
   const h=document.createElement("h2"); h.textContent="Üretim"; B.appendChild(h);
   const satir=(a,b)=>{ const d=document.createElement("div"); d.className="satir"; d.innerHTML='<span></span><span class="deger"></span>'; d.children[0].textContent=a; d.children[1].textContent=b; B.appendChild(d); };
   if(U_.d!=null) satir("Döküm parça",U_.d); (U_.h||[]).forEach(([a,n])=>satir(a,n+" adet"));
-  (U_.n||[]).forEach(t=>{ const e=document.createElement("p"); e.className="tanim"; e.textContent=t; B.appendChild(e); }); }
+  (U_.n||[]).forEach(t=>{ const e=document.createElement("p"); e.className="tanim"; kodBagla(e,t); B.appendChild(e); }); if(!vu.hidden) kodBagla(vc,U_.n[0]); }
+// metindeki ürün kodları (SB-01-K, GS-KL-14 …) tıklanır bağlantı: ../u/<kod>.html (paylaşım köprüsü, ürünü kendi set sayfasında açar); "(bu sayfa)" ve açık ürünün kendi kodu bağlantısız
+function kodBagla(el,t){ el.textContent=""; const re=/\b((?:SB|GS)-[A-Z0-9]+(?:-[A-Z0-9]+)*)\b(\s*\(bu sayfa\))?/g; let i=0, m;
+  while((m=re.exec(t))){ el.append(t.slice(i,m.index)); if(m[2]||m[1]===urun.kisa) el.append(m[0]); else { const a=document.createElement("a"); a.href="../u/"+m[1]+".html"; a.textContent=m[1]; a.className="kod-bag"; el.appendChild(a); } i=m.index+m[0].length; }
+  el.append(t.slice(i)); }
 const ROZET={gecme:"GEÇME",pim:"PİM",lazer:"LAZER",mihlama:"MIHLAMA",hazir:"HAZIR PARÇA"};
 /* MONTAJ ADIMLARI (u.montaj): liste satırları adımların kendisi; kaydırıcı 1→0 (Birleşik→Parçalı) adımları sondan başa ayırır, 0→1 sırayla oturtur.
    Satıra tıklayınca (ya da ↑/↓) satır açılır, açıklama okunur, o adımın parçaları vurgulanır ve yerine oturur (öncekiler yerinde, sonrakiler ayrık). */
@@ -655,7 +659,7 @@ function sec(kod){ urun=MAN.find(u=>u.kod===kod); const G=urun.gruplar; gizli=G.
   const s=urun.boyut.map(x=>String(x).replace(".",",")), yon=urun.taban==="-z"?[s[0],s[2],s[1]]:s;
   $("r-bag").hidden=!urun.kisa; $("bag").textContent="Bağlantıyı kopyala";
   $("k-ad").textContent=urun.ad; $("k-olcu").textContent=(urun.kisa?urun.kisa+" · ":"")+yon[0]+" × "+yon[1]+" × "+yon[2]+" mm · "+urun.gram;
-  $("v-ad").textContent=urun.ad; $("v-tanim").textContent=urun.tanim||"";
+  $("v-ad").textContent=urun.ad; kodBagla($("v-tanim"),urun.tanim||"");
   $("r-fizik").hidden=$("r-canli").hidden=$("ayar-fizik").hidden=!urun.sarkac.length; $("r-doner").hidden=!DN.length&&!MKS.length; if(MKS.length){ const n=urun.mek.find(x=>x.dg); $("ayar-fizik").hidden=false; setTimeout(()=>{ $("cevir").textContent=(n&&n.dg)||(urun.mek.some(m=>m.t==="m"&&!m.kp)?"Yüzdür":"Çevir"); });   /* düğme yazısı yoksa: mafsal zinciri "Yüzdür" */ }
   // malzeme paneli ürüne göre: taş yoksa taş seçimi yok; büyük-küçük ayrımı yoksa "küçük taşlar renksiz" yok; dönen parça varsa ona ayrı metal
   { const taslar=urun.parcalar.filter(q=>G[q.g].tur==="tas"&&!q.tp), varT=taslar.length>0; ayrim=taslar.some(q=>q.k)&&taslar.some(q=>!q.k);
