@@ -416,7 +416,7 @@ function sahneCiz(dt,w,h,jx,jy){
   const G=urun.gruplar, top=G.map(()=>[0,0,0,0]), S=urun.sarkac, A_=ag[urun.kod];
   const soluk=mekGorAcik(), solL=[]; gl.uniform1f(U.sl,1);
   const yzk=yzGor(), mnA=mnGor();
-  const cizQ=(pc,gec)=>{ if(pc.rl===3?!mnA:(pc.rl&&(pc.rl===2?yzk!=="sonra":(yzk==="sonra"&&!pc._dz)))) return;   /* mine yüzeyi (rl 3) yalnız "Mineli"de */   /* demo yalnız "Kesimden sonra"da; yüzey grubu orada gizli (desen katmanında desenle çizilir) */
+  const cizQ=(pc,gec)=>{ if(pc.rl===3?!mnA:(pc.rl&&(pc.rl===2?yzk!=="sonra":(yzk==="sonra"&&!pc._dz&&!pc._dg)))) return;   /* mine yüzeyi (rl 3) yalnız "Mineli"de */   /* demo yalnız "Kesimden sonra"da; yüzey grubu orada gizli (desen katmanında desenle çizilir) */
     if(soluk&&!gec&&!mekVurgu(pc)){ solL.push(pc); return; } const g=G[pc.g], tasMi=g.tur==="tas", e=etkenQ(pc); let O=pc._ev?top3(carp(pc._ev._o,etkenQ(pc._ev)),carp(pc._k,e)):carp(pc._o||[0,0,0],e);   // taş yuvasının bulunduğu parçayla gider, sonra yuvaya oturur
     if(!pc.rl){ const t=top[pc.g]; t[0]+=pc.c[0]+O[0]; t[1]+=pc.c[1]+O[1]; t[2]+=pc.c[2]+O[2]; t[3]++; }
     const topQ=!!(urun.top&&pc.tp);   // serbest top (inci, taş boncuk, altın): taş grubunda olsa da "Top" seçimiyle çizilir
@@ -501,7 +501,7 @@ function renkCiz(){ const R=urun.rg, B=$("b-renk"), T=$("b-top"); B.textContent=
 function uretimCiz(){ const U_=urun.uretim, B=$("uretim"); B.textContent=""; B.hidden=!U_; const vc=$("v-calisma"), vu=$("v-uretim"); vu.hidden=!(U_&&U_.n&&U_.n[0]); vc.textContent=vu.hidden?"":U_.n[0]; if(!U_) return;   /* Vitrin: kısa "Üretim" satırı (notların ilki) */
   const h=document.createElement("h2"); h.textContent="Üretim"; B.appendChild(h);
   const satir=(a,b)=>{ const d=document.createElement("div"); d.className="satir"; d.innerHTML='<span></span><span class="deger"></span>'; d.children[0].textContent=a; d.children[1].textContent=b; B.appendChild(d); };
-  if(U_.d!=null) satir("Döküm parça",U_.d); (U_.h||[]).forEach(([a,n])=>satir(a,n+" adet"));
+  if(U_.d!=null) satir("Döküm parça",U_.d); (U_.h||[]).forEach(([a,n])=>satir(a,n+" adet")); (U_.s||[]).forEach(([a,b])=>satir(a,b));
   (U_.n||[]).forEach(t=>{ const e=document.createElement("p"); e.className="tanim"; kodBagla(e,t); B.appendChild(e); }); if(!vu.hidden) kodBagla(vc,U_.n[0]); }
 // metindeki ürün kodları (SB-01-K, GS-KL-14 …) tıklanır bağlantı: ../u/<kod>.html (paylaşım köprüsü, ürünü kendi set sayfasında açar); "(bu sayfa)" ve açık ürünün kendi kodu bağlantısız
 function kodBagla(el,t){ el.textContent=""; const re=/\b((?:SB|GS)-[A-Z0-9]+(?:-[A-Z0-9]+)*)\b(\s*\(bu sayfa\))?/g; let i=0, m;
@@ -681,8 +681,8 @@ function yzSinir(a){ if(a._yz) return a._yz; const P=a.P, I=a.I; if(!P) return a
   c=carp(c,1/(W||1)); let en=0, d0=1e18; for(let i=0;i<K.length;i++){ const d=(P[3*i]-c[0])**2+(P[3*i+1]-c[1])**2+(P[3*i+2]-c[2])**2; if(d<d0){ d0=d; en=i; } }
   const lb=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,lb); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(L),gl.STATIC_DRAW);
   return a._yz={lb,n:L.length/3,m:[P[3*en],P[3*en+1],P[3*en+2]],nr:birim(nr)}; }
-function yzKur(){ yzEl.forEach(o=>o.el.remove()); yzEl=[]; urun.parcalar.forEach(q=>{ delete q._dz; }); if(!urun.yi) return; const A_=ag[urun.kod];
-  urun.yi.forEach(y=>{ if(y.dz) y.g.forEach((j,b)=>{ urun.parcalar[j]._dz={y,b}; }); });
+function yzKur(){ yzEl.forEach(o=>o.el.remove()); yzEl=[]; urun.parcalar.forEach(q=>{ delete q._dz; delete q._dg; }); if(!urun.yi) return; const A_=ag[urun.kod];
+  urun.yi.forEach(y=>{ if(y.dz) y.g.forEach((j,b)=>{ urun.parcalar[j]._dz={y,b}; }); else if(y.d<0) y.g.forEach(j=>{ urun.parcalar[j]._dg=1; }); });   /* desen katmanı da demo da yoksa (kalem dökümde var): "Kesimden sonra"da yüzey grubu gövdeyle aynı metal çizilir (gövde delikli görünmesin) */
   urun.yi.forEach(y=>{ const el=document.createElement("div"); el.className="et yzet"; el.hidden=true; el.innerHTML="<b>◆</b><span></span>"; el.children[1].textContent=y.t==="elmas_kesim"?"Elmas kesim":"Yüzey işlemi"; $("etiketler").appendChild(el);
     yzEl.push({el,G:y.g.map(i=>({q:urun.parcalar[i],S:[].concat(urun.parcalar[i].m).map(m=>yzSinir(A_[m]))}))}); }); }
 /* ── DESEN KATMANI. yi[].dz = {v: varsayılan desen, vs: varsayılan sıklık, e: etek, d: {kod: {sıklık: {g: [bant başına
