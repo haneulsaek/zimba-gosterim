@@ -6,7 +6,7 @@ Zımba tasarımlarının tarayıcıda döndürülebilen 3B ön izlemeleri. Adres
 - **Damla**: 4 ürün
 - **Dümen yüzükleri**: 5 ürün
 - **Kelepçeler**: 2 ürün
-- **Mıhlama v1**: 11 ürün
+- **Mıhlama**: 11 ürün
 - **Devran**: 22 ürün
 - **Bahçe**: 21 ürün
 - **Selim'in Yüzükleri**: 9 ürün
@@ -18,4 +18,4 @@ Zımba tasarımlarının tarayıcıda döndürülebilen 3B ön izlemeleri. Adres
 STL dosyaları ve tasarım motorunun kodu bu depoda değildir; bu depo yalnız sunum içindir.
 Ürün listesi ve etiketler: `veri/urunler.json`.
 
-Bu klasör `zimba_site.py kur` ile kendiliğinden üretilir; elle düzenlenmez.
+Bu klasör kendiliğinden üretilir; elle düzenlenmez. Modellerin ön izleme ağları ürün başına `<koleksiyon>/ag/` altındadır; ürün seçilince yüklenir.
