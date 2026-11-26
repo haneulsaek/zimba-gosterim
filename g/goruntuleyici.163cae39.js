@@ -398,10 +398,12 @@ function ciz(dt){
   gl.bindFramebuffer(gl.FRAMEBUFFER,null); gl.viewport(0,0,w,h); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT); gl.disable(gl.DEPTH_TEST); dortgen([0,0,1,1],0,BK.A.tx); gl.enable(gl.DEPTH_TEST); }
 function sahneCiz(dt,w,h,jx,jy){
   // odak: ürünün asıl parçası (kolye ucu, madalyonlar…) çerçevelenir ve dönüş onun merkezinde olur; Montaj modunda bütün ürün (eski davranış)
-  const hedefK=urun.odak&&(mod!=="montaj"||(urun.mood&&p>0.5))?1:0;   // mood: Montaj birleşikken de odak kadrajı (kanca kadrajdan taşmasın; site-14) odakK+=(hedefK-odakK)*(1-Math.exp(-6*dt));
+  const hedefK=urun.odak&&(mod!=="montaj"||(urun.mood&&p>0.5))?1:0;   // mood: Montaj birleşikken de odak kadrajı (kanca kadrajdan taşmasın; site-14)
+  if(urun.mood) odakK+=(hedefK-odakK)*(1-Math.exp(-6*dt));   // site-16: güncelleme site-14'te yorum içinde kalmıştı; parçalı hâlde kadraj bütün parçalara açılır. Yalnız mood ürünlerinde (öteki ürünlerin Montaj kadrajı değişmesin)
   if(urun._mK) urun._boyA=mKadraj(w/h);
   const Od=urun.odak, bt=urun.olc+((urun._boyA||urun.olc*1.5)-urun.olc)*ease(1-p), boy=Od?bt+(Od.b-bt)*odakK:bt, fc=urun._mA?top3(Od?carp(Od.m,odakK):[0,0,0],carp(urun._mA,ease(1-p))):(Od?carp(Od.m,odakK):[0,0,0]); sonBoy=boy;
-  const kE=cv.clientWidth<=600?$("k-ad").parentNode.offsetHeight:0; kunyeS=kE>0?Math.min(0.3,(kE+12)/Math.max(1,cv.clientHeight)):0;   // dar ekran: model künyenin üstünde kalan alana (künye gizliyse 0; site-14)
+  { const kn=$("k-ad").parentNode, kE=kn.offsetHeight;   // model künyenin üstünde kalan alana (künye gizliyse 0, ör. gömülü kip/kart görseli). Dar ekran site-14; geniş ekran site-16: künyenin üst kenarından 8 px pay
+    kunyeS=kE<=0?0:cv.clientWidth<=600?Math.min(0.3,(kE+12)/Math.max(1,cv.clientHeight)):Math.min(0.3,(cv.getBoundingClientRect().bottom-kn.getBoundingClientRect().top+8)/Math.max(1,cv.clientHeight)); }
   const en=w/h, f=1/Math.tan(13*Math.PI/180), D=boy*(en<1?2.5/en:2.5)/yakin/(1-kunyeS), yk=urun.olc*0.05, uz=D+urun.olc*4;
   const P=new Float32Array([f/en,0,0,0, 0,f,0,0, 2*jx/w,2*jy/h-kunyeS,(uz+yk)/(yk-uz),-1, 0,0,2*uz*yk/(yk-uz),0]);
   const R=Rkur(sapma,yunus,urun.taban); sonR=R; const Rf=rd(R,fc);
