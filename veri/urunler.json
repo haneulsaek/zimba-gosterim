@@ -9989,7 +9989,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -10010,7 +10013,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 25.7,
+   "gram": 25.79,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -10027,7 +10030,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -10048,7 +10054,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 31.42,
+   "gram": 31.88,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -10065,7 +10071,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -10086,7 +10095,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 22.02,
+   "gram": 22.04,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -11302,7 +11311,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -11323,7 +11335,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 29.89,
+   "gram": 30.01,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -11340,6 +11352,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "yakin": "birincil",
    "tm": [
     "sade"
@@ -11361,7 +11376,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 38.46,
+   "gram": 38.55,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -11378,6 +11393,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "yakin": "birincil",
    "tm": [
     "sade"
@@ -11399,7 +11417,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 43.75,
+   "gram": 44.2,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -11416,7 +11434,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -11437,7 +11458,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 41.84,
+   "gram": 42.89,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -11454,7 +11475,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -11475,7 +11499,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 58.14,
+   "gram": 58.34,
    "gram_dilim": "> 50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -12144,6 +12168,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "tm": [
     "sade"
    ],
@@ -12164,7 +12191,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 25.52,
+   "gram": 25.7,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -12288,6 +12315,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "tm": [
     "sade"
    ],
@@ -12308,7 +12338,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 20.43,
+   "gram": 21.3,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -12324,6 +12354,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "tm": [
     "sade"
    ],
@@ -12344,7 +12377,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 19.91,
+   "gram": 20.28,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -12468,6 +12501,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "tm": [
     "sade"
    ],
@@ -12488,7 +12524,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 18.76,
+   "gram": 18.84,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -12504,6 +12540,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "tm": [
     "sade"
    ],
@@ -12524,7 +12563,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 15.93,
+   "gram": 16.03,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -12756,6 +12795,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "tm": [
     "sade"
    ],
@@ -12776,7 +12818,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 15.71,
+   "gram": 16.39,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -12792,6 +12834,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "tm": [
     "sade"
    ],
@@ -12812,7 +12857,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 15.39,
+   "gram": 16.05,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -12900,6 +12945,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "tm": [
     "sade"
    ],
@@ -12920,7 +12968,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 14.25,
+   "gram": 14.96,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -13688,7 +13736,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -13709,7 +13760,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 33.97,
+   "gram": 34.17,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -13840,7 +13891,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -13861,7 +13915,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 19.35,
+   "gram": 20.36,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -13878,6 +13932,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "yakin": "birincil",
    "tm": [
     "sade"
@@ -13899,7 +13956,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 22.27,
+   "gram": 22.67,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -14030,6 +14087,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "yakin": "birincil",
    "tm": [
     "sade"
@@ -14051,7 +14111,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 20.85,
+   "gram": 20.94,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -14068,7 +14128,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -14089,7 +14152,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 16.86,
+   "gram": 16.98,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -14334,7 +14397,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -14355,7 +14421,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 14.69,
+   "gram": 15.46,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -14372,7 +14438,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -14393,7 +14462,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 14.02,
+   "gram": 14.79,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -14486,7 +14555,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -14507,7 +14579,7 @@
    "hareket": [
     "yok"
    ],
-   "gram": 14.94,
+   "gram": 15.78,
    "gram_dilim": "10–25 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -15384,7 +15456,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -15405,7 +15480,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 34.82,
+   "gram": 35.03,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -15764,7 +15839,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -15785,7 +15863,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 37.03,
+   "gram": 37.24,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -15840,6 +15918,9 @@
    "h": 640
   },
   {
+   "etiketler": [
+    "Elmas kesim"
+   ],
    "yakin": "birincil",
    "tm": [
     "sade"
@@ -15861,7 +15942,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 26.03,
+   "gram": 26.48,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,
@@ -15878,7 +15959,10 @@
    "h": 640
   },
   {
-   "yakin": "ikincil",
+   "etiketler": [
+    "Elmas kesim"
+   ],
+   "yakin": "birincil",
    "tm": [
     "sade"
    ],
@@ -15899,7 +15983,7 @@
    "hareket": [
     "eklemli"
    ],
-   "gram": 33.28,
+   "gram": 34.32,
    "gram_dilim": "25–50 g",
    "tarih": "2026-11-26",
    "yeni": true,

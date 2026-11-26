@@ -445,7 +445,9 @@ function sahneCiz(dt,w,h,jx,jy){
     const mk_=pc.mk>=0?pc.mk:(tasMi&&pc._ev&&pc._ev.mk>=0?pc._ev.mk:-1);   // taş, yuvasının bulunduğu parçanın düğümüyle gider
     if(mk_>=0&&MKT){ const T_=MKT[mk_]; M=mm(T_.M,A); Tr=top3(top3(mv(T_.M,b),T_.t),O); }
     if(pc.dn>=0){ const dd=urun.doner[pc.dn], Qd=eksenDon(dd.eks,DN[pc.dn].f); M=mm(Qd,A); Tr=top3(top3(mv(Qd,cik(b,dd.mer)),dd.mer),O); }
-    if(pc.pd>=0){ const st=FZ[pc.pd], b0=(pc.dn>=0||mk_>=0)?cik(Tr,O):b; M=mm(st.Q,M); Tr=top3(top3(mv(st.Q,cik(b0,S[pc.pd].piv)),st.pp),O); }   // dönen parça sarkaca asılıysa ikisi birleşir
+    if(pc.pd>=0){ const st=FZ[pc.pd], b0=(pc.dn>=0||mk_>=0)?cik(Tr,O):b; M=mm(st.Q,M); let pv=S[pc.pd].piv, pk=[0,0,0];   // site-23: ayrık takılan parça (hareket.ayri) ayrıkken kendi asma noktasından sallanır (q._ap; ayriK ile yumuşak geçiş)
+      if(pc._ap&&ayriK>0){ pk=carp(cik(pc._ap,pv),ease(ayriK)); pv=top3(pv,pk); }
+      Tr=top3(top3(top3(mv(st.Q,cik(b0,pv)),st.pp),pk),O); }   // dönen parça sarkaca asılıysa ikisi birleşir
     pc._M=M; pc._T=Tr;
     gl.uniformMatrix3fv(U.M,false,new Float32Array([M[0],M[3],M[6],M[1],M[4],M[7],M[2],M[5],M[8]])); gl.uniform3f(U.Tr,Tr[0],Tr[1],Tr[2]);
     const ms=Array.isArray(pc.m)?pc.m:[pc.m], a=A_[ms[0]]; gl.uniform1f(U.yz,pc.rl===2?3:(pc.yz||0)); gl.uniform1f(U.ys,pc.rl===1&&yzk==="isaret"?1:0); gl.uniform1f(U.par,tasMi&&e>0&&e<0.35&&p<0.999?Math.sin(Math.PI*e/0.35):0);
@@ -540,6 +542,9 @@ function kamAc(){ if(!urun||!urun._eks||kamOnce||eksenAci(sapma,yunus)>=35) retu
 /* site-22, ayri: {"<parça kimliği deseni>": [dx,dy,dz] mm}. Ayrı takılan parçalar (küpe ile kolye ucu) açılışta yan yana; "Birleştir" motifin tamamlandığı hâl.
    Yalnız gösterim (geometri, ölçü, ağırlık aynı). Kadraj iki hâlin ön görünüş kutusuna göre yumuşakça büyür/kayar. Montaj kipinde birleşik. */
 function ayriKur(){ const A=urun.ayri||null; urun._ay=null; urun.parcalar.forEach(q=>{ q._ay=null; if(A) for(const d in A) if(new RegExp(d).test(q.id||"")) q._ay=A[d]; });
+  urun.parcalar.forEach(q=>{ q._ap=null; }); if(A) for(const d in A){ const Q=urun.parcalar.filter(q=>!q.rl&&new RegExp(d).test(q.id||"")); if(!Q.length) continue;   // site-23: ayrık parçanın asma noktası: grubun kutusunun tepesinin 0,8 mm altı (göz), x/z kutu ortası
+    const lo=[1e9,1e9,1e9], hi=[-1e9,-1e9,-1e9]; Q.forEach(q=>{ for(let k=0;k<3;k++){ lo[k]=Math.min(lo[k],q.c[k]-q._y[k]); hi[k]=Math.max(hi[k],q.c[k]+q._y[k]); } }); const ap=[(lo[0]+hi[0])/2,hi[1]-0.8,(lo[2]+hi[2])/2];
+    urun.parcalar.forEach(q=>{ if(new RegExp(d).test(q.id||"")) q._ap=ap; }); }
   $("r-ayri").hidden=!A; ayriH=ayriK=A?1:0;
   if(A){ const kutu=ek=>{ const lo=[1e9,1e9,1e9], hi=[-1e9,-1e9,-1e9]; urun.parcalar.forEach(q=>{ if(q.rl) return; const o=ek&&q._ay?q._ay:[0,0,0]; for(let k=0;k<3;k++){ lo[k]=Math.min(lo[k],q.c[k]+o[k]-q._y[k]); hi[k]=Math.max(hi[k],q.c[k]+o[k]+q._y[k]); } }); return [lo,hi]; };
     const [l0,h0]=kutu(false), [l1,h1]=kutu(true), b0=Math.max(h0[0]-l0[0],h0[1]-l0[1]), b1=Math.max(h1[0]-l1[0],h1[1]-l1[1]);
