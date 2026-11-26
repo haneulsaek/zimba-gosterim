@@ -398,29 +398,32 @@ function ciz(dt){
   gl.bindFramebuffer(gl.FRAMEBUFFER,null); gl.viewport(0,0,w,h); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT); gl.disable(gl.DEPTH_TEST); dortgen([0,0,1,1],0,BK.A.tx); gl.enable(gl.DEPTH_TEST); }
 function sahneCiz(dt,w,h,jx,jy){
   // odak: ürünün asıl parçası (kolye ucu, madalyonlar…) çerçevelenir ve dönüş onun merkezinde olur; Montaj modunda bütün ürün (eski davranış)
-  const hedefK=urun.odak&&mod!=="montaj"?1:0; odakK+=(hedefK-odakK)*(1-Math.exp(-6*dt));
+  const hedefK=urun.odak&&(mod!=="montaj"||(urun.mood&&p>0.5))?1:0;   // mood: Montaj birleşikken de odak kadrajı (kanca kadrajdan taşmasın; site-14) odakK+=(hedefK-odakK)*(1-Math.exp(-6*dt));
   if(urun._mK) urun._boyA=mKadraj(w/h);
   const Od=urun.odak, bt=urun.olc+((urun._boyA||urun.olc*1.5)-urun.olc)*ease(1-p), boy=Od?bt+(Od.b-bt)*odakK:bt, fc=urun._mA?top3(Od?carp(Od.m,odakK):[0,0,0],carp(urun._mA,ease(1-p))):(Od?carp(Od.m,odakK):[0,0,0]); sonBoy=boy;
-  const en=w/h, f=1/Math.tan(13*Math.PI/180), D=boy*(en<1?2.5/en:2.5)/yakin, yk=urun.olc*0.05, uz=D+urun.olc*4;
-  const P=new Float32Array([f/en,0,0,0, 0,f,0,0, 2*jx/w,2*jy/h,(uz+yk)/(yk-uz),-1, 0,0,2*uz*yk/(yk-uz),0]);
+  const kE=cv.clientWidth<=600?$("k-ad").parentNode.offsetHeight:0; kunyeS=kE>0?Math.min(0.3,(kE+12)/Math.max(1,cv.clientHeight)):0;   // dar ekran: model künyenin üstünde kalan alana (künye gizliyse 0; site-14)
+  const en=w/h, f=1/Math.tan(13*Math.PI/180), D=boy*(en<1?2.5/en:2.5)/yakin/(1-kunyeS), yk=urun.olc*0.05, uz=D+urun.olc*4;
+  const P=new Float32Array([f/en,0,0,0, 0,f,0,0, 2*jx/w,2*jy/h-kunyeS,(uz+yk)/(yk-uz),-1, 0,0,2*uz*yk/(yk-uz),0]);
   const R=Rkur(sapma,yunus,urun.taban); sonR=R; const Rf=rd(R,fc);
   { const L=ISIKLAR[isik]; gl.uniform3f(U.gok,...L.gok); gl.uniform3f(U.yer,...L.yer); gl.uniform1f(U.bay,L.bay); gl.uniform1f(U.bay2,L.bay2||0); gl.uniform1f(U.poz,L.poz||1); gl.uniform1f(U.kut,L.kut); gl.uniform1f(U.yum,L.yum); gl.uniform1f(U.aoD,L.ao); gl.uniform1f(U.gez,gezAci()); }
   fizik(dt,R); donerAdim(dt,R); mekAdim(dt,R); MKT=mekDonusum(); KAM={R,T:[kay[0]-Rf[0],kay[1]-Rf[1],-D-Rf[2]],f,en};
   gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
   if(p>0.999&&odakK<0.5&&ISIKLAR[isik].golge>0){ // temas gölgesi: ürünün ekrandaki alt kenarında yumuşak elips
     const b=urun.boyut.map(x=>x/2), T=[kay[0]-Rf[0],kay[1]-Rf[1],-D-Rf[2]]; let x0=9,x1=-9,y0=9;
-    for(let i=0;i<8;i++){ const q=top3(rd(R,[i&1?b[0]:-b[0],i&2?b[1]:-b[1],i&4?b[2]:-b[2]]),T), sx=f/en*q[0]/-q[2], sy=f*q[1]/-q[2]; x0=Math.min(x0,sx); x1=Math.max(x1,sx); y0=Math.min(y0,sy); }
+    for(let i=0;i<8;i++){ const q=top3(rd(R,[i&1?b[0]:-b[0],i&2?b[1]:-b[1],i&4?b[2]:-b[2]]),T), sx=f/en*q[0]/-q[2], sy=f*q[1]/-q[2]+kunyeS; x0=Math.min(x0,sx); x1=Math.max(x1,sx); y0=Math.min(y0,sy); }
     const rx=(x1-x0)*0.42; if(rx>0&&y0>-0.92){ gl.disable(gl.DEPTH_TEST); gl.enable(gl.BLEND); gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
       dortgen([(x0+x1)/2,y0-rx*0.04*en,rx*1.1,rx*0.13*en],1,null,ISIKLAR[isik].golge); gl.disable(gl.BLEND); gl.enable(gl.DEPTH_TEST); } }
   gl.uniformMatrix4fv(U.P,false,P); gl.uniformMatrix3fv(U.R,false,new Float32Array(R)); gl.uniform3f(U.T,kay[0]-Rf[0],kay[1]-Rf[1],-D-Rf[2]); gl.uniform1f(U.kil,mod==="teknik"&&kil?1:0);
   const G=urun.gruplar, top=G.map(()=>[0,0,0,0]), S=urun.sarkac, A_=ag[urun.kod];
   const soluk=mekGorAcik(), solL=[]; gl.uniform1f(U.sl,1);
   const yzk=yzGor(), mnA=mnGor();
+  if(urun.mek&&MKS.length){ let mx=0; urun.mek.forEach((n,k)=>{ if(n.t==="m"&&!n.kp&&MKS[k]) mx=Math.max(mx,Math.abs(MKS[k].a)); }); bukGz=bukGz?mx>0.004:mx>0.012; } else bukGz=false;   // Bük: mafsal zincirine bağlanamayan tek parça iç tel (bg) bükülürken çizilmez (site-14)
   const cizQ=(pc,gec)=>{ if(pc.rl===3?!mnA:(pc.rl&&(pc.rl===2?yzk!=="sonra":(yzk==="sonra"&&!pc._dz&&!pc._dg)))) return;   /* mine yüzeyi (rl 3) yalnız "Mineli"de */   /* demo yalnız "Kesimden sonra"da; yüzey grubu orada gizli (desen katmanında desenle çizilir) */
     if(soluk&&!gec&&!mekVurgu(pc)){ solL.push(pc); return; } const g=G[pc.g], tasMi=g.tur==="tas", e=etkenQ(pc); let O=pc._ev?top3(carp(pc._ev._o,etkenQ(pc._ev)),carp(pc._k,e)):carp(pc._o||[0,0,0],e);   // taş yuvasının bulunduğu parçayla gider, sonra yuvaya oturur
     if(!pc.rl){ const t=top[pc.g]; t[0]+=pc.c[0]+O[0]; t[1]+=pc.c[1]+O[1]; t[2]+=pc.c[2]+O[2]; t[3]++; }
     const topQ=!!(urun.top&&pc.tp);   // serbest top (inci, taş boncuk, altın): taş grubunda olsa da "Top" seçimiyle çizilir
     if(gizli[pc.g]||(tasMi&&!topQ&&!tas[2])) return;
+    if(pc.bg&&bukGz) return;
     if(urun.montaj&&gizliA[adimNo(pc)]) return;   // montaj listesinde gizlenen adım
     if(pc.kn>=0&&MKS[pc.kn]&&MKS[pc.kn].kl>0){ const n_=urun.mek[pc.kn]; O=top3(O,carp(n_.kl.d,-n_.kl.m*MKS[pc.kn].kl)); }   // kilit parçası çekilmiş
     const A=pc.A||KIM, b=pc.b||[0,0,0]; let M=A, Tr=top3(b,O);
@@ -464,7 +467,7 @@ function sahneCiz(dt,w,h,jx,jy){
   G.forEach((g,i)=>{ const el=etEl[i], t=top[i]; if(!el) return;
     const gor=etAcik&&!gizli[i]&&t[3]>0&&!(g.tur==="tas"&&!tas[2]); el.hidden=!gor; if(!gor) return;
     const q=rd(R,[t[0]/t[3],t[1]/t[3],t[2]/t[3]]), qx=q[0]+kay[0]-Rf[0], qy=q[1]+kay[1]-Rf[1], qz=q[2]-D-Rf[2];
-    const sx2=(f/en*qx/-qz*.5+.5)*cv.clientWidth, sy2=(1-(f*qy/-qz*.5+.5))*cv.clientHeight;
+    const sx2=(f/en*qx/-qz*.5+.5)*cv.clientWidth, sy2=(1-((f*qy/-qz+kunyeS)*.5+.5))*cv.clientHeight;
     el.style.transform="translate("+(sx2+8).toFixed(1)+"px,"+(sy2-11).toFixed(1)+"px)"; });
 }
 /* ── HAREKET AĞACI (mekanizmalar): düğümler "u" ile ağaç; her düğüm üstünün hareketli çerçevesinde döner (d: dönme, m: mafsal) ya da
@@ -523,7 +526,7 @@ function kamGeri(){ if(kamOnce){ kamH=kamOnce; kamOnce=null; } }
 function aktifAc(i,oynat){ const n=urun.montaj.length; i=clamp(i,0,n-1); aktifA=i;
   for(const li of $("liste").children) li.dataset.acik=li.dataset.i==i?1:0;
   if(oynat){ kamAc(); oynA=Math.min(p,i/n); oynB=(i+1)/n; if(azHareket) oynA=oynB; oynSure=0.9; oynT0=performance.now(); oynuyor=true; } adimYaz(); }
-let mekGor=false;
+let mekGor=false, bukGz=false, kunyeS=0;
 const mekGorAcik=()=>mekGor&&mod==="montaj"&&!!(urun&&urun.mek&&urun.mek.length);
 const mekVurgu=q=>/^(pim|mil|mentese|kilit|percin|aks)/.test(q.id||"")||q.kn>=0;   // mekanizma görünümünde vurgulu: pimler, miller, kilit
 function durumHesap(){ const M_=urun.montaj; if(!M_||!M_.some(m=>m.du)) return null; const n=M_.length, x=clamp(p*n,0,n-1e-6), i=Math.floor(x), t=ease(x-i), D={};
@@ -602,8 +605,8 @@ function mekItki(dg){ if(!MKS.length) return; const N=urun.mek; let maf=false;
   N.forEach((n,k)=>{ const st=MKS[k]; if(dg&&n.dg&&n.dg!==dg) return; if(n.kp&&n.kl){ st.istek=st.istek==="ac"?"kapa":"ac"; return; } if(n.kp){ st.h=(st.h||0)>n.s[0]+1e-3?n.s[0]:n.s[1]; return; } if(n.t==="m") maf=true; else if(n.t==="s") st.v=top3(st.v,[(Math.random()-.5)*90,40+Math.random()*40,(Math.random()-.5)*90]);
     else if(!n.o) st.wa+=(Math.random()<.5?-1:1)*(3+4*Math.random()); });
   if(maf) yuzT=0; }
-function ekranaM(m){ const K=KAM, q=top3(rd(K.R,m),K.T); return [(K.f/K.en*q[0]/-q[2]*.5+.5)*cv.clientWidth,(1-(K.f*q[1]/-q[2]*.5+.5))*cv.clientHeight]; }
-function mekSec(e){ if(!KAM) return null; const b=cv.getBoundingClientRect(), x=((e.clientX-b.left)/b.width)*2-1, y=1-((e.clientY-b.top)/b.height)*2, K=KAM;
+function ekranaM(m){ const K=KAM, q=top3(rd(K.R,m),K.T); return [(K.f/K.en*q[0]/-q[2]*.5+.5)*cv.clientWidth,(1-((K.f*q[1]/-q[2]+kunyeS)*.5+.5))*cv.clientHeight]; }
+function mekSec(e){ if(!KAM) return null; const b=cv.getBoundingClientRect(), x=((e.clientX-b.left)/b.width)*2-1, y=1-((e.clientY-b.top)/b.height)*2-kunyeS, K=KAM;
   const Rt=[K.R[0],K.R[3],K.R[6],K.R[1],K.R[4],K.R[7],K.R[2],K.R[5],K.R[8]], o=rd(Rt,carp(K.T,-1)), d=rd(Rt,[x*K.en/K.f,y/K.f,-1]); let en=null;
   for(const q of urun.parcalar){ if(!(q.mk>=0)||!q._M||gizli[q.g]) continue; const a=ag[urun.kod][Array.isArray(q.m)?q.m[0]:q.m]; if(!a.P) continue;
     const Mi=ters3(q._M), o2=mv(Mi,cik(o,q._T)), d2=mv(Mi,d), P=a.P, I=a.I;
@@ -642,6 +645,7 @@ function teknikYaz(){ const G=urun.gruplar, s=urun.boyut.map(x=>String(x).replac
   const satir=(a,b)=>'<div class="satir"><span>'+a+'</span><span class="deger">'+b+'</span></div>', ucgen=urun.aglar.reduce((a,m,i)=>a+(urun.parcalar.some(q=>(q.rl===2||q.rl===3)&&[].concat(q.m).includes(i))?0:m.nf),0);   /* demo ve mine ağı sayılmaz */
   $("t-kunye").innerHTML=satir("Ölçü (G × Y × D)",yon.join(" × ")+" mm")+urun.gram.split(" · ").map(x=>{ const i=x.indexOf(" "); return satir(x.slice(0,i),x.slice(i+1)); }).join("")+
     satir("Döküm parça",say("dokum"))+satir("Hazır parça",say("hazir"))+satir("Taş",say("tas"))+satir("Sallanan parça",urun.sarkac.length||"yok")+satir("Ön izleme ağı",ucgen.toLocaleString("tr-TR")+" üçgen");
+  $("t-gram-not").textContent=/925/.test(urun.gram)?"14 ayar ve 925 gümüş":"14 ayar";   // dip notu ağırlık satırlarıyla aynı (site-14)
   $("t-parca").innerHTML=sira.map((gi,k)=>satir((k+1)+" · "+G[gi].ad,G[gi].adet+" × "+TUR[G[gi].tur])).join(""); }
 function sec(kod){ urun=MAN.find(u=>u.kod===kod); const G=urun.gruplar; gizli=G.map(()=>false); sarkacKur(); DN=(urun.doner||[]).map(d=>({f:d.sin?d.sin[0]:0,w:0,h:d.sin?d.sin[0]:0})); esSapD=sapma; esYunD=yunus;
   mekKurDurum(); sira=patlatKur(); renkKur(); gizliA=(urun.montaj||[]).map(()=>false); aktifA=-1;
@@ -658,7 +662,7 @@ function sec(kod){ urun=MAN.find(u=>u.kod===kod); const G=urun.gruplar; gizli=G.
     const e=document.createElement("div"); e.className="et"; e.hidden=true; e.innerHTML="<b>"+(k+1)+"</b><span></span>"; e.children[1].textContent=g.ad+(g.adet>1?" × "+g.adet:""); E.appendChild(e); etEl[gi]=e; });
   const s=urun.boyut.map(x=>String(x).replace(".",",")), yon=urun.taban==="-z"?[s[0],s[2],s[1]]:s;
   $("r-bag").hidden=!urun.kisa; $("bag").textContent="Bağlantıyı kopyala";
-  $("k-ad").textContent=urun.ad; $("k-olcu").textContent=(urun.kisa?urun.kisa+" · ":"")+yon[0]+" × "+yon[1]+" × "+yon[2]+" mm · "+urun.gram;
+  $("k-ad").textContent=urun.ad; { const ko=$("k-olcu"), ek=document.createElement("span"); ko.textContent=urun.kisa||""; ek.className="k-ek"; ek.textContent=(urun.kisa?" · ":"")+yon[0]+" × "+yon[1]+" × "+yon[2]+" mm · "+urun.gram.replace(/\s*\(.*\)\s*$/,""); ko.appendChild(ek); }   /* künye kısa: ad + kod (+ ölçü, ağırlık); parantezli ağırlık notu Teknik ve Üretim kutusunda (site-14) */
   $("v-ad").textContent=urun.ad; kodBagla($("v-tanim"),urun.tanim||"");
   $("r-fizik").hidden=$("r-canli").hidden=$("ayar-fizik").hidden=!urun.sarkac.length; $("r-doner").hidden=!DN.length&&!MKS.length; if(MKS.length){ const n=urun.mek.find(x=>x.dg); $("ayar-fizik").hidden=false; setTimeout(()=>{ $("cevir").textContent=(n&&n.dg)||(urun.mek.some(m=>m.t==="m"&&!m.kp)?"Yüzdür":"Çevir"); });   /* düğme yazısı yoksa: mafsal zinciri "Yüzdür" */ }
   // malzeme paneli ürüne göre: taş yoksa taş seçimi yok; büyük-küçük ayrımı yoksa "küçük taşlar renksiz" yok; dönen parça varsa ona ayrı metal
